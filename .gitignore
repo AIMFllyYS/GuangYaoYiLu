@@ -1,0 +1,30 @@
+# ===== 大文件排除 =====
+
+# 视频文件
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# 大型演示文件
+*.pptx
+
+# 参考作品PDF（238MB）
+输出终稿/优秀成品参考.pdf
+
+# 参考作品预览图
+输出终稿/ref_preview/
+
+# 大型PDF
+素材库/04嘉年华/*特团宣传图片pdf纯享.pdf
+
+# ===== 系统文件 =====
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ===== 编辑器 =====
+.vscode/
+*.swp
+*.swo
+*~
