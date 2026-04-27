@@ -229,20 +229,51 @@ def draw_text_block(
     color: tuple = None,
     line_spacing: float = 1.6,
 ):
-    """绘制自动换行的文字块，返回最终 y 坐标"""
+    """绘制自动换行的文字块，支持简单的层级和Markdown语法，返回最终 y 坐标"""
     if color is None:
         color = COLORS["text_black"]
     draw = ImageDraw.Draw(canvas)
-    font = get_font(font_key, font_size)
     
-    # 手动按字符换行
-    lines = []
+    font_body = get_font(font_key, font_size)
+    font_h2 = get_font("hei", int(font_size * 1.3))
+    font_bold = get_font("hei", font_size)
+    font_toc_part = get_font("kai", int(font_size * 1.2))
+    
+    current_y = y
+    
     for paragraph in text.split("\n"):
         if not paragraph.strip():
-            lines.append("")
+            current_y += int(font_size * line_spacing * 0.5)
             continue
+            
+        p_text = paragraph.strip()
+        font = font_body
+        text_color = color + (255,)
+        
+        # 简单层级解析
+        if p_text.startswith("## "):
+            font = font_h2
+            p_text = p_text[3:]
+            current_y += 20
+        elif p_text.startswith("**") and p_text.endswith("**"):
+            font = font_bold
+            p_text = p_text[2:-2]
+        elif p_text.startswith("第一篇") or p_text.startswith("第二篇") or p_text.startswith("第三篇"):
+            font = font_toc_part
+            text_color = COLORS["chinese_red"] + (255,)
+            current_y += 40
+        elif p_text.startswith("CH") and "  " in p_text: # 目录项
+            font = font_bold
+        elif " · " in p_text and len(p_text) < 20 and not p_text.endswith("。"): # 短标题
+            font = font_h2
+            current_y += 20
+        elif p_text.startswith("· "):
+            p_text = "  " + p_text # 缩进
+            
+        # 自动换行
+        lines = []
         current_line = ""
-        for char in paragraph:
+        for char in p_text:
             test_line = current_line + char
             bbox = font.getbbox(test_line)
             if bbox[2] - bbox[0] > max_width:
@@ -252,13 +283,13 @@ def draw_text_block(
                 current_line = test_line
         if current_line:
             lines.append(current_line)
-    
-    line_height = int(font_size * line_spacing)
-    current_y = y
-    for line in lines:
-        if line:
-            draw.text((x, current_y), line, font=font, fill=color + (255,))
-        current_y += line_height
+        
+        line_height = int(font.size * line_spacing)
+        for line in lines:
+            draw.text((x, current_y), line, font=font, fill=text_color)
+            current_y += line_height
+            
+        current_y += int(font.size * 0.5) # 段落间距
     
     return current_y
 
@@ -543,15 +574,31 @@ def compose_chapter(chapter_dir: Path, output_dir: Path, preview=False):
             )
         elif page_type == "text":
             img = load_and_resize_bg(bg_path)
+            
+            # 针对不同背景图调整文字排版区域
+            body_x = 300
+            body_y = 450
+            max_w = A4_WIDTH - 600
+            title_y = 180
+            title_size = 100
+            
+            if "timeline_bg" in bg_path:
+                body_x = 850
+                max_w = A4_WIDTH - 1050
+                title_y = 120
+                body_y = 350
+            elif "character_bg" in bg_path or "data_infographic_bg" in bg_path:
+                title_size = 80
+            
             if page_cfg.get("title"):
-                draw_text_centered(img, page_cfg["title"], y=200,
-                                   font_key="handwriting", font_size=100,
+                draw_text_centered(img, page_cfg["title"], y=title_y,
+                                   font_key="handwriting", font_size=title_size,
                                    color=COLORS["text_black"])
             if page_cfg.get("body"):
                 draw_text_block(img, page_cfg["body"],
-                                x=200, y=500,
-                                max_width=A4_WIDTH - 400,
-                                font_key="song", font_size=44,
+                                x=body_x, y=body_y,
+                                max_width=max_w,
+                                font_key="song", font_size=42,
                                 color=COLORS["text_black"])
             draw_page_number(img, page_num, config.get("total_pages", 83))
         else:
