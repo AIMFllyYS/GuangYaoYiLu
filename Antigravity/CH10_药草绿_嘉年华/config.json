@@ -1,0 +1,225 @@
+{
+  "chapter": "CH10",
+  "total_pages": 76,
+  "pages": [
+    {
+      "page_num": 42,
+      "type": "cover",
+      "background": "_shared/carnival_cover_bg.png",
+      "title": "药草绿 · 嘉年华",
+      "subtitle": "风采嘉年华 · 中药文化路演",
+      "quote": "2025年12月21日，中心操场。一场融合中药文化与现代创意的嘉年华路演，让传统在青春中焕发新生。",
+      "color_theme": [
+        45,
+        90,
+        39
+      ]
+    },
+    {
+      "page_num": 43,
+      "type": "text",
+      "background": "_shared/neutral_text_bg.png",
+      "title": "嘉年华路演",
+      "body": "2025年12月21日，联合支部在华中科技大学中心操场举办了\"光药医路·风采嘉年华\"路演活动。\n\n本次路演以中药文化体验为核心，设置了三大互动游戏关卡，并配合自主开发的活动小程序，让参与者在趣味体验中感受中医药文化的魅力。\n\n路演数据：\n· 参与率：超过70%\n· 互动游戏：3个关卡\n· 小程序访问：覆盖全场\n· 路演材料：海报+宣传单+奖券"
+    },
+    {
+      "page_num": 44,
+      "type": "text",
+      "background": "_shared/green_photo_bg.png",
+      "title": "游戏一 · 草色通真",
+      "body": "草色通真——中药辨认挑战\n\n玩法：参与者面对多种中药材实物，需要在限定时间内正确辨认出指定的药材名称。\n\n考核药材包括：金银花、枸杞、黄芪、当归、陈皮、甘草等常见中药材。\n\n通过视觉、嗅觉、触觉的多重感知，让参与者真正\"认识\"那些出现在处方里的药材究竟长什么样。\n\n设计理念：\"不识药材真面目，只缘未曾亲手摸。\""
+    },
+    {
+      "page_num": 45,
+      "type": "text",
+      "background": "_shared/green_photo_bg.png",
+      "title": "游戏二 · 捣药闻香",
+      "body": "捣药闻香——传统捣药体验\n\n玩法：使用传统中药捣药钵，将干燥药材研磨成粉末。体验古代药师\"悬壶济世\"的日常。\n\n配合体验：品尝由药学专业同学精心调配的中药养生茶饮，在捣药的芬芳中感受中药文化的温度。\n\n设计理念：\"千锤百炼出真知，一杵一臼见匠心。\""
+    },
+    {
+      "page_num": 46,
+      "type": "text",
+      "background": "_shared/green_photo_bg.png",
+      "title": "游戏三 · 分两入毫",
+      "body": "分两入毫——传统药秤称量\n\n玩法：使用传统中药药秤（戥子），精确称量指定重量的药材。考验参与者的手感和耐心。\n\n传统药秤以\"钱\"为单位（1钱≈3.125克），要求称量误差不超过半钱。\n\n设计理念：\"药有君臣佐使，量有分毫不差。\" 体验中药配伍中\"精准\"的重要性。"
+    },
+    {
+      "page_num": 47,
+      "type": "photo",
+      "background": "_shared/green_photo_bg.png",
+      "title": "小程序 · 数字化体验",
+      "photos": [
+        {
+          "path": "素材库/04嘉年华/04嘉年华-小程序内部.jpg",
+          "x": 140,
+          "y": 280,
+          "w": 1050,
+          "h": 1500,
+          "rotation": -1,
+          "frame": "rounded"
+        },
+        {
+          "path": "素材库/04嘉年华/04嘉年华-小程序码.png",
+          "x": 1350,
+          "y": 400,
+          "w": 900,
+          "h": 900,
+          "rotation": 1,
+          "frame": "white_border"
+        }
+      ],
+      "caption": "光电2506班主导开发的活动小程序，用代码为中药文化搭建数字化展示平台。"
+    },
+    {
+      "page_num": 48,
+      "type": "photo",
+      "background": "_shared/green_photo_bg.png",
+      "title": "海报设计",
+      "photos": [
+        {
+          "path": "素材库/04嘉年华/04嘉年华-光药医路海报.png",
+          "x": 440,
+          "y": 250,
+          "w": 1600,
+          "h": 2200,
+          "rotation": 0,
+          "frame": "white_border"
+        }
+      ],
+      "caption": "基医2501孔德羽同学主导设计的活动海报，将中医药文化的视觉美学与现代设计语言完美融合。"
+    },
+    {
+      "page_num": 49,
+      "type": "photo",
+      "background": "_shared/green_photo_bg.png",
+      "title": "路演现场",
+      "photos": [
+        {
+          "path": "素材库/04嘉年华/图集/04嘉年华-图集-摊位互动1.jpg",
+          "x": 140,
+          "y": 280,
+          "w": 1050,
+          "h": 750,
+          "rotation": -1.5,
+          "frame": "polaroid"
+        },
+        {
+          "path": "素材库/04嘉年华/图集/04嘉年华-图集-捣药钵与茶水.jpg",
+          "x": 1280,
+          "y": 320,
+          "w": 1050,
+          "h": 750,
+          "rotation": 1,
+          "frame": "polaroid"
+        },
+        {
+          "path": "素材库/04嘉年华/图集/04嘉年华-图集-中药称量体验.jpg",
+          "x": 340,
+          "y": 1400,
+          "w": 1800,
+          "h": 1100,
+          "rotation": 0,
+          "frame": "white_border"
+        }
+      ],
+      "caption": "摊位互动、捣药体验、药秤称量——嘉年华路演的精彩瞬间。"
+    },
+    {
+      "page_num": 50,
+      "type": "photo",
+      "background": "_shared/green_photo_bg.png",
+      "title": "路演花絮",
+      "photos": [
+        {
+          "path": "素材库/04嘉年华/图集/04嘉年华-图集-发放奖券.jpg",
+          "x": 140,
+          "y": 280,
+          "w": 1050,
+          "h": 750,
+          "rotation": 1,
+          "frame": "polaroid"
+        },
+        {
+          "path": "素材库/04嘉年华/图集/04嘉年华-图集-摊位双人合照.jpg",
+          "x": 1280,
+          "y": 350,
+          "w": 1050,
+          "h": 750,
+          "rotation": -1.5,
+          "frame": "polaroid"
+        },
+        {
+          "path": "素材库/04嘉年华/图集/04嘉年华-图集-摊位合照.jpg",
+          "x": 340,
+          "y": 1400,
+          "w": 1800,
+          "h": 1100,
+          "rotation": 0,
+          "frame": "white_border"
+        }
+      ],
+      "caption": "发放奖券、合照留念——每一个参与者都带走了一份中药文化的记忆。"
+    },
+    {
+      "page_num": 51,
+      "type": "testimony",
+      "background": "_shared/green_testimony_bg.png",
+      "title": "嘉年华感悟",
+      "testimonies": [
+        {
+          "quote": "作为财务组的一员，看着精心采购的药材变成同学们手中的体验道具，觉得每一分钱都花得值。最开心的是看到路过的同学被我们的摊位吸引驻足。",
+          "author": "—— 龚则元（药学2503）",
+          "x": 150,
+          "y": 250,
+          "width": 1000,
+          "rotation": -1
+        },
+        {
+          "quote": "说实话，策划嘉年华的时候压力很大——怕没人来。但那天操场上排起的长队告诉我，中药文化真的有吸引力，关键是用年轻人喜欢的方式去呈现。",
+          "author": "—— 田传耀（光电2506）",
+          "x": 1250,
+          "y": 230,
+          "width": 1050,
+          "rotation": 1.5
+        }
+      ]
+    },
+    {
+      "page_num": 52,
+      "type": "testimony",
+      "background": "_shared/green_testimony_bg.png",
+      "title": "",
+      "testimonies": [
+        {
+          "quote": "海报设计改了不下十版，但看到最终成品被挂在路演摊位上的那一刻，觉得一切都值了。这是我大学以来做过最有成就感的设计作品。",
+          "author": "—— 孔德羽（基医2501）",
+          "x": 150,
+          "y": 200,
+          "width": 1050,
+          "rotation": 1
+        },
+        {
+          "quote": "开发小程序的过程虽然辛苦，但这是第一次把代码用在了传播文化的事情上。技术不只是工具，它可以是一座连接传统与现代的桥梁。",
+          "author": "—— 袁睿祺（光电2506）",
+          "x": 1200,
+          "y": 180,
+          "width": 1100,
+          "rotation": -1
+        }
+      ]
+    },
+    {
+      "page_num": 53,
+      "type": "cover",
+      "background": "_shared/carnival_cover_bg.png",
+      "title": "药草绿",
+      "subtitle": "是创新与传承交融的颜色",
+      "quote": "三个游戏关卡，一个小程序，一份精心设计的海报。\n\"光药医路\"的嘉年华，让中药文化在青春的土壤里生根发芽。",
+      "color_theme": [
+        45,
+        90,
+        39
+      ]
+    }
+  ]
+}

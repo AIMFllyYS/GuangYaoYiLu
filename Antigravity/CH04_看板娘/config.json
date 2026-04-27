@@ -1,0 +1,44 @@
+{
+  "chapter": "CH04",
+  "total_pages": 76,
+  "pages": [
+    {
+      "page_num": 8,
+      "type": "cover",
+      "background": "_shared/character_bg.png",
+      "title": "瑶  光",
+      "subtitle": "联合支部虚拟看板娘",
+      "quote": "",
+      "color_theme": [
+        45,
+        90,
+        39
+      ]
+    },
+    {
+      "page_num": 9,
+      "type": "photo",
+      "background": "_shared/character_bg.png",
+      "title": "瑶光 · 人物设定",
+      "photos": [
+        {
+          "path": "_shared/yaoguang.png",
+          "x": 540,
+          "y": 250,
+          "w": 1400,
+          "h": 2400,
+          "rotation": 0,
+          "frame": "no_frame"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "page_num": 10,
+      "type": "text",
+      "background": "_shared/neutral_text_bg.png",
+      "title": "角色档案",
+      "body": "姓名：瑶光\n身份：\"光药医路\"联合支部虚拟看板娘\n\n外观特征：\n· 身着白大褂，衣襟绣有中草药纹样\n· 佩戴光学透镜发饰\n· 手持银杏叶书签\n\n性格设定：\n温柔而坚定，知性而活泼。她是三个专业精神的融合体——拥有光电人的严谨、药学人的细腻、医学人的温暖。\n\n名字寓意：\n\"瑶\"取自中药\"瑶草\"，象征珍贵的草药\n\"光\"呼应光电专业，也寓意引路之光\n瑶光，是北斗七星的第七颗星，象征指引方向。"
+    }
+  ]
+}

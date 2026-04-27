@@ -1,0 +1,19 @@
+{
+  "chapter": "CH01",
+  "total_pages": 76,
+  "pages": [
+    {
+      "page_num": 1,
+      "type": "cover",
+      "background": "_shared/cover_bg.png",
+      "title": "光药医路",
+      "subtitle": "金光青黛同济兴，本草杏林华夏清",
+      "quote": "华中科技大学\n药学（中外合作办学）2503 · 光电2506 · 基医强基2501\n联合团支部特色团日活动总结书",
+      "color_theme": [
+        40,
+        40,
+        40
+      ]
+    }
+  ]
+}

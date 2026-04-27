@@ -1,0 +1,79 @@
+{
+  "chapter": "CH11",
+  "total_pages": 76,
+  "pages": [
+    {
+      "page_num": 54,
+      "type": "cover",
+      "background": "_shared/speech_cover_bg.png",
+      "title": "冬暖青日 · 宣讲",
+      "subtitle": "回访母校，传递中药文化之光",
+      "quote": "2026年1月寒假期间，联合支部同学回到家乡高中，向学弟学妹们分享中医药文化与大学生活。",
+      "color_theme": [
+        45,
+        90,
+        39
+      ]
+    },
+    {
+      "page_num": 55,
+      "type": "photo",
+      "background": "_shared/green_photo_bg.png",
+      "title": "母校宣讲",
+      "photos": [
+        {
+          "path": "素材库/05冬暖青日/宣讲/05冬暖青日-宣讲-女生讲PPT.jpg",
+          "x": 140,
+          "y": 280,
+          "w": 1050,
+          "h": 750,
+          "rotation": -1,
+          "frame": "polaroid"
+        },
+        {
+          "path": "素材库/05冬暖青日/宣讲/05冬暖青日-宣讲-男生讲PPT.png",
+          "x": 1280,
+          "y": 320,
+          "w": 1050,
+          "h": 750,
+          "rotation": 1.5,
+          "frame": "polaroid"
+        },
+        {
+          "path": "素材库/05冬暖青日/宣讲/05冬暖青日-宣讲-女生讲PPT远景.jpg",
+          "x": 340,
+          "y": 1400,
+          "w": 1800,
+          "h": 1100,
+          "rotation": 0,
+          "frame": "white_border"
+        }
+      ],
+      "caption": "联合支部同学回到母校，以PPT宣讲的方式分享中医药文化知识与大学生活感悟。"
+    },
+    {
+      "page_num": 56,
+      "type": "testimony",
+      "background": "_shared/green_testimony_bg.png",
+      "title": "宣讲感悟",
+      "testimonies": [
+        {
+          "quote": "站在高中的讲台上，面对曾经和自己一样迷茫的学弟学妹，我突然理解了'薪火相传'的含义。",
+          "author": "—— 宣讲志愿者",
+          "x": 150,
+          "y": 250,
+          "width": 1050,
+          "rotation": -1
+        },
+        {
+          "quote": "当学弟问我'中药真的有用吗'，我笑着回答：'你来华科，我带你去叶开泰看看就知道了。'",
+          "author": "—— 宣讲志愿者",
+          "x": 1200,
+          "y": 750,
+          "width": 1050,
+          "rotation": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "chapter": "CH02",
+  "total_pages": 76,
+  "pages": [
+    {
+      "page_num": 2,
+      "type": "text",
+      "background": "_shared/timeline_bg.png",
+      "title": "目  录",
+      "body": "CH01  封面\nCH02  目录\nCH03  主题介绍 · 光药医路\nCH04  看板娘 · 瑶光\nCH05  三个支部介绍\nCH06  人员分工\n\n第一篇 · 初识白\nCH07  破冰大会\n\n第二篇 · 思政红\nCH08  主题团课\nCH09  志愿服务\n\n第三篇 · 药草绿\nCH10  嘉年华路演\nCH11  冬暖青日 · 宣讲\nCH12  家乡考察\nCH13  叶开泰博物馆\n\nCH14  总结与展望\nCH15  封底"
+    },
+    {
+      "page_num": 3,
+      "type": "text",
+      "background": "_shared/timeline_bg.png",
+      "title": "活动时间轴",
+      "body": "2025年12月7日    破冰大会 · 韵苑活动中心\n\n2025年12月21日   嘉年华路演 · 中心操场\n\n2026年1月         冬暖青日 · 回访母校宣讲\n\n2026年1-3月       家乡药草考察 · 全国各地\n\n2026年3月29日    主题团课 · 锚定十五五蓝图\n\n2026年4月19日    志愿服务 · 红建社区\n\n2026年4月26日    叶开泰中医药文化园"
+    }
+  ]
+}

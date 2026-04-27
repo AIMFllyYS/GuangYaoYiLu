@@ -1,0 +1,95 @@
+{
+  "chapter": "CH12",
+  "total_pages": 76,
+  "pages": [
+    {
+      "page_num": 57,
+      "type": "cover",
+      "background": "_shared/hometown_cover_bg.png",
+      "title": "家乡药草考察",
+      "subtitle": "以脚步丈量本草，以家乡连接世界",
+      "quote": "2026年1-3月，联合支部同学利用寒假时间，在全国各地开展家乡中草药考察实践。",
+      "color_theme": [
+        45,
+        90,
+        39
+      ]
+    },
+    {
+      "page_num": 58,
+      "type": "text",
+      "background": "_shared/neutral_text_bg.png",
+      "title": "考察导语",
+      "body": "\"橘生淮南则为橘，生于淮北则为枳。\"\n\n中国幅员辽阔，不同的地理环境孕育了各具特色的道地药材。联合支部75位同学来自全国各地，每个人的家乡都有独特的中草药资源与用药传统。\n\n在2026年寒假期间，同学们回到家乡，走访当地药材市场、中药种植基地、民间中医诊所，用镜头和文字记录下了家乡的中草药故事。\n\n这是一次跨越山河的药草之旅——\n从东北的人参鹿茸，到西南的三七天麻；\n从江浙的杭白菊贝母，到岭南的陈皮砂仁；\n75位同学的家乡故事，拼出了一幅中国本草地图。"
+    },
+    {
+      "page_num": 59,
+      "type": "text",
+      "background": "_shared/green_photo_bg.png",
+      "title": "本草地图 · 北方篇",
+      "body": "东北地区\n· 人参 · 鹿茸 · 五味子\n\"世界人参在中国，中国人参在东北\"\n\n华北地区\n· 黄芪 · 甘草 · 枸杞\n内蒙古黄芪以\"膜芪\"品质最优\n\n西北地区\n· 当归 · 党参 · 大黄\n甘肃岷县被称为\"中国当归之乡\""
+    },
+    {
+      "page_num": 60,
+      "type": "text",
+      "background": "_shared/green_photo_bg.png",
+      "title": "本草地图 · 南方篇",
+      "body": "华东地区\n· 杭白菊 · 浙贝母 · 温郁金\n\"浙八味\"自古闻名天下\n\n华中地区\n· 茯苓 · 半夏 · 蕲艾\n湖北蕲春——李时珍故里\n\n华南地区\n· 陈皮 · 砂仁 · 广藿香\n\"广药\"体系，岭南道地药材\n\n西南地区\n· 三七 · 天麻 · 虫草\n云贵川的\"药材宝库\""
+    },
+    {
+      "page_num": 61,
+      "type": "photo",
+      "background": "_shared/green_photo_bg.png",
+      "title": "胡庆余堂留影",
+      "photos": [
+        {
+          "path": "素材库/05冬暖青日/博物馆/05冬暖青日-博物馆-胡庆余堂留影.jpg",
+          "x": 140,
+          "y": 280,
+          "w": 2200,
+          "h": 1400,
+          "rotation": 0,
+          "frame": "white_border"
+        }
+      ],
+      "caption": "\"戒欺\" —— 胡庆余堂的百年堂训。杭州同学在胡庆余堂中药博物馆留影。"
+    },
+    {
+      "page_num": 62,
+      "type": "testimony",
+      "background": "_shared/green_testimony_bg.png",
+      "title": "家乡药草故事",
+      "testimonies": [
+        {
+          "quote": "回到内蒙古老家，我第一次认真观察了村口那片野生黄芪。奶奶说她小时候就知道用黄芪泡水喝能'补气'，这大概就是最朴素的中医智慧吧。",
+          "author": "—— 考察同学",
+          "x": 150,
+          "y": 250,
+          "width": 1000,
+          "rotation": -1
+        },
+        {
+          "quote": "在杭州的胡庆余堂，我看到了'戒欺'两个大字。做药如做人，来不得半点虚假。这也许是中医药文化传承千年的根本。",
+          "author": "—— 考察同学",
+          "x": 1250,
+          "y": 750,
+          "width": 1050,
+          "rotation": 1
+        }
+      ]
+    },
+    {
+      "page_num": 63,
+      "type": "cover",
+      "background": "_shared/hometown_cover_bg.png",
+      "title": "家乡药草",
+      "subtitle": "一方水土，一味本草",
+      "quote": "75位同学，75个家乡故事。\n中国本草地图的每一个省份，都留下了\"光药医路\"同学的足迹。",
+      "color_theme": [
+        45,
+        90,
+        39
+      ]
+    }
+  ]
+}
