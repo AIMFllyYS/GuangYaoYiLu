@@ -412,13 +412,20 @@ def compose_chapter_cover(
                            font_key="kai", font_size=60,
                            color=COLORS["text_gray"])
     
-    # 引言
+    # 引言 (水平居中，类似诗歌排版)
     if quote:
-        draw_text_block(canvas, quote,
-                        x=200, y=A4_HEIGHT * 2 // 3,
-                        max_width=A4_WIDTH - 400,
-                        font_key="fangsong", font_size=38,
-                        color=COLORS["text_gray"])
+        quote_y = A4_HEIGHT * 2 // 3 + 100
+        quote_lines = quote.split("\n")
+        line_height = int(38 * 1.6)
+        # 上移一点如果行数多
+        quote_y -= (len(quote_lines) * line_height) // 2
+        
+        for q_line in quote_lines:
+            if q_line.strip():
+                draw_text_centered(canvas, q_line.strip(), y=quote_y,
+                                   font_key="fangsong", font_size=38,
+                                   color=COLORS["text_gray"])
+            quote_y += line_height
     
     draw_page_number(canvas, page_num, total_pages)
     return canvas
