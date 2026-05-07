@@ -1,0 +1,1578 @@
+[
+  {
+    "slide": 1,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_01/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "9999bcc5788545325de55167943e77c8f76b3798104d14414a9c26aab63c8fd4"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_01/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "6baaebbc9458f7fcfd9eb56bf48a23bc432f1a7fa132e48d8a88b24078070da7"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_01/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "b028ccdd8a80e29983c0c69b15370bb093c4d10aa37176f1aaaff01de83a9621"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_01/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "d66cc551800b04b7eb8ed65be45e511f3ae50b864105c28e6afe6c62e44f3a2e"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_01/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "ab67e41672320cee8a2b2db0e0b079f517eeba845661d12a6b032749f9c3b666"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_01/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "676ce98d41fe70a9bb4959d3bb22dc460c2dca485fa7ca3645bb9daebd0f83de"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_01/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_02/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "2995a68d34962ed1a4451a263deafe8cbd4881b9f2b62a060d309c3f9a56478f"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_02/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "3e28539d486a59debd0403871945ca076307f6e09e979d80a658b07dad7fabc7"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_02/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "c7ac7c4f93fd5deb8b66488cb4f5ae072fc8fe8e9993571201ed9de36bcb534f"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_02/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "5f8db5c5fc56d06022b7308f1fa058d7cab487e682369f649b59eebc94a7b874"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_02/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "d87fee93e109480f0755b87eb38b747d2e55033863c8645cd274694431c2586e"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_02/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "e673332e0fd1a96bead2b8744a326537df7a7396ad227431e80c85e04dd722ec"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_02/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_03/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "59b016bba2bbb049837a06d8551a7899462b3d5d9b28f2f4eb46c959c66185e5"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_03/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "5852b8e29cd1b967d71f71c566436408d0dfb3441ea9db7f645414ac05f7a8e0"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_03/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "2638a09021910fbf84c1a9e0267dabb023ccf73ad2e3db25c71424145e0a0df1"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_03/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "05f8b3571f8424f7ae60d7076206ad5b277f242a89f8e56482849b733806438b"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_03/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "583a5ec45326515a6e9a50d0b37f4264180a92b41417524ac742e815d75b8eb0"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_03/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "8baf0a6689885ff29862f72c8d4009ef3611ceb49205c7f17e240a29f85a2fd4"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_03/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_04/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "fd4099a5e5ba844f0f2f66fc7cb7006ddc4c456c0ad82229b74f0b17973fbce2"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_04/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "56b57f18caa96835294f7a033a41e1d222938979f78cf0343ec703aa7bca77b8"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_04/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "570adcd67332cde9645c14e5b65bd84b1f7fbee906a52e93a88ef181e61b42f7"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_04/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "34ccc789e09a59da4c87a4db6163867c5794d09c2ac4f17266b5555f30c5b3f5"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_04/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "c2b508970cfd0cf69a17c37fd8d9ed3705304630e07cba7d90ca67bc0b6b376b"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_04/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "f3e6966296c4e0b56454db234e8da77fd622d5718dfd0fdf48819e30e27478c3"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_04/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      },
+      {
+        "name": "photo_01",
+        "path": "layers/slide_04/photo_01.png",
+        "x": 186,
+        "y": 336,
+        "w": 458,
+        "h": 338,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "974e6c0e681c61d27e25dd1cb11a8997e38c2fb6d1e63f8fc8c24f9bd3fb3d68"
+      },
+      {
+        "name": "photo_02",
+        "path": "layers/slide_04/photo_02.png",
+        "x": 731,
+        "y": 336,
+        "w": 458,
+        "h": 338,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "e351be5b044a8dc2d6d30a69a0f9a9acae22fbeaa59581904d54c2aa3203745a"
+      },
+      {
+        "name": "photo_03",
+        "path": "layers/slide_04/photo_03.png",
+        "x": 1276,
+        "y": 336,
+        "w": 458,
+        "h": 338,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "36bc58eb3fbdf44fee46f5f1ce774f0d8e4a045de8abbdc1a0b1b1b2fe4f1eeb"
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_05/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "80b4fdb09028c52aaf0c92fcb1da25d60e9f1258f4b2d4539e5b9fc7817838a2"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_05/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "d3fac9aa8cdd9c2400cc8ead633d19fb39fb6b8bbab3e8384ffa0ed3f0fed8b9"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_05/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "ceed31153197020d48e44d0f8a2634e411dbd670b27bc40e1351295125a1e9ea"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_05/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "b0ff01968abfa6183e3478ebf7b78c5e3394864d7f4a1730918e1007b5f9fb01"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_05/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "b53b81fb79e582f4ef37d6f04c6f90874ebbcc5e3ab8df85147902a3b0e92e2d"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_05/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "6fb606ddbdc6b7c0b47a30eda34ec53a880b412b887aef59c5e6b79f2e7eefaa"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_05/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_06/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "f4fffcff5bd674bbb13e192454024f30ae4b023e4ef0793cbb776dc7face4b56"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_06/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "cab71634b442a61952e88f6ad60820299a83336cfc33a9d1b035953221d94d9a"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_06/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "035e6d7e109558153998eb55358b614e8c947a5b85ecd65306f53ea3889adada"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_06/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "0678c090d6d9705c48c556864346371397922d148f1ce5d8ce942f60f327dc97"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_06/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "27faaa88f31814716e717cdd64414b37eddfbd5f77cef66bdaae88bd7cfbce75"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_06/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "22ba5b7dfca28d60381b327336b5ef43971830e32847bec39f2f5194964c6482"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_06/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_07/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "0eceeece98988ae520d6a14f6e53d5e04c9dbdc770d7b7de429490fb70b1fdee"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_07/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "7f8d457f5eb00cd09dd8c1a63d07f543d75448d94c3f783284fbc857c48f7d9b"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_07/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "ae62685783b25639a74524159af1c75af0333e631f22bc95d25217f41fe7a003"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_07/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "4df9b560790550d0c3eb877e37e906474ed61358c70b8a1bbc99c5e4ee9d3440"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_07/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "5c67455d9a53654d707bdc2ebf26e4f453087904a60a8a39cc1caee228d30bac"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_07/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "514c982ef28a8defbabfbe24094cc1a2f4851061e7afb9971a6613dfcd1b80b9"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_07/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      },
+      {
+        "name": "photo_01",
+        "path": "layers/slide_07/photo_01.png",
+        "x": 116,
+        "y": 236,
+        "w": 848,
+        "h": 493,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "45f5a9c700d1e4f055da335764fe8ab7cc29a10c34997c3816958bf40b38d182"
+      },
+      {
+        "name": "photo_02",
+        "path": "layers/slide_07/photo_02.png",
+        "x": 896,
+        "y": 396,
+        "w": 303,
+        "h": 228,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "aab975a2d5d1a63648166c10c4bdd63522d22d02d6efb1c768334b9ab3159280"
+      },
+      {
+        "name": "photo_03",
+        "path": "layers/slide_07/photo_03.png",
+        "x": 1216,
+        "y": 396,
+        "w": 303,
+        "h": 228,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "0521eed043e87828c0289fd7b3cccbee4191bc86aef8f37c3b4c68048a238b40"
+      },
+      {
+        "name": "photo_04",
+        "path": "layers/slide_07/photo_04.png",
+        "x": 1531,
+        "y": 396,
+        "w": 303,
+        "h": 228,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "498acbb9af7b7729121ce59dab0d3ed472b95bb76baf8df19811d88b5904edce"
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_08/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "70956e9e8e196dc6180ac6e7fba6323e0a6617259bbe019de7353e404c2129e7"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_08/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "4e4b10664d32b26d2c924e7e9a5138a241e00efb9901903f8bf5b4c224ea0263"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_08/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "4d51f26bae09f01b617342c628c62bdba05e6220b10f67196704584d321af928"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_08/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "f3c36acf8b11b166670e844c6dd450644ce1dd57178417b62a491d4c5d1daac7"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_08/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "8cf2836d6cc6bc3ee220c43aadeda761b8a30092de3ffc0b13dc9b31c86cebd2"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_08/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "5a74938dcbaa2373285638e2e8198ce5fee5d15040a60873b277a3af4b8a8aab"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_08/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      },
+      {
+        "name": "photo_01",
+        "path": "layers/slide_08/photo_01.png",
+        "x": 116,
+        "y": 231,
+        "w": 708,
+        "h": 413,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "31adaff964c7a22734790a8ecb483c85d10184dfb6df077c741a47ac4da1c50e"
+      },
+      {
+        "name": "photo_02",
+        "path": "layers/slide_08/photo_02.png",
+        "x": 116,
+        "y": 676,
+        "w": 708,
+        "h": 238,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "8aebb904299f582b4a949e83e05d21f6878e6f20f47619ac128ab363a5573257"
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_09/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "174a4a5499a1b567f38fec6b8a0c70ee99918314ece98a6290a4976c83af2b8b"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_09/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "92ddab9a80622fcdec2b8ef9210a413b4209fb977480f67e64ab7d17a5fb2bf0"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_09/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "46a0fd26595d1cf8b6d588bd3d648aafa63a7e9a6f55f2d5d12e436e034d420b"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_09/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "be4ec739307cd27041347043c922b80c963a504862535573b0d414db658bb9e2"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_09/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "c987fa7da7ed5482ddbb109d00781576393461690a669d8ef1545dc050fc8709"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_09/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "8c852adfe22835da8d5edeecf86886d696b0b65d861d8b485dfc88fd1fdc8189"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_09/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      },
+      {
+        "name": "photo_01",
+        "path": "layers/slide_09/photo_01.png",
+        "x": 136,
+        "y": 336,
+        "w": 763,
+        "h": 443,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "a3200a724df76bd310a5828207fa39d1592f19d5e07b4e2ca2e70484bb84d777"
+      },
+      {
+        "name": "photo_02",
+        "path": "layers/slide_09/photo_02.png",
+        "x": 971,
+        "y": 341,
+        "w": 273,
+        "h": 343,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "d8aebbcad20be84208192192ca0823457fc3832434445df1191c7cac69849daf"
+      },
+      {
+        "name": "photo_03",
+        "path": "layers/slide_09/photo_03.png",
+        "x": 1274,
+        "y": 341,
+        "w": 273,
+        "h": 343,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "ff4108141ef5f63ac2fdf64fae68a56f7622f94f327644d3c9433fc38e620798"
+      },
+      {
+        "name": "photo_04",
+        "path": "layers/slide_09/photo_04.png",
+        "x": 1578,
+        "y": 341,
+        "w": 273,
+        "h": 343,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "1d084b73541bef1a958c3f222c8173c86b61d726f1ca7be56d1016ece694b228"
+      }
+    ]
+  },
+  {
+    "slide": 10,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_10/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "5d87272926b0754c7bc50ee82a29e030701908ee6784d97c03164640b4ddcdea"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_10/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "a6b11cbb75347320930dfbb905d4cd3753f0d43440c7151a065d28b4dd0360d6"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_10/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "0914348e23b4ee14185d3ec39bdf365b203ce7f1d4a6941244579d48e9e738d4"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_10/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "4aa6756122b69539c62c70250080e0b9a6273d44f980aa9b4787354d2e3c3ea0"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_10/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "7c52ad8838b8f6773faddccd90b7281d1b9f26985e6f387a5e61d830ea82c63b"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_10/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "5bf652694406d1a296355701004d6f5e88d6df3492a49f3514b4ff787c4370bb"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_10/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      },
+      {
+        "name": "photo_01",
+        "path": "layers/slide_10/photo_01.png",
+        "x": 116,
+        "y": 216,
+        "w": 843,
+        "h": 573,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "783d0cb96edfb59c62301905985e9cf8866fd18ad555bf046cba38882ba7bf28"
+      }
+    ]
+  },
+  {
+    "slide": 11,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_11/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "1dc29a217cb93502adc69d5021e8cf336952b7421cc40ce96c7645191a826cc9"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_11/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "6159c4a7bcfe2b2b0f359e44fe5c0147db352ff450888bfa3747cd9ae5817f22"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_11/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "a0947a9d2bc5930233c07f4e7ecc9d4665d73c163a13bf2175ea14b4b440b87e"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_11/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "ed204c562c8000f55ad1c1038fa8f5e97e78a720329aa9b7ff0b582da5db7e35"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_11/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "cbd28cd9c58a5a25fdad2013cbcdb9dfbe714a684d61141e166e75f7299ea83a"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_11/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "e7a1583c16b6dbeaac63cc21b78f786a051f743a01eebd90ad62b83fb0ff9893"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_11/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      },
+      {
+        "name": "photo_01",
+        "path": "layers/slide_11/photo_01.png",
+        "x": 156,
+        "y": 191,
+        "w": 358,
+        "h": 663,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "46525284b433fae4fc44eb1d8e8f2eb80d68efad9070b9f7ec1e7d58270131a0"
+      },
+      {
+        "name": "photo_02",
+        "path": "layers/slide_11/photo_02.png",
+        "x": 1416,
+        "y": 171,
+        "w": 418,
+        "h": 418,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "dfcede5dc0d6959cbc72f63a6b14de611d42df3779cc04a45516cbd1dc62a8b0"
+      },
+      {
+        "name": "photo_03",
+        "path": "layers/slide_11/photo_03.png",
+        "x": 1390,
+        "y": 640,
+        "w": 170,
+        "h": 170,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "12bb38f4870120f5948665d6e3a89a067e7b199920e46e7e294653bfec32af47"
+      }
+    ]
+  },
+  {
+    "slide": 12,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_12/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "4a0f81b6a885fee6ccacc4d811ca4f091123ccb05dc46becb29fe09586a1b34e"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_12/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "091bc02dbb73ecce093bd80f46aff1f2d1bc701bb7d97c9ae949b0472fc9a558"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_12/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "e543af72f8553e6a9a905e5b36e00ccdea89002d0e458e822a441b9acd316a05"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_12/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "7d276661d16d53f9dae50c677b22b21ed7ed8bd81f002cb8a8582861ebd585aa"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_12/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "e279c163b1f76b2e5ea79b3e263cbf6af2125840a3088d2b8a49f1ea47324e84"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_12/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "3bd40a45fd81b2408099c80bf4d9b2a01aa4a44ca5cee72fc9edd896f7284100"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_12/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      },
+      {
+        "name": "photo_01",
+        "path": "layers/slide_12/photo_01.png",
+        "x": 61,
+        "y": 151,
+        "w": 313,
+        "h": 323,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "21caefc1fed6a06ffd6792c39bd44e8fd98b7babd967d3e45a3d2a01b61c58c9"
+      },
+      {
+        "name": "photo_02",
+        "path": "layers/slide_12/photo_02.png",
+        "x": 396,
+        "y": 151,
+        "w": 313,
+        "h": 323,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "fdd51f22d5ebca3fd296bb4576be02512e3a0f6a537e0925180f275314ef79a5"
+      }
+    ]
+  },
+  {
+    "slide": 13,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_13/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "984d9e01633358e53905a4f19db7e19bdefa6f359d1f901b27be7ba6ef923ce7"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_13/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "8aefaa563b473a8231386a35ec09614607bad2c24e10e397b040e81c08ede377"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_13/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "b12a6df4c278f734885c8121eb9d0dfc9e07de2dc06b9429df51272ff227e3f8"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_13/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "21c1ac5c5a5e80d940c76f2e304f4b3827a80fb253cc8e9a77ad6afd837c9416"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_13/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "3a0f0948c9c227ce32e289aae7187d7c98f24f670cbaca1fe1a795a9a0ff82c6"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_13/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "9c6c790fcf778830db8e5a313294e2396d98ef3394019ab05b182b0254fdca21"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_13/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      },
+      {
+        "name": "photo_01",
+        "path": "layers/slide_13/photo_01.png",
+        "x": 236,
+        "y": 346,
+        "w": 788,
+        "h": 428,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "6f953c03e8d3a9e753f47d97285a9e608c457998a12f6b4946361221f2ac71b1"
+      },
+      {
+        "name": "photo_02",
+        "path": "layers/slide_13/photo_02.png",
+        "x": 1061,
+        "y": 341,
+        "w": 248,
+        "h": 283,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "1a4a625e12130109dc082b38c6885b52f05ba7a9b071f6a01287f8e5df341f87"
+      },
+      {
+        "name": "photo_03",
+        "path": "layers/slide_13/photo_03.png",
+        "x": 1326,
+        "y": 341,
+        "w": 248,
+        "h": 283,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "ad8a51194640ccde928017df2c5f79f2c059b993576d996392a0441740816bc5"
+      },
+      {
+        "name": "photo_04",
+        "path": "layers/slide_13/photo_04.png",
+        "x": 1596,
+        "y": 341,
+        "w": 248,
+        "h": 283,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "4d51590edfeb12d113875f41faeccfcbc44be18bf78cd9496c1acfb696d602e0"
+      }
+    ]
+  },
+  {
+    "slide": 14,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_14/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "a173ea95a12eaa324eb9bc9d01e98103df3ffcd359bfd2c634aaba849620db20"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_14/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "ee37ac0119cf1186b52cc9a360ddbe9137741d7683f48181e0a9b34aabbf859d"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_14/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "89360cc8f2e17eb31f68d20869c1f3ba5e0ddbd5bf324ad208a186b8e8620b9d"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_14/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "796ebd3cfe64fb2bb590c7ccb0b93af1c1364b1919cdb780932c4c8125826caa"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_14/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "fb4aac498a54c94c25c65a1dcf4b9d61237e27bbc521acdba1d63233cbc41024"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_14/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "3dc6ac975d244d220625f680f06b8e3b7779a149ba707d027187e6e8589b8887"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_14/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      },
+      {
+        "name": "photo_01",
+        "path": "layers/slide_14/photo_01.png",
+        "x": 126,
+        "y": 336,
+        "w": 498,
+        "h": 308,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "6a18d2f5f8cd6f63b3efcec72c985d62e1b1e68012a6d4357cddbe65e404a028"
+      },
+      {
+        "name": "photo_02",
+        "path": "layers/slide_14/photo_02.png",
+        "x": 711,
+        "y": 336,
+        "w": 498,
+        "h": 308,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "cf941cc2f88e16604eafdcaf7165a1aca52e652fcb8b20670dbf9b090f82f95d"
+      },
+      {
+        "name": "photo_03",
+        "path": "layers/slide_14/photo_03.png",
+        "x": 1296,
+        "y": 336,
+        "w": 498,
+        "h": 308,
+        "role": "real_photo",
+        "animate_group": 2,
+        "sha256": "afc0839b6a06db6caf6d13c1712e51f395266c9c11b0e3f8e19056b5bdee8071"
+      }
+    ]
+  },
+  {
+    "slide": 15,
+    "size": [
+      1920,
+      1080
+    ],
+    "layers": [
+      {
+        "name": "header",
+        "path": "layers/slide_15/header.png",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 170,
+        "role": "ai_tile",
+        "animate_group": 1,
+        "sha256": "0275314201decce52ba1f560157e985142d2710327fbe6f0661a058362340ae5"
+      },
+      {
+        "name": "left_field",
+        "path": "layers/slide_15/left_field.png",
+        "x": 0,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "17959a2dc66d31d89308a90c5b46d24e90952fffd0c5faac78ed41916ffd71c5"
+      },
+      {
+        "name": "center_field",
+        "path": "layers/slide_15/center_field.png",
+        "x": 640,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "f01aa1614bfce0e0505accc5e380df4af9d32fa757856009c8fec586b8298be7"
+      },
+      {
+        "name": "right_field",
+        "path": "layers/slide_15/right_field.png",
+        "x": 1280,
+        "y": 170,
+        "w": 640,
+        "h": 700,
+        "role": "ai_tile",
+        "animate_group": 2,
+        "sha256": "d06083e8f5df8fb05c42580a642067d5fe24a00bffd2cdd1101925d39f79cb2d"
+      },
+      {
+        "name": "footer_left",
+        "path": "layers/slide_15/footer_left.png",
+        "x": 0,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "818751052ad6f9ede13339e4521b5865778d1ef24c8d3e5c0878e4df936766bc"
+      },
+      {
+        "name": "footer_right",
+        "path": "layers/slide_15/footer_right.png",
+        "x": 960,
+        "y": 870,
+        "w": 960,
+        "h": 210,
+        "role": "ai_tile",
+        "animate_group": 3,
+        "sha256": "de329690552392ccbd1796e87e8d21ec0fd5c2398ef6fa68bac07a058b15af3f"
+      },
+      {
+        "name": "hust_logo",
+        "path": "layers/slide_15/hust_logo.png",
+        "x": 42,
+        "y": 22,
+        "w": 260,
+        "h": 61,
+        "role": "official_logo",
+        "animate_group": 1,
+        "sha256": "00e9a9ae55f52aed598b901ea8207c91afd9742431bc8bfbbcf490a7a8b8f13e"
+      }
+    ]
+  }
+]
