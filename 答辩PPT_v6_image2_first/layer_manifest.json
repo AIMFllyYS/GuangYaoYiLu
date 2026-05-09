@@ -61,23 +61,23 @@
   },
   {
     "slide": 1,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_01/page-marker-cover.png",
+    "path": "layers/slide_01/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 1,
@@ -87,8 +87,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_01/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -96,7 +96,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "b92f7812bbdbf0811345670d0a0b0f7d259a4c20123b686986fb32de527f701a"
   },
   {
@@ -221,23 +221,23 @@
   },
   {
     "slide": 2,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_02/page-marker-cover.png",
+    "path": "layers/slide_02/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 2,
@@ -247,8 +247,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_02/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -256,7 +256,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "2561476ee7475ba5b4a8dca435d0bf4d413df85685f5d51e4bc318d7733bf94f"
   },
   {
@@ -381,23 +381,23 @@
   },
   {
     "slide": 3,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_03/page-marker-cover.png",
+    "path": "layers/slide_03/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 3,
@@ -407,8 +407,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_03/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -416,7 +416,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "bbf28bd6814edc9d5727730a6c55725e9d3cc104b945371bc208dc79477fdba9"
   },
   {
@@ -541,23 +541,23 @@
   },
   {
     "slide": 4,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_04/page-marker-cover.png",
+    "path": "layers/slide_04/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 4,
@@ -567,8 +567,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_04/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -576,7 +576,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "383acc7c3c147f883f5ddbaeb89993f5968ba7ea12803f29d27b015aa6369c05"
   },
   {
@@ -721,23 +721,23 @@
   },
   {
     "slide": 5,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_05/page-marker-cover.png",
+    "path": "layers/slide_05/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 5,
@@ -747,8 +747,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_05/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -756,7 +756,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "a9de40bbdc6a3d0321a25f4f1b209bc78ac588ad9ff10e955e1043882137a3ce"
   },
   {
@@ -901,23 +901,23 @@
   },
   {
     "slide": 6,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_06/page-marker-cover.png",
+    "path": "layers/slide_06/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 6,
@@ -927,8 +927,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_06/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -936,7 +936,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "937c2a1f08a32a6829e222dbe25e4db3643d363a183a16f4938bf00a1dce22ae"
   },
   {
@@ -1061,23 +1061,23 @@
   },
   {
     "slide": 7,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_07/page-marker-cover.png",
+    "path": "layers/slide_07/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 7,
@@ -1087,8 +1087,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_07/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -1096,7 +1096,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "7505192c0dee8386b51be4cdb53ac06525127d78277a4721347611162d7ac36c"
   },
   {
@@ -1221,23 +1221,23 @@
   },
   {
     "slide": 8,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_08/page-marker-cover.png",
+    "path": "layers/slide_08/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 8,
@@ -1247,8 +1247,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_08/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -1256,7 +1256,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "22aea312b2bc2ac0e065da5243ba8523a500d496963d90f8fabcaeb8cc9162c1"
   },
   {
@@ -1321,23 +1321,23 @@
   },
   {
     "slide": 9,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_09/page-marker-cover.png",
+    "path": "layers/slide_09/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 9,
@@ -1347,8 +1347,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_09/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -1356,7 +1356,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "39622bc8f2d6fef1257265866394d679b0141d005c77f5b24c26722646fe61da"
   },
   {
@@ -1421,23 +1421,23 @@
   },
   {
     "slide": 10,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_10/page-marker-cover.png",
+    "path": "layers/slide_10/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 10,
@@ -1447,8 +1447,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_10/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -1456,7 +1456,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "8ffebdc1c53a15cb5757e93068732747901be00f42c958341b5f540cf86b2cfd"
   },
   {
@@ -1521,23 +1521,23 @@
   },
   {
     "slide": 11,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_11/page-marker-cover.png",
+    "path": "layers/slide_11/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 11,
@@ -1547,8 +1547,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_11/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -1556,7 +1556,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "52e25ccdef655f91a82634f8336a8f0dd2ccc13cc19bc6f7cb6d4f398a894048"
   },
   {
@@ -1701,23 +1701,23 @@
   },
   {
     "slide": 12,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_12/page-marker-cover.png",
+    "path": "layers/slide_12/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 12,
@@ -1727,8 +1727,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_12/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -1736,7 +1736,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "476c495fe14d70cbfebb1d10cec8a976c6fdc54ff1c31a9a18da81db2de19609"
   },
   {
@@ -1841,23 +1841,23 @@
   },
   {
     "slide": 13,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_13/page-marker-cover.png",
+    "path": "layers/slide_13/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 13,
@@ -1867,8 +1867,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_13/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -1876,7 +1876,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "6d831e4ffc0f95a595cb56235068c38deebf15bb066005de6068813c77030cfd"
   },
   {
@@ -2021,23 +2021,23 @@
   },
   {
     "slide": 14,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_14/page-marker-cover.png",
+    "path": "layers/slide_14/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 14,
@@ -2047,8 +2047,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_14/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -2056,7 +2056,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "83783528ffafded1a59801ad9693c0eb167da69d84abbbf20c67cd2c1c937225"
   },
   {
@@ -2141,23 +2141,23 @@
   },
   {
     "slide": 15,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_15/page-marker-cover.png",
+    "path": "layers/slide_15/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 15,
@@ -2167,8 +2167,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_15/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -2176,7 +2176,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "b4ac278ab3eabfa9d1c067bc8ae230e4049140f5b9aae3982c99318442d3a342"
   },
   {
@@ -2301,23 +2301,23 @@
   },
   {
     "slide": 16,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_16/page-marker-cover.png",
+    "path": "layers/slide_16/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 16,
@@ -2327,8 +2327,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_16/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -2336,7 +2336,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "91a4c6be6685993331f2a7427aeeb0d1e592836b0b645558fe14973695539fac"
   },
   {
@@ -2401,23 +2401,23 @@
   },
   {
     "slide": 17,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_17/page-marker-cover.png",
+    "path": "layers/slide_17/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 17,
@@ -2427,8 +2427,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_17/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -2436,7 +2436,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "ab2100ddda17037cd57c1f31b6a978a590a08cef4239a1a8347ee453da501f23"
   },
   {
@@ -2501,23 +2501,23 @@
   },
   {
     "slide": 18,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_18/page-marker-cover.png",
+    "path": "layers/slide_18/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 18,
@@ -2527,8 +2527,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_18/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -2536,7 +2536,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "41e5fccd9c8ada7e6e8bde2dc7e4f76c9cbe713e9f34a8bb5aff2f58a9459fde"
   },
   {
@@ -2641,23 +2641,23 @@
   },
   {
     "slide": 19,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_19/page-marker-cover.png",
+    "path": "layers/slide_19/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 19,
@@ -2667,8 +2667,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_19/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -2676,7 +2676,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "c60f4de1036e263f276a5d3f90d2420f74a52f9e3a7ee9b82bde2cd061910675"
   },
   {
@@ -2821,23 +2821,23 @@
   },
   {
     "slide": 20,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_20/page-marker-cover.png",
+    "path": "layers/slide_20/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 20,
@@ -2847,8 +2847,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_20/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -2856,7 +2856,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "6df84c7b672b1ce5ac51baf7117898732af0c3fb6af246701fa899dffca0b590"
   },
   {
@@ -2981,23 +2981,23 @@
   },
   {
     "slide": 21,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_21/page-marker-cover.png",
+    "path": "layers/slide_21/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 21,
@@ -3007,8 +3007,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_21/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -3016,7 +3016,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "c0b54c8646aaf5e29ba331ad9ec9ee5e03277f09f9fae6ee233559e8a532d4a0"
   },
   {
@@ -3081,23 +3081,23 @@
   },
   {
     "slide": 22,
-    "id": "page-marker-cover",
-    "name": "page-marker-cover",
+    "id": "legacy-page-marker-cover",
+    "name": "legacy-page-marker-cover",
     "type": "image",
     "source": "generated_background",
-    "path": "layers/slide_22/page-marker-cover.png",
+    "path": "layers/slide_22/legacy-page-marker-cover.png",
     "bbox": {
-      "x": 86,
-      "y": 121,
-      "w": 160,
-      "h": 48
+      "x": 1688,
+      "y": 1010,
+      "w": 180,
+      "h": 58
     },
     "z": 21,
     "editable": false,
     "role": "repair_patch",
     "source_asset": "",
-    "notes": "Covers old page marker before applying v6 page number.",
-    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+    "notes": "Covers legacy lower-right page marker from reused v4 mother art or generated mother text.",
+    "sha256": "16f33a44b4a8adcbc86e0f4b51ef7216683fafa87af659c3ef4fd11f53a09853"
   },
   {
     "slide": 22,
@@ -3107,8 +3107,8 @@
     "source": "generated_decoration",
     "path": "layers/slide_22/page-marker-bg.png",
     "bbox": {
-      "x": 92,
-      "y": 118,
+      "x": 1688,
+      "y": 1010,
       "w": 180,
       "h": 52
     },
@@ -3116,7 +3116,7 @@
     "editable": false,
     "role": "page_marker",
     "source_asset": "",
-    "notes": "Rendered v6 page marker.",
+    "notes": "Rendered v6 page marker over the repaired lower-right marker area.",
     "sha256": "b459296512c8f490b12e791e8cd8ff0b631e5e78890468ae19e68920c567ab41"
   }
 ]

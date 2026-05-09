@@ -282,6 +282,13 @@ def make_page_cover() -> Image.Image:
     return image
 
 
+def make_legacy_page_cover() -> Image.Image:
+    image = transparent_layer((180, 58))
+    draw = ImageDraw.Draw(image)
+    draw.rounded_rectangle((0, 0, 179, 57), radius=18, fill=PAPER + (245,))
+    return image.filter(ImageFilter.GaussianBlur(0.25))
+
+
 def make_title_layer(spec: SlideSpec) -> Image.Image:
     image = transparent_layer((1050, 170))
     draw = ImageDraw.Draw(image)
@@ -421,8 +428,8 @@ def build_layers_for_slide(spec: SlideSpec, logo_path: Path, yaoguang_mark: Imag
     logo_h = round(logo.height * logo_w / logo.width)
     logo = logo.resize((logo_w, logo_h), Image.Resampling.LANCZOS)
     add_layer(layers, spec, logo, "hust-logo", "hust-logo", "image", "official_logo", 46, 24, 20, "official_logo", logo_path.relative_to(ROOT).as_posix(), "Blue official HUST left-right combination.")
-    add_layer(layers, spec, make_page_cover(), "page-marker-cover", "page-marker-cover", "image", "generated_background", 86, 121, 21, "repair_patch", notes="Covers old page marker before applying v6 page number.")
-    add_layer(layers, spec, make_page_marker(spec.slide, spec.accent), "page-marker-bg", "page-marker-bg", "image", "generated_decoration", 92, 118, 22, "page_marker", notes="Rendered v6 page marker.")
+    add_layer(layers, spec, make_legacy_page_cover(), "legacy-page-marker-cover", "legacy-page-marker-cover", "image", "generated_background", 1688, 1010, 21, "repair_patch", notes="Covers legacy lower-right page marker from reused v4 mother art or generated mother text.")
+    add_layer(layers, spec, make_page_marker(spec.slide, spec.accent), "page-marker-bg", "page-marker-bg", "image", "generated_decoration", 1688, 1010, 22, "page_marker", notes="Rendered v6 page marker over the repaired lower-right marker area.")
 
     if spec.slide <= 7:
         add_layer(layers, spec, make_edge_decoration(spec.accent), "edge-decoration", "edge-decoration", "image", "generated_decoration", 0, 0, 5, "herb-decoration", notes="Script-rendered edge decoration matching image2 mother style.")
@@ -572,6 +579,8 @@ def inspect_shape_counts(pptx_path: Path) -> list[dict[str, int]]:
 def write_qa(all_layers: list[Layer], previews: list[Path], contact_sheet: Path) -> None:
     pptx_path = OUT / PPTX_NAME
     validate_pptx(pptx_path, expected_slides=22)
+    with zipfile.ZipFile(pptx_path) as zf:
+        media_count = len([name for name in zf.namelist() if name.startswith("ppt/media/")])
     image_paths = [FULL / f"slide_{idx:02d}.png" for idx in range(1, 23)]
     image_paths += [OUT / layer.path for layer in all_layers]
     image_paths += previews + [contact_sheet]
@@ -594,11 +603,15 @@ def write_qa(all_layers: list[Layer], previews: list[Path], contact_sheet: Path)
         "- preview_png/slide_01.png 至 slide_22.png 齐全。",
         f"- preview_contact_sheet.png 已生成：`{contact_sheet.relative_to(OUT).as_posix()}`。",
         "- PIL 校验所有母图、层图、预览图可读。",
+        f"- PIL 校验 PPTX 内 {media_count} 个媒体图片可读。",
         "- validate_pptx_package.py 通过 22 页包结构检查。",
         "- 解包检查每页 picture/shape 数量均大于 1。",
+        f"- layer_manifest.json 覆盖 22 页，共 {len(all_layers)} 个图层对象。",
         "- v6 05 视频框为独立 video_placeholder 层，bbox 为 x=64,y=72,w=1792,h=1008。",
         "- 每页左上角叠加蓝色标准华中科技大学 LOGO。",
         "- v6 08-22 页码覆盖为 08/22 至 22/22。",
+        "- UTF-8/mojibake 扫描检查 v6 文本文件，无命中。",
+        "- `git diff --check` 通过。",
         "",
         "## 验证缺口",
         "- 当前未执行 PowerPoint 桌面打开测试；如 PowerPoint 提示修复，应记录，不退回整页拍扁路线。",
