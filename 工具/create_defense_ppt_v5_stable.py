@@ -298,11 +298,15 @@ def rounded_picture(
 
 def parchment_background(accent: tuple[int, int, int] = GREEN) -> Image.Image:
     base = Image.new("RGB", (PX_W, PX_H), CREAM)
-    noise = Image.effect_noise((PX_W, PX_H), 13).convert("L")
-    texture = Image.new("RGB", (PX_W, PX_H), (236, 225, 203))
-    base = Image.composite(texture, base, noise.point(lambda p: 95 if p > 140 else 0))
     overlay = Image.new("RGBA", (PX_W, PX_H), (255, 255, 255, 0))
     draw = ImageDraw.Draw(overlay)
+    # Deterministic paper speckles keep reruns from churning large PNG outputs.
+    for i in range(6200):
+        x = (i * 97 + 41) % PX_W
+        y = (i * 193 + 17) % PX_H
+        alpha = 12 + (i * 7) % 18
+        color = (188, 171, 138, alpha) if i % 3 else (255, 255, 255, alpha)
+        draw.point((x, y), fill=color)
     for shift, color, width in [(0, RED, 28), (48, GOLD, 18), (92, accent, 20)]:
         draw.arc((-260 + shift, 650, 1180 + shift, 1420), 198, 350, fill=(*color, 42), width=width)
         draw.arc((875 - shift, -240, 2260 - shift, 485), 14, 178, fill=(*color, 36), width=width)
@@ -355,8 +359,12 @@ def prepare_assets() -> dict[str, Path]:
 
 def draw_header(canvas: Image.Image, title: str, subtitle: str, no: int, accent: tuple[int, int, int] = GREEN) -> None:
     draw = ImageDraw.Draw(canvas)
-    draw.rounded_rectangle((118, 66, 250, 98), radius=16, fill=(*accent, 220))
-    draw.text((142, 70), f"{no:02d}/22", font=font(22), fill=(255, 250, 235))
+    logo = V4 / "source_assets" / "hust_logo_official_layer.png"
+    if logo.exists():
+        logo_im = Image.open(logo).convert("RGBA").resize((260, 61), Image.Resampling.LANCZOS)
+        canvas.alpha_composite(logo_im, (42, 22))
+    draw.rounded_rectangle((328, 43, 462, 77), radius=17, fill=(*accent, 220))
+    draw.text((352, 48), f"{no:02d}/22", font=font(22), fill=(255, 250, 235))
     draw.text((118, 122), title, font=font(66, "hei"), fill=accent)
     if subtitle:
         draw.text((122, 206), subtitle, font=font(30), fill=MUTED)
@@ -546,6 +554,13 @@ def make_slide_17(mark: Path, merch: Path) -> tuple[Path, Path, list[Element]]:
     draw_header(bg, "瑶光文创延展", "参考实物形态，后期贴入瑶光与主题元素", slide_no, GREEN)
     rounded_picture(bg, merch, (95, 250, 1120, 655), radius=38, mode="cover")
     draw = ImageDraw.Draw(bg)
+    draw.text((300, 548), "光药医路", font=font(48, "hei"), fill=GREEN)
+    draw.text((332, 610), "YAO GUANG", font=font(24), fill=GOLD)
+    small_mark = Image.open(mark).convert("RGBA").resize((92, 92), Image.Resampling.LANCZOS)
+    small_mark.putalpha(small_mark.getchannel("A").point(lambda p: int(p * 0.88)))
+    bg.alpha_composite(small_mark, (692, 492))
+    bg.alpha_composite(small_mark.resize((72, 72), Image.Resampling.LANCZOS), (666, 658))
+    draw.text((882, 358), "本草日历", font=font(31, "hei"), fill=RED)
     draw.rounded_rectangle((1265, 250, 1765, 905), radius=44, fill=(255, 252, 240, 232), outline=GOLD, width=4)
     draw.text((1320, 292), "从活动现场", font=font(42, "hei"), fill=GREEN)
     draw.text((1320, 350), "走进日常生活", font=font(42, "hei"), fill=RED)
@@ -562,6 +577,7 @@ def make_slide_17(mark: Path, merch: Path) -> tuple[Path, Path, list[Element]]:
     elements: list[Element] = []
     register(elements, slide_no, "background", "image", "generated_background", (0, 0, PX_W, PX_H), 0, False)
     register(elements, slide_no, "merch-base", "image", "ai_generated_product_mockup", (95, 250, 1120, 655), 5, False)
+    register(elements, slide_no, "merch-theme-overlay", "text_image_group", "native", (300, 548, 585, 190), 9, True, "光药医路 / YAO GUANG / 本草日历")
     register(elements, slide_no, "yaoguang-mark", "image", "reference_asset", (1080, 650, 160, 160), 10, False)
     register(elements, slide_no, "text-panel", "shape_text_group", "native", (1265, 250, 500, 655), 12, True, body)
     preview = PREVIEW / "slide_17.png"
@@ -729,7 +745,8 @@ def add_native_slide_content(slide: Any, no: int, bg_path: Path, asset_map: dict
 
     data = SLIDE_TEXT[no - 1]
     accent = RED if no in [18, 22] else GOLD if no in [17, 20] else GREEN
-    add_text(slide, f"{no:02d}/22", (142, 70, 90, 28), 12, (255, 250, 235), name="header-slide-number", align=PP_ALIGN.CENTER)
+    add_round_rect(slide, (328, 43, 134, 34), accent, accent, "header-slide-number-bg", 0)
+    add_text(slide, f"{no:02d}/22", (352, 48, 86, 24), 12, (255, 250, 235), name="header-slide-number", align=PP_ALIGN.CENTER)
     add_text(slide, data.title, (118, 122, 760, 86), 36, accent, True, "title")
     add_text(slide, data.subtitle, (122, 205, 900, 44), 17, MUTED, False, "subtitle")
     if no == 16:
@@ -748,6 +765,11 @@ def add_native_slide_content(slide: Any, no: int, bg_path: Path, asset_map: dict
             add_text(slide, body, (x + 28, y + 54, w - 56, 28), 13, MUTED, False, f"concept-{idx}-body")
     elif no == 17:
         add_picture_box(slide, asset_map["merch_base"], (95, 250, 1120, 655), "merch-base")
+        add_text(slide, "光药医路", (300, 548, 260, 58), 25, GREEN, True, "merch-notebook-title")
+        add_text(slide, "YAO GUANG", (332, 610, 180, 34), 13, GOLD, False, "merch-notebook-en")
+        add_picture_box(slide, asset_map["yaoguang_mark"], (692, 492, 92, 92), "merch-badge-mark")
+        add_picture_box(slide, asset_map["yaoguang_mark"], (666, 658, 72, 72), "merch-keychain-mark")
+        add_text(slide, "本草日历", (882, 358, 190, 42), 17, RED, True, "merch-calendar-title")
         add_round_rect(slide, (1265, 250, 500, 655), (255, 252, 240), GOLD, "text-panel", 8)
         add_text(slide, "从活动现场\n走进日常生活", (1320, 292, 380, 120), 23, GREEN, True, "panel-headline")
         add_text(
@@ -830,6 +852,8 @@ def fix_app_slide_count(pptx_path: Path, slide_count: int) -> None:
     with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
         for name, data in parts.items():
             zout.writestr(name, data)
+    if pptx_path.exists():
+        pptx_path.unlink()
     tmp.replace(pptx_path)
 
 

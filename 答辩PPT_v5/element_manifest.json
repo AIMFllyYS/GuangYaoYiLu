@@ -792,6 +792,21 @@
   },
   {
     "slide": 17,
+    "id": "merch-theme-overlay",
+    "type": "text_image_group",
+    "source": "native",
+    "bbox": {
+      "x": 300,
+      "y": 548,
+      "w": 585,
+      "h": 190
+    },
+    "z": 9,
+    "editable": true,
+    "text": "光药医路 / YAO GUANG / 本草日历"
+  },
+  {
+    "slide": 17,
     "id": "yaoguang-mark",
     "type": "image",
     "source": "reference_asset",
