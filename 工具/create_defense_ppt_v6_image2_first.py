@@ -506,7 +506,31 @@ def build_pptx(all_layers: list[Layer]) -> None:
             h = layer.bbox["h"] / PX_H * SLIDE_H_IN
             shape = slide.shapes.add_picture(str(OUT / layer.path), Inches(x), Inches(y), width=Inches(w), height=Inches(h))
             shape.name = layer.layer_id
-    prs.save(OUT / PPTX_NAME)
+    out = OUT / PPTX_NAME
+    prs.save(out)
+    fix_app_slide_count(out, 22)
+
+
+def fix_app_slide_count(pptx_path: Path, slide_count: int) -> None:
+    """python-pptx can leave docProps/app.xml Slides at 0; keep metadata honest."""
+    app_name = "docProps/app.xml"
+    ns = {"ep": "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"}
+    with zipfile.ZipFile(pptx_path, "r") as zin:
+        parts = {name: zin.read(name) for name in zin.namelist()}
+    if app_name not in parts:
+        return
+    root = ET.fromstring(parts[app_name])
+    slides = root.find("ep:Slides", ns)
+    if slides is not None:
+        slides.text = str(slide_count)
+        parts[app_name] = ET.tostring(root, encoding="utf-8", xml_declaration=True)
+    tmp = pptx_path.with_suffix(".tmp.pptx")
+    with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
+        for name, data in parts.items():
+            zout.writestr(name, data)
+    if pptx_path.exists():
+        pptx_path.unlink()
+    tmp.replace(pptx_path)
 
 
 def make_contact_sheet(previews: list[Path]) -> Path:
