@@ -646,6 +646,20 @@
   },
   {
     "slide": 16,
+    "id": "composite-slide",
+    "type": "image",
+    "source": "v5_composite_preview",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 16,
     "id": "background",
     "type": "image",
     "source": "generated_background",
@@ -764,6 +778,20 @@
   },
   {
     "slide": 17,
+    "id": "composite-slide",
+    "type": "image",
+    "source": "v5_composite_preview",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 17,
     "id": "background",
     "type": "image",
     "source": "generated_background",
@@ -836,6 +864,20 @@
   },
   {
     "slide": 18,
+    "id": "composite-slide",
+    "type": "image",
+    "source": "v5_composite_preview",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 18,
     "id": "background",
     "type": "image",
     "source": "generated_background",
@@ -891,6 +933,20 @@
     "z": 11,
     "editable": true,
     "text": "宣传文案把活动包装成一场“同济杏林之约”：有兔子战队、有行动坐标、有游戏任务，也有幸运奖品。它让传统文化先以年轻、轻快、可转发的方式抵达同学。"
+  },
+  {
+    "slide": 19,
+    "id": "composite-slide",
+    "type": "image",
+    "source": "v5_composite_preview",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
   },
   {
     "slide": 19,
@@ -983,6 +1039,20 @@
   },
   {
     "slide": 20,
+    "id": "composite-slide",
+    "type": "image",
+    "source": "v5_composite_preview",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 20,
     "id": "background",
     "type": "image",
     "source": "generated_background",
@@ -1026,6 +1096,20 @@
   },
   {
     "slide": 21,
+    "id": "composite-slide",
+    "type": "image",
+    "source": "v5_composite_preview",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 21,
     "id": "background",
     "type": "image",
     "source": "generated_background",
@@ -1065,6 +1149,20 @@
       "h": 150
     },
     "z": 9,
+    "editable": false
+  },
+  {
+    "slide": 22,
+    "id": "composite-slide",
+    "type": "image",
+    "source": "v5_composite_preview",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
     "editable": false
   },
   {

@@ -11,6 +11,7 @@ elements as native PowerPoint shapes/text/pictures where practical.
 import hashlib
 import json
 import shutil
+import tempfile
 import zipfile
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -701,7 +702,8 @@ def build_preview_and_assets(asset_map: dict[str, Path]) -> tuple[list[Path], di
         preview, bg, slide_elements = fn()
         previews.append(preview)
         no = int(preview.stem.split("_")[1])
-        bg_assets[no] = bg
+        bg_assets[no] = preview
+        register(elements, no, "composite-slide", "image", "v5_composite_preview", (0, 0, PX_W, PX_H), 0, False)
         elements.extend(slide_elements)
     return previews, bg_assets, elements
 
@@ -735,6 +737,8 @@ def save_pdf(previews: list[Path]) -> Path:
 
 def add_native_slide_content(slide: Any, no: int, bg_path: Path, asset_map: dict[str, Path]) -> list[Element]:
     add_full_slide_picture(slide, bg_path, "background")
+    if no >= 16:
+        return []
     add_picture_box(slide, asset_map["hust_logo"], (42, 22, 260, 61), "hust-logo")
     if no <= 15:
         add_picture_box(slide, asset_map["yaoguang_mark"], (1702, 780, 118, 118), "yaoguang-mark")
@@ -830,8 +834,16 @@ def write_pptx(bg_assets: dict[int, Path], asset_map: dict[str, Path]) -> Path:
         slide = prs.slides.add_slide(blank)
         add_native_slide_content(slide, no, bg_assets[no], asset_map)
     out = OUT / PPTX_NAME
-    prs.save(out)
-    fix_app_slide_count(out, 22)
+    tmp_dir = Path(tempfile.gettempdir())
+    tmp_out = tmp_dir / "guangyaoyilu_v5_build_tmp.pptx"
+    if tmp_out.exists():
+        tmp_out.unlink()
+    prs.save(str(tmp_out))
+    fix_app_slide_count(tmp_out, 22)
+    if out.exists():
+        out.unlink()
+    shutil.copy2(tmp_out, out)
+    tmp_out.unlink()
     return out
 
 
