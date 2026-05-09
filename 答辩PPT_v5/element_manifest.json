@@ -1,0 +1,1098 @@
+[
+  {
+    "slide": 1,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 1,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 1,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "01/22"
+  },
+  {
+    "slide": 2,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 2,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 2,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "02/22"
+  },
+  {
+    "slide": 3,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 3,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 3,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "03/22"
+  },
+  {
+    "slide": 4,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 4,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 4,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "04/22"
+  },
+  {
+    "slide": 5,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 5,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 5,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "05/22"
+  },
+  {
+    "slide": 6,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 6,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 6,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "06/22"
+  },
+  {
+    "slide": 7,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 7,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 7,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "07/22"
+  },
+  {
+    "slide": 8,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 8,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 8,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "08/22"
+  },
+  {
+    "slide": 9,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 9,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 9,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "09/22"
+  },
+  {
+    "slide": 10,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 10,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 10,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "10/22"
+  },
+  {
+    "slide": 11,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 11,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 11,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "11/22"
+  },
+  {
+    "slide": 12,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 12,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 12,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "12/22"
+  },
+  {
+    "slide": 13,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 13,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 13,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "13/22"
+  },
+  {
+    "slide": 14,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 14,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 14,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "14/22"
+  },
+  {
+    "slide": 15,
+    "id": "background",
+    "type": "image",
+    "source": "v4_visual_reference",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 15,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1702,
+      "y": 780,
+      "w": 118,
+      "h": 118
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 15,
+    "id": "page-marker",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 1762,
+      "y": 1020,
+      "w": 85,
+      "h": 28
+    },
+    "z": 6,
+    "editable": true,
+    "text": "15/22"
+  },
+  {
+    "slide": 16,
+    "id": "background",
+    "type": "image",
+    "source": "generated_background",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 16,
+    "id": "title",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 118,
+      "y": 122,
+      "w": 720,
+      "h": 78
+    },
+    "z": 5,
+    "editable": true,
+    "text": "瑶光角色解构"
+  },
+  {
+    "slide": 16,
+    "id": "yaoguang-character",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 120,
+      "y": 260,
+      "w": 560,
+      "h": 720
+    },
+    "z": 6,
+    "editable": false
+  },
+  {
+    "slide": 16,
+    "id": "concept-1",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 795,
+      "y": 275,
+      "w": 760,
+      "h": 90
+    },
+    "z": 11,
+    "editable": true,
+    "text": "白色实验袍：现代医学、实验精神与专业可信度"
+  },
+  {
+    "slide": 16,
+    "id": "concept-2",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 920,
+      "y": 410,
+      "w": 760,
+      "h": 90
+    },
+    "z": 12,
+    "editable": true,
+    "text": "红色中式内衫：承接思政红，也把传统文化穿在身上"
+  },
+  {
+    "slide": 16,
+    "id": "concept-3",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 795,
+      "y": 545,
+      "w": 760,
+      "h": 90
+    },
+    "z": 13,
+    "editable": true,
+    "text": "绿色腰带与药壶：药草绿主线，指向中医药文化生命力"
+  },
+  {
+    "slide": 16,
+    "id": "concept-4",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 1020,
+      "y": 680,
+      "w": 680,
+      "h": 90
+    },
+    "z": 14,
+    "editable": true,
+    "text": "发簪透镜：光电专业技术视角，连接观测与创新"
+  },
+  {
+    "slide": 16,
+    "id": "concept-5",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 795,
+      "y": 815,
+      "w": 760,
+      "h": 90
+    },
+    "z": 15,
+    "editable": true,
+    "text": "银杏 / DNA 纹样：本草意象与基础医学理解同框出现"
+  },
+  {
+    "slide": 17,
+    "id": "background",
+    "type": "image",
+    "source": "generated_background",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 17,
+    "id": "merch-base",
+    "type": "image",
+    "source": "ai_generated_product_mockup",
+    "bbox": {
+      "x": 95,
+      "y": 250,
+      "w": 1120,
+      "h": 655
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 17,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1080,
+      "y": 650,
+      "w": 160,
+      "h": 160
+    },
+    "z": 10,
+    "editable": false
+  },
+  {
+    "slide": 17,
+    "id": "text-panel",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 1265,
+      "y": 250,
+      "w": 500,
+      "h": 655
+    },
+    "z": 12,
+    "editable": true,
+    "text": "文创不直接照搬参考图中的图案，而是保留产品形态：本子、日历、徽章、钥匙扣、卡套和笔。最终贴入瑶光、光药医路与三色成长弧，让活动记忆可携带、可展示、可交换。"
+  },
+  {
+    "slide": 18,
+    "id": "background",
+    "type": "image",
+    "source": "generated_background",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 18,
+    "id": "promo-post",
+    "type": "image",
+    "source": "source_asset",
+    "bbox": {
+      "x": 110,
+      "y": 250,
+      "w": 620,
+      "h": 640
+    },
+    "z": 5,
+    "editable": false
+  },
+  {
+    "slide": 18,
+    "id": "headline",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 820,
+      "y": 305,
+      "w": 820,
+      "h": 145
+    },
+    "z": 10,
+    "editable": true,
+    "text": "无需穿越时空 / 在校园亲手触碰千年本草"
+  },
+  {
+    "slide": 18,
+    "id": "promo-summary",
+    "type": "text",
+    "source": "native",
+    "bbox": {
+      "x": 825,
+      "y": 510,
+      "w": 820,
+      "h": 190
+    },
+    "z": 11,
+    "editable": true,
+    "text": "宣传文案把活动包装成一场“同济杏林之约”：有兔子战队、有行动坐标、有游戏任务，也有幸运奖品。它让传统文化先以年轻、轻快、可转发的方式抵达同学。"
+  },
+  {
+    "slide": 19,
+    "id": "background",
+    "type": "image",
+    "source": "generated_background",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 19,
+    "id": "game-1",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 145,
+      "y": 280,
+      "w": 700,
+      "h": 215
+    },
+    "z": 5,
+    "editable": true,
+    "text": "望色辨证：观察药液色彩，引入中医观察思维"
+  },
+  {
+    "slide": 19,
+    "id": "game-2",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 980,
+      "y": 280,
+      "w": 700,
+      "h": 215
+    },
+    "z": 6,
+    "editable": true,
+    "text": "草色通真：辨认药材图样，解锁本草知识"
+  },
+  {
+    "slide": 19,
+    "id": "game-3",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 145,
+      "y": 565,
+      "w": 700,
+      "h": 215
+    },
+    "z": 7,
+    "editable": true,
+    "text": "捣药闻香：研磨药材，感受药香与古法技艺"
+  },
+  {
+    "slide": 19,
+    "id": "game-4",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 980,
+      "y": 565,
+      "w": 700,
+      "h": 215
+    },
+    "z": 8,
+    "editable": true,
+    "text": "分两入毫：挑战药秤称量，体验慎于分量"
+  },
+  {
+    "slide": 19,
+    "id": "reward-bar",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 390,
+      "y": 870,
+      "w": 1140,
+      "h": 85
+    },
+    "z": 14,
+    "editable": true,
+    "text": "积分挑战 · 现场引导 · 100%中奖"
+  },
+  {
+    "slide": 20,
+    "id": "background",
+    "type": "image",
+    "source": "generated_background",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 20,
+    "id": "video-placeholder",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 230,
+      "y": 260,
+      "w": 1460,
+      "h": 615
+    },
+    "z": 5,
+    "editable": true,
+    "text": "预留视频插入区域"
+  },
+  {
+    "slide": 20,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1575,
+      "y": 705,
+      "w": 150,
+      "h": 150
+    },
+    "z": 9,
+    "editable": false
+  },
+  {
+    "slide": 21,
+    "id": "background",
+    "type": "image",
+    "source": "generated_background",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 21,
+    "id": "video-placeholder",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 230,
+      "y": 260,
+      "w": 1460,
+      "h": 615
+    },
+    "z": 5,
+    "editable": true,
+    "text": "预留视频插入区域"
+  },
+  {
+    "slide": 21,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1575,
+      "y": 705,
+      "w": 150,
+      "h": 150
+    },
+    "z": 9,
+    "editable": false
+  },
+  {
+    "slide": 22,
+    "id": "background",
+    "type": "image",
+    "source": "generated_background",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false
+  },
+  {
+    "slide": 22,
+    "id": "video-placeholder",
+    "type": "shape_text_group",
+    "source": "native",
+    "bbox": {
+      "x": 230,
+      "y": 260,
+      "w": 1460,
+      "h": 615
+    },
+    "z": 5,
+    "editable": true,
+    "text": "预留视频插入区域"
+  },
+  {
+    "slide": 22,
+    "id": "yaoguang-mark",
+    "type": "image",
+    "source": "reference_asset",
+    "bbox": {
+      "x": 1575,
+      "y": 705,
+      "w": 150,
+      "h": 150
+    },
+    "z": 9,
+    "editable": false
+  }
+]
