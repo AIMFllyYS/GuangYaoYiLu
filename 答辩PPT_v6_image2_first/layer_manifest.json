@@ -1,0 +1,3122 @@
+[
+  {
+    "slide": 1,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "new_image2",
+    "path": "layers/slide_01/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_01.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "4618801aea2dd9d953df1f08bde8c39abeaefe2a554abe98a16190d33bcb846e"
+  },
+  {
+    "slide": 1,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_01/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 1,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_01/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 1,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_01/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 1,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_01/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "b92f7812bbdbf0811345670d0a0b0f7d259a4c20123b686986fb32de527f701a"
+  },
+  {
+    "slide": 1,
+    "id": "edge-decoration",
+    "name": "edge-decoration",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_01/edge-decoration.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 5,
+    "editable": false,
+    "role": "herb-decoration",
+    "source_asset": "",
+    "notes": "Script-rendered edge decoration matching image2 mother style.",
+    "sha256": "efc14c5f4dd78bd30939fedcd2789116e8988249dd94a74a6ba060e39d5e2994"
+  },
+  {
+    "slide": 1,
+    "id": "title-art",
+    "name": "title-art",
+    "type": "image",
+    "source": "script_rendered_text_layer",
+    "path": "layers/slide_01/title-art.png",
+    "bbox": {
+      "x": 126,
+      "y": 62,
+      "w": 1050,
+      "h": 170
+    },
+    "z": 23,
+    "editable": false,
+    "role": "generated_text_image_layer",
+    "source_asset": "",
+    "notes": "Editable source text is recorded in text_manifest; this rendered layer is not native editable text.",
+    "sha256": "128a628fbbe6e01d81f89657a234f170b088c8229851f3b75dbe5a79c2885a26"
+  },
+  {
+    "slide": 1,
+    "id": "yaoguang-slot",
+    "name": "yaoguang-slot",
+    "type": "image",
+    "source": "yaoguang_character",
+    "path": "layers/slide_01/yaoguang-slot.png",
+    "bbox": {
+      "x": 1648,
+      "y": 780,
+      "w": 132,
+      "h": 132
+    },
+    "z": 26,
+    "editable": false,
+    "role": "yaoguang_character",
+    "source_asset": "瑶光文创/瑶光-3.jpg",
+    "notes": "Independent yaoguang visual clue layer.",
+    "sha256": "3f6f854a085dbec76622bc8ed4153855cebc82d26ff264e62928c2df9eb41cdd"
+  },
+  {
+    "slide": 2,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "new_image2",
+    "path": "layers/slide_02/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_02.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "f781d73d15ef9a7d179f893c9b4fb8677a3bc6aa45b566c6d9ecfe81b08430e5"
+  },
+  {
+    "slide": 2,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_02/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 2,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_02/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 2,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_02/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 2,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_02/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "2561476ee7475ba5b4a8dca435d0bf4d413df85685f5d51e4bc318d7733bf94f"
+  },
+  {
+    "slide": 2,
+    "id": "edge-decoration",
+    "name": "edge-decoration",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_02/edge-decoration.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 5,
+    "editable": false,
+    "role": "herb-decoration",
+    "source_asset": "",
+    "notes": "Script-rendered edge decoration matching image2 mother style.",
+    "sha256": "87ff5884ef65e01e68bcdbaecd9f1fe9656a2031ae07aa179c4ca559126fb26f"
+  },
+  {
+    "slide": 2,
+    "id": "title-art",
+    "name": "title-art",
+    "type": "image",
+    "source": "script_rendered_text_layer",
+    "path": "layers/slide_02/title-art.png",
+    "bbox": {
+      "x": 126,
+      "y": 62,
+      "w": 1050,
+      "h": 170
+    },
+    "z": 23,
+    "editable": false,
+    "role": "generated_text_image_layer",
+    "source_asset": "",
+    "notes": "Editable source text is recorded in text_manifest; this rendered layer is not native editable text.",
+    "sha256": "d0f3beb0fddff05ac6854bff91b03a31465eac6c19663e16910e3b150a10903b"
+  },
+  {
+    "slide": 2,
+    "id": "yaoguang-slot",
+    "name": "yaoguang-slot",
+    "type": "image",
+    "source": "yaoguang_character",
+    "path": "layers/slide_02/yaoguang-slot.png",
+    "bbox": {
+      "x": 1648,
+      "y": 780,
+      "w": 132,
+      "h": 132
+    },
+    "z": 26,
+    "editable": false,
+    "role": "yaoguang_character",
+    "source_asset": "瑶光文创/瑶光-3.jpg",
+    "notes": "Independent yaoguang visual clue layer.",
+    "sha256": "3f6f854a085dbec76622bc8ed4153855cebc82d26ff264e62928c2df9eb41cdd"
+  },
+  {
+    "slide": 3,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "new_image2",
+    "path": "layers/slide_03/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_03.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "36d2b523fe7739a6bcd1be15210c2161a2c03b38816827a553268ffe91201f3c"
+  },
+  {
+    "slide": 3,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_03/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 3,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_03/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 3,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_03/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 3,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_03/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "bbf28bd6814edc9d5727730a6c55725e9d3cc104b945371bc208dc79477fdba9"
+  },
+  {
+    "slide": 3,
+    "id": "edge-decoration",
+    "name": "edge-decoration",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_03/edge-decoration.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 5,
+    "editable": false,
+    "role": "herb-decoration",
+    "source_asset": "",
+    "notes": "Script-rendered edge decoration matching image2 mother style.",
+    "sha256": "efc14c5f4dd78bd30939fedcd2789116e8988249dd94a74a6ba060e39d5e2994"
+  },
+  {
+    "slide": 3,
+    "id": "title-art",
+    "name": "title-art",
+    "type": "image",
+    "source": "script_rendered_text_layer",
+    "path": "layers/slide_03/title-art.png",
+    "bbox": {
+      "x": 126,
+      "y": 62,
+      "w": 1050,
+      "h": 170
+    },
+    "z": 23,
+    "editable": false,
+    "role": "generated_text_image_layer",
+    "source_asset": "",
+    "notes": "Editable source text is recorded in text_manifest; this rendered layer is not native editable text.",
+    "sha256": "24de80e6bad7a6b7586397732494ad75b76179d09806245cd5b1f487da32d692"
+  },
+  {
+    "slide": 3,
+    "id": "yaoguang-slot",
+    "name": "yaoguang-slot",
+    "type": "image",
+    "source": "yaoguang_character",
+    "path": "layers/slide_03/yaoguang-slot.png",
+    "bbox": {
+      "x": 1648,
+      "y": 780,
+      "w": 132,
+      "h": 132
+    },
+    "z": 26,
+    "editable": false,
+    "role": "yaoguang_character",
+    "source_asset": "瑶光文创/瑶光-3.jpg",
+    "notes": "Independent yaoguang visual clue layer.",
+    "sha256": "3f6f854a085dbec76622bc8ed4153855cebc82d26ff264e62928c2df9eb41cdd"
+  },
+  {
+    "slide": 4,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "new_image2",
+    "path": "layers/slide_04/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_04.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "0cd0aa4157a95e82fd5fb040796cfc044fdac26e3f3bf23db9cc68027930a454"
+  },
+  {
+    "slide": 4,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_04/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 4,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_04/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 4,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_04/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 4,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_04/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "383acc7c3c147f883f5ddbaeb89993f5968ba7ea12803f29d27b015aa6369c05"
+  },
+  {
+    "slide": 4,
+    "id": "edge-decoration",
+    "name": "edge-decoration",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_04/edge-decoration.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 5,
+    "editable": false,
+    "role": "herb-decoration",
+    "source_asset": "",
+    "notes": "Script-rendered edge decoration matching image2 mother style.",
+    "sha256": "87ff5884ef65e01e68bcdbaecd9f1fe9656a2031ae07aa179c4ca559126fb26f"
+  },
+  {
+    "slide": 4,
+    "id": "title-art",
+    "name": "title-art",
+    "type": "image",
+    "source": "script_rendered_text_layer",
+    "path": "layers/slide_04/title-art.png",
+    "bbox": {
+      "x": 126,
+      "y": 62,
+      "w": 1050,
+      "h": 170
+    },
+    "z": 23,
+    "editable": false,
+    "role": "generated_text_image_layer",
+    "source_asset": "",
+    "notes": "Editable source text is recorded in text_manifest; this rendered layer is not native editable text.",
+    "sha256": "2ebae17e044eb2ee52b722b7f2d93480750a4c904c79bf0026b9409ce314c448"
+  },
+  {
+    "slide": 4,
+    "id": "yaoguang-slot",
+    "name": "yaoguang-slot",
+    "type": "image",
+    "source": "yaoguang_character",
+    "path": "layers/slide_04/yaoguang-slot.png",
+    "bbox": {
+      "x": 1648,
+      "y": 780,
+      "w": 132,
+      "h": 132
+    },
+    "z": 26,
+    "editable": false,
+    "role": "yaoguang_character",
+    "source_asset": "瑶光文创/瑶光-3.jpg",
+    "notes": "Independent yaoguang visual clue layer.",
+    "sha256": "3f6f854a085dbec76622bc8ed4153855cebc82d26ff264e62928c2df9eb41cdd"
+  },
+  {
+    "slide": 4,
+    "id": "merch-product-base",
+    "name": "merch-product-base",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_04/merch-product-base.png",
+    "bbox": {
+      "x": 120,
+      "y": 300,
+      "w": 1020,
+      "h": 620
+    },
+    "z": 24,
+    "editable": false,
+    "role": "merch-product-base",
+    "source_asset": "瑶光文创",
+    "notes": "Product shapes are schematic references only, not copied brand graphics.",
+    "sha256": "6ee547d1c0da3c76e1974deaba0f23b3063ce96c57c21b961b2fb1b8e7e14465"
+  },
+  {
+    "slide": 5,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "new_image2",
+    "path": "layers/slide_05/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_05.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "0dc71ccb70a7acd160d93a92365228085820e3a23c458f0340e68c23afe114ef"
+  },
+  {
+    "slide": 5,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_05/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 5,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_05/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 5,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_05/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 5,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_05/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "a9de40bbdc6a3d0321a25f4f1b209bc78ac588ad9ff10e955e1043882137a3ce"
+  },
+  {
+    "slide": 5,
+    "id": "edge-decoration",
+    "name": "edge-decoration",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_05/edge-decoration.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 5,
+    "editable": false,
+    "role": "herb-decoration",
+    "source_asset": "",
+    "notes": "Script-rendered edge decoration matching image2 mother style.",
+    "sha256": "0e30c4f9cb40e0e46a2962c8935d9d0308f0e3fd616c2a944bfa5690d6e96cd0"
+  },
+  {
+    "slide": 5,
+    "id": "yaoguang-slot",
+    "name": "yaoguang-slot",
+    "type": "image",
+    "source": "yaoguang_character",
+    "path": "layers/slide_05/yaoguang-slot.png",
+    "bbox": {
+      "x": 1648,
+      "y": 780,
+      "w": 132,
+      "h": 132
+    },
+    "z": 26,
+    "editable": false,
+    "role": "yaoguang_character",
+    "source_asset": "瑶光文创/瑶光-3.jpg",
+    "notes": "Independent yaoguang visual clue layer.",
+    "sha256": "3f6f854a085dbec76622bc8ed4153855cebc82d26ff264e62928c2df9eb41cdd"
+  },
+  {
+    "slide": 5,
+    "id": "video-frame",
+    "name": "video-frame",
+    "type": "image",
+    "source": "video_placeholder",
+    "path": "layers/slide_05/video-frame.png",
+    "bbox": {
+      "x": 64,
+      "y": 72,
+      "w": 1792,
+      "h": 1008
+    },
+    "z": 24,
+    "editable": false,
+    "role": "video_placeholder",
+    "source_asset": "",
+    "notes": "Main video insertion area; keep as a large independent object.",
+    "sha256": "a168a15873098a80b21448f9df3bb74fc28c9e845457bcc56407da2f8692da5f"
+  },
+  {
+    "slide": 5,
+    "id": "video-title-art",
+    "name": "video-title-art",
+    "type": "image",
+    "source": "script_rendered_text_layer",
+    "path": "layers/slide_05/video-title-art.png",
+    "bbox": {
+      "x": 116,
+      "y": 92,
+      "w": 720,
+      "h": 117
+    },
+    "z": 25,
+    "editable": false,
+    "role": "generated_text_image_layer",
+    "source_asset": "",
+    "notes": "Small title overlay on top of the large video frame.",
+    "sha256": "fe0863da8087b1f8a1426378103aadb3d502f0a095f0967b6176f0627ff1c095"
+  },
+  {
+    "slide": 6,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "new_image2",
+    "path": "layers/slide_06/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_06.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "0d1f2c8ae82c72d6ed1a8454cd274c9179bf502187279a28df08de435362e48a"
+  },
+  {
+    "slide": 6,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_06/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 6,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_06/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 6,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_06/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 6,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_06/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "937c2a1f08a32a6829e222dbe25e4db3643d363a183a16f4938bf00a1dce22ae"
+  },
+  {
+    "slide": 6,
+    "id": "edge-decoration",
+    "name": "edge-decoration",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_06/edge-decoration.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 5,
+    "editable": false,
+    "role": "herb-decoration",
+    "source_asset": "",
+    "notes": "Script-rendered edge decoration matching image2 mother style.",
+    "sha256": "efc14c5f4dd78bd30939fedcd2789116e8988249dd94a74a6ba060e39d5e2994"
+  },
+  {
+    "slide": 6,
+    "id": "title-art",
+    "name": "title-art",
+    "type": "image",
+    "source": "script_rendered_text_layer",
+    "path": "layers/slide_06/title-art.png",
+    "bbox": {
+      "x": 126,
+      "y": 62,
+      "w": 1050,
+      "h": 170
+    },
+    "z": 23,
+    "editable": false,
+    "role": "generated_text_image_layer",
+    "source_asset": "",
+    "notes": "Editable source text is recorded in text_manifest; this rendered layer is not native editable text.",
+    "sha256": "4339e8be90defc9ac656c9ee04771ddbbe8dc7a635faa793444b899f1d193d2f"
+  },
+  {
+    "slide": 6,
+    "id": "yaoguang-slot",
+    "name": "yaoguang-slot",
+    "type": "image",
+    "source": "yaoguang_character",
+    "path": "layers/slide_06/yaoguang-slot.png",
+    "bbox": {
+      "x": 1648,
+      "y": 780,
+      "w": 132,
+      "h": 132
+    },
+    "z": 26,
+    "editable": false,
+    "role": "yaoguang_character",
+    "source_asset": "瑶光文创/瑶光-3.jpg",
+    "notes": "Independent yaoguang visual clue layer.",
+    "sha256": "3f6f854a085dbec76622bc8ed4153855cebc82d26ff264e62928c2df9eb41cdd"
+  },
+  {
+    "slide": 7,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "new_image2",
+    "path": "layers/slide_07/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_07.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "67bf46959323d71be357508ed8b7bbaaeeef404eeecc44db56fd301b861d2acc"
+  },
+  {
+    "slide": 7,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_07/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 7,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_07/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 7,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_07/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 7,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_07/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "7505192c0dee8386b51be4cdb53ac06525127d78277a4721347611162d7ac36c"
+  },
+  {
+    "slide": 7,
+    "id": "edge-decoration",
+    "name": "edge-decoration",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_07/edge-decoration.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 5,
+    "editable": false,
+    "role": "herb-decoration",
+    "source_asset": "",
+    "notes": "Script-rendered edge decoration matching image2 mother style.",
+    "sha256": "87ff5884ef65e01e68bcdbaecd9f1fe9656a2031ae07aa179c4ca559126fb26f"
+  },
+  {
+    "slide": 7,
+    "id": "title-art",
+    "name": "title-art",
+    "type": "image",
+    "source": "script_rendered_text_layer",
+    "path": "layers/slide_07/title-art.png",
+    "bbox": {
+      "x": 126,
+      "y": 62,
+      "w": 1050,
+      "h": 170
+    },
+    "z": 23,
+    "editable": false,
+    "role": "generated_text_image_layer",
+    "source_asset": "",
+    "notes": "Editable source text is recorded in text_manifest; this rendered layer is not native editable text.",
+    "sha256": "b6e715cf80a1c2a85bd893a93733dbcd58403913781ac1befa391bfaa2552260"
+  },
+  {
+    "slide": 7,
+    "id": "yaoguang-slot",
+    "name": "yaoguang-slot",
+    "type": "image",
+    "source": "yaoguang_character",
+    "path": "layers/slide_07/yaoguang-slot.png",
+    "bbox": {
+      "x": 1648,
+      "y": 780,
+      "w": 132,
+      "h": 132
+    },
+    "z": 26,
+    "editable": false,
+    "role": "yaoguang_character",
+    "source_asset": "瑶光文创/瑶光-3.jpg",
+    "notes": "Independent yaoguang visual clue layer.",
+    "sha256": "3f6f854a085dbec76622bc8ed4153855cebc82d26ff264e62928c2df9eb41cdd"
+  },
+  {
+    "slide": 8,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_08/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_08.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "633b5fec8a7a5949bf76b7eeffe56df0c4e555f94dece4933b404d808e909bb0"
+  },
+  {
+    "slide": 8,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_08/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 8,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_08/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 8,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_08/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 8,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_08/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "22aea312b2bc2ac0e065da5243ba8523a500d496963d90f8fabcaeb8cc9162c1"
+  },
+  {
+    "slide": 9,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_09/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_09.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "a485903ee5d5ba4f4c5bba3df8763bb3d7681173aa76a3512de7b5746184333b"
+  },
+  {
+    "slide": 9,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_09/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 9,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_09/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 9,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_09/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 9,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_09/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "39622bc8f2d6fef1257265866394d679b0141d005c77f5b24c26722646fe61da"
+  },
+  {
+    "slide": 10,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_10/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_10.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "67fa399f6349a1642796733e8b64c172cdaf1a2077388aff2da7f701626ee535"
+  },
+  {
+    "slide": 10,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_10/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 10,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_10/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 10,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_10/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 10,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_10/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "8ffebdc1c53a15cb5757e93068732747901be00f42c958341b5f540cf86b2cfd"
+  },
+  {
+    "slide": 11,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_11/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_11.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "53be86ecf971daf2bd932df9be1b73b1562180a516fcb33d5dda9f9ffdab0e3c"
+  },
+  {
+    "slide": 11,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_11/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 11,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_11/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 11,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_11/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 11,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_11/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "52e25ccdef655f91a82634f8336a8f0dd2ccc13cc19bc6f7cb6d4f398a894048"
+  },
+  {
+    "slide": 11,
+    "id": "real-photo-01",
+    "name": "real-photo-01",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_11/real-photo-01.png",
+    "bbox": {
+      "x": 130,
+      "y": 250,
+      "w": 820,
+      "h": 465
+    },
+    "z": 31,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/03破冰活动/图集/03破冰活动-图集-全体合照.jpeg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "56b112a56f883da076212549cf4f6f09c010193cd2bcda91c22c2fd79c088b3b"
+  },
+  {
+    "slide": 11,
+    "id": "real-photo-02",
+    "name": "real-photo-02",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_11/real-photo-02.png",
+    "bbox": {
+      "x": 910,
+      "y": 410,
+      "w": 275,
+      "h": 200
+    },
+    "z": 32,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/03破冰活动/图集/03破冰活动-图集-桌游互动1.jpeg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "402fa5b7714ed300a1a62166bc08b2876443d5be603417dc5aa95bfa43a7b013"
+  },
+  {
+    "slide": 11,
+    "id": "real-photo-03",
+    "name": "real-photo-03",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_11/real-photo-03.png",
+    "bbox": {
+      "x": 1230,
+      "y": 410,
+      "w": 275,
+      "h": 200
+    },
+    "z": 33,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/03破冰活动/图集/03破冰活动-图集-全景听讲.jpeg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "1ad6b5a09c8b449f3a0e316269ce627c8a5d3b5b9cd589188a6ce5ca451be30d"
+  },
+  {
+    "slide": 11,
+    "id": "real-photo-04",
+    "name": "real-photo-04",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_11/real-photo-04.png",
+    "bbox": {
+      "x": 1545,
+      "y": 410,
+      "w": 275,
+      "h": 200
+    },
+    "z": 34,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/03破冰活动/图集/03破冰活动-图集-围坐讨论.jpeg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "3465ee85690cb01911f67aa818bf5331c60362700d82304d91c2bb720657a716"
+  },
+  {
+    "slide": 12,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_12/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_12.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "588c771757da1d1ec12b5f2a2f0229f3d66ed836fe9c7bd876b4479d3a693590"
+  },
+  {
+    "slide": 12,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_12/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 12,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_12/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 12,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_12/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 12,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_12/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "476c495fe14d70cbfebb1d10cec8a976c6fdc54ff1c31a9a18da81db2de19609"
+  },
+  {
+    "slide": 12,
+    "id": "real-photo-01",
+    "name": "real-photo-01",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_12/real-photo-01.png",
+    "bbox": {
+      "x": 130,
+      "y": 245,
+      "w": 680,
+      "h": 385
+    },
+    "z": 31,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/06三月活动/3.29主题团会/06三月活动-3.29主题团会-团会PPT讲解1.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "a7efd5fdc49544409f3b88b3301c7adb3267123d5ce32bea3148e07ccaf64023"
+  },
+  {
+    "slide": 12,
+    "id": "real-photo-02",
+    "name": "real-photo-02",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_12/real-photo-02.png",
+    "bbox": {
+      "x": 130,
+      "y": 690,
+      "w": 680,
+      "h": 210
+    },
+    "z": 32,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/06三月活动/3.29主题团会/06三月活动-3.29主题团会-团会全景合照.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "94d404637bf97a1d793e276a8465b143ece25506858d2383e0da7817827a5fa2"
+  },
+  {
+    "slide": 13,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_13/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_13.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "b6f988539087106ae511e49edf80745f5b016a7fdafbbb240e57a60e4b3edef7"
+  },
+  {
+    "slide": 13,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_13/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 13,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_13/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 13,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_13/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 13,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_13/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "6d831e4ffc0f95a595cb56235068c38deebf15bb066005de6068813c77030cfd"
+  },
+  {
+    "slide": 13,
+    "id": "real-photo-01",
+    "name": "real-photo-01",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_13/real-photo-01.png",
+    "bbox": {
+      "x": 150,
+      "y": 350,
+      "w": 735,
+      "h": 415
+    },
+    "z": 31,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/07四月活动/图片集/志愿服务/07四月活动-图片集-志愿服务-红建社区合影1.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "58cedfc3feea3b207a5c324e00dc6a464a0fb972337296edefc5e3cdd78f40eb"
+  },
+  {
+    "slide": 13,
+    "id": "real-photo-02",
+    "name": "real-photo-02",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_13/real-photo-02.png",
+    "bbox": {
+      "x": 985,
+      "y": 355,
+      "w": 245,
+      "h": 315
+    },
+    "z": 32,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/07四月活动/图片集/志愿服务/07四月活动-图片集-志愿服务-男生使用铲子清理红砖墙小广告1.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "29ba9fa986bc5b20b2575cc77e6653f5bcdf394dd5ce73e6983ed59b7e6d0b45"
+  },
+  {
+    "slide": 13,
+    "id": "real-photo-03",
+    "name": "real-photo-03",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_13/real-photo-03.png",
+    "bbox": {
+      "x": 1288,
+      "y": 355,
+      "w": 245,
+      "h": 315
+    },
+    "z": 33,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/07四月活动/图片集/志愿服务/07四月活动-图片集-志愿服务-红建社区清扫巷道落叶的同学1.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "7470c16398e922e408d700b27fbf25b9ce7fba8434de96c032a2aa42b121aff0"
+  },
+  {
+    "slide": 13,
+    "id": "real-photo-04",
+    "name": "real-photo-04",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_13/real-photo-04.png",
+    "bbox": {
+      "x": 1592,
+      "y": 355,
+      "w": 245,
+      "h": 315
+    },
+    "z": 34,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/07四月活动/图片集/志愿服务/07四月活动-图片集-志愿服务-两名同学在社区公告栏张贴通知1.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "59a9ed72c13fb4cc1b35e089de4d8eeec69b539b1f6a4f36dabdd15b1991e50f"
+  },
+  {
+    "slide": 14,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_14/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_14.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "7b16ac574c91da01bf0fe9e4edb325be912cabec983cbf104bab4c29cd0d0e9e"
+  },
+  {
+    "slide": 14,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_14/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 14,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_14/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 14,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_14/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 14,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_14/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "83783528ffafded1a59801ad9693c0eb167da69d84abbbf20c67cd2c1c937225"
+  },
+  {
+    "slide": 14,
+    "id": "real-photo-01",
+    "name": "real-photo-01",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_14/real-photo-01.png",
+    "bbox": {
+      "x": 130,
+      "y": 230,
+      "w": 815,
+      "h": 545
+    },
+    "z": 31,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/04嘉年华/图集/04嘉年华-图集-摊位合照.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "9cd0766fdcff359cd6a868fffff6598a60e87262fba60b042692b84759ef2d0f"
+  },
+  {
+    "slide": 15,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_15/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_15.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "99385680af753880aec1f589bd9ebeddd1990d2b0ddfabcf02e8cfebc6f49aab"
+  },
+  {
+    "slide": 15,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_15/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 15,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_15/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 15,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_15/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 15,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_15/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "b4ac278ab3eabfa9d1c067bc8ae230e4049140f5b9aae3982c99318442d3a342"
+  },
+  {
+    "slide": 15,
+    "id": "real-photo-01",
+    "name": "real-photo-01",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_15/real-photo-01.png",
+    "bbox": {
+      "x": 170,
+      "y": 205,
+      "w": 330,
+      "h": 635
+    },
+    "z": 31,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/04嘉年华/04嘉年华-小程序内部.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "bb4af2265f97e0bd6e4bc1a1b6ce37a185c1551b9bc011ade7e8b96d264f749a"
+  },
+  {
+    "slide": 15,
+    "id": "real-photo-02",
+    "name": "real-photo-02",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_15/real-photo-02.png",
+    "bbox": {
+      "x": 1430,
+      "y": 185,
+      "w": 390,
+      "h": 390
+    },
+    "z": 32,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/04嘉年华/04嘉年华-光药医路海报.png",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "02eb7b8e4b948ab52865e1bc4e195444cbd45473dc66553b5d6ba1d74b38f78c"
+  },
+  {
+    "slide": 15,
+    "id": "real-photo-03",
+    "name": "real-photo-03",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_15/real-photo-03.png",
+    "bbox": {
+      "x": 1390,
+      "y": 640,
+      "w": 170,
+      "h": 170
+    },
+    "z": 33,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/04嘉年华/04嘉年华-小程序码.png",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "fcaa86a277116c46a0a5a040aeb23759c808327111ef7d80df60ca9273e48c0d"
+  },
+  {
+    "slide": 16,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_16/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_16.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "daff68001d639f144013f13ae8a86a3616c22a096aa324789710e2e49a816838"
+  },
+  {
+    "slide": 16,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_16/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 16,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_16/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 16,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_16/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 16,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_16/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "91a4c6be6685993331f2a7427aeeb0d1e592836b0b645558fe14973695539fac"
+  },
+  {
+    "slide": 17,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_17/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_17.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "3a097c6d07911b6b2b6e03ef2a5527ad0ed6561bea323d6fc75982e2a1ad1499"
+  },
+  {
+    "slide": 17,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_17/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 17,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_17/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 17,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_17/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 17,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_17/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "ab2100ddda17037cd57c1f31b6a978a590a08cef4239a1a8347ee453da501f23"
+  },
+  {
+    "slide": 18,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_18/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_18.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "2c28206046e52aec81c5de440fba6ffd5379019dbb74a5c1e30f00ef09a004f1"
+  },
+  {
+    "slide": 18,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_18/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 18,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_18/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 18,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_18/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 18,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_18/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "41e5fccd9c8ada7e6e8bde2dc7e4f76c9cbe713e9f34a8bb5aff2f58a9459fde"
+  },
+  {
+    "slide": 18,
+    "id": "real-photo-01",
+    "name": "real-photo-01",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_18/real-photo-01.png",
+    "bbox": {
+      "x": 75,
+      "y": 165,
+      "w": 285,
+      "h": 295
+    },
+    "z": 31,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/05冬暖青日/宣讲/05冬暖青日-宣讲-女生讲PPT.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "ccfde99988b3543a843ee05c6d062caa1687e2c0b0d8b447b6a3633ef2d893e3"
+  },
+  {
+    "slide": 18,
+    "id": "real-photo-02",
+    "name": "real-photo-02",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_18/real-photo-02.png",
+    "bbox": {
+      "x": 410,
+      "y": 165,
+      "w": 285,
+      "h": 295
+    },
+    "z": 32,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/05冬暖青日/宣讲/05冬暖青日-宣讲-男生讲PPT.png",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "57cecfc9fccfe838c90c99305157bc193ead2fb898e8d3f741f02529055bb73b"
+  },
+  {
+    "slide": 19,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_19/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_19.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "7888067783404afe2b69766c3d72c1d12ec8d60ff4a77a984eec25d09b302e96"
+  },
+  {
+    "slide": 19,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_19/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 19,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_19/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 19,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_19/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 19,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_19/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "c60f4de1036e263f276a5d3f90d2420f74a52f9e3a7ee9b82bde2cd061910675"
+  },
+  {
+    "slide": 19,
+    "id": "real-photo-01",
+    "name": "real-photo-01",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_19/real-photo-01.png",
+    "bbox": {
+      "x": 250,
+      "y": 360,
+      "w": 760,
+      "h": 400
+    },
+    "z": 31,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/07四月活动/图片集/叶开泰/合照与活动花絮/07四月活动-图片集-叶开泰-叶开泰中医药文化园横幅大合照1.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "15d07b6d080120f1583815a17f4d9aeac14ac079d709d6bbb0bc86ca3be9d2df"
+  },
+  {
+    "slide": 19,
+    "id": "real-photo-02",
+    "name": "real-photo-02",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_19/real-photo-02.png",
+    "bbox": {
+      "x": 1075,
+      "y": 355,
+      "w": 220,
+      "h": 255
+    },
+    "z": 32,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/07四月活动/图片集/叶开泰/展厅内部参观/07四月活动-图片集-叶开泰-展厅内部参观-叶开泰传统中药铺全景复原2.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "051561f96768aa405596df5feffd73487c34effa0d0a03024ab62ba02274016c"
+  },
+  {
+    "slide": 19,
+    "id": "real-photo-03",
+    "name": "real-photo-03",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_19/real-photo-03.png",
+    "bbox": {
+      "x": 1340,
+      "y": 355,
+      "w": 220,
+      "h": 255
+    },
+    "z": 33,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/07四月活动/图片集/叶开泰/展厅内部参观/07四月活动-图片集-叶开泰-展厅内部参观-叶开泰植物标本玻璃瓶墙1.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "dcc9f86c9bb818c9b75b457dfc51f10b51ce3881f62861df5521120bbe12eca9"
+  },
+  {
+    "slide": 19,
+    "id": "real-photo-04",
+    "name": "real-photo-04",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_19/real-photo-04.png",
+    "bbox": {
+      "x": 1610,
+      "y": 355,
+      "w": 220,
+      "h": 255
+    },
+    "z": 34,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/07四月活动/图片集/叶开泰/07四月活动-图片集-叶开泰-触摸互动桌体验.png",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "8f5fc920a29502cac9205c1248e58d73c47582d31aa0f8b4c322648462d9c570"
+  },
+  {
+    "slide": 20,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_20/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_20.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "2682914e36f5737a5ef3aef18fcb452c4b6e5e44e492caae94dbcf1afb7cc3c5"
+  },
+  {
+    "slide": 20,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_20/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 20,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_20/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 20,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_20/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 20,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_20/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "6df84c7b672b1ce5ac51baf7117898732af0c3fb6af246701fa899dffca0b590"
+  },
+  {
+    "slide": 20,
+    "id": "real-photo-01",
+    "name": "real-photo-01",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_20/real-photo-01.png",
+    "bbox": {
+      "x": 140,
+      "y": 350,
+      "w": 470,
+      "h": 280
+    },
+    "z": 31,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/06三月活动/3.29主题团会/06三月活动-3.29主题团会-团会全景合照.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "672ac35a9f40329d65ef7a2b576e4132348e4f03fe915ca3754c5e9483b71db8"
+  },
+  {
+    "slide": 20,
+    "id": "real-photo-02",
+    "name": "real-photo-02",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_20/real-photo-02.png",
+    "bbox": {
+      "x": 725,
+      "y": 350,
+      "w": 470,
+      "h": 280
+    },
+    "z": 32,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/03破冰活动/图集/03破冰活动-图集-大合照2.jpeg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "3e02a14dd5afb1df2c3038909c87713a72892d17a21bc955a7473d8e4d1c3881"
+  },
+  {
+    "slide": 20,
+    "id": "real-photo-03",
+    "name": "real-photo-03",
+    "type": "image",
+    "source": "real_photo",
+    "path": "layers/slide_20/real-photo-03.png",
+    "bbox": {
+      "x": 1310,
+      "y": 350,
+      "w": 470,
+      "h": 280
+    },
+    "z": 33,
+    "editable": false,
+    "role": "real_photo",
+    "source_asset": "素材库/04嘉年华/图集/04嘉年华-图集-摊位互动1.jpg",
+    "notes": "Independent real activity photo layer placed after the reused mother art.",
+    "sha256": "13d21a874ee1d0d67ded5b4b05b2a721ae516eaddb93fdf61335b31e65d9226e"
+  },
+  {
+    "slide": 21,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_21/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_21.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "6a9a9be5c49baefa64acaa2237939ed333bd0d8d12c6842203880853d913e415"
+  },
+  {
+    "slide": 21,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_21/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 21,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_21/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 21,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_21/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 21,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_21/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "c0b54c8646aaf5e29ba331ad9ec9ee5e03277f09f9fae6ee233559e8a532d4a0"
+  },
+  {
+    "slide": 22,
+    "id": "background-paper",
+    "name": "background-paper",
+    "type": "image",
+    "source": "v4_full_ai_slide_reused",
+    "path": "layers/slide_22/background-paper.png",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "z": 0,
+    "editable": false,
+    "role": "generated_background",
+    "source_asset": "答辩PPT_v6_image2_first/full_ai_slides/slide_22.png",
+    "notes": "Full-slide visual mother. New front pages are image2-generated; old pages reuse v4 mother art.",
+    "sha256": "12331cf91bdde1706af3c83f4ef04be7d72597c8d4d0c624b57bf7d1853f7ca7"
+  },
+  {
+    "slide": 22,
+    "id": "logo-cover",
+    "name": "logo-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_22/logo-cover.png",
+    "bbox": {
+      "x": 36,
+      "y": 15,
+      "w": 310,
+      "h": 88
+    },
+    "z": 10,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old/generated logo area before applying official blue logo.",
+    "sha256": "868a39c96e6a922ea5d4a99ccf15765a5a688a9313114a8f3938dde950508b38"
+  },
+  {
+    "slide": 22,
+    "id": "hust-logo",
+    "name": "hust-logo",
+    "type": "image",
+    "source": "official_logo",
+    "path": "layers/slide_22/hust-logo.png",
+    "bbox": {
+      "x": 46,
+      "y": 24,
+      "w": 270,
+      "h": 65
+    },
+    "z": 20,
+    "editable": false,
+    "role": "official_logo",
+    "source_asset": "答辩PPT_v6_image2_first/source_assets/official_hust_logo_blue.png",
+    "notes": "Blue official HUST left-right combination.",
+    "sha256": "ae7caf291894a7f022ce913fa6c51d5f64db4b67e162ceb6b90c675624225ded"
+  },
+  {
+    "slide": 22,
+    "id": "page-marker-cover",
+    "name": "page-marker-cover",
+    "type": "image",
+    "source": "generated_background",
+    "path": "layers/slide_22/page-marker-cover.png",
+    "bbox": {
+      "x": 86,
+      "y": 121,
+      "w": 160,
+      "h": 48
+    },
+    "z": 21,
+    "editable": false,
+    "role": "repair_patch",
+    "source_asset": "",
+    "notes": "Covers old page marker before applying v6 page number.",
+    "sha256": "409ee7d61501e093090c6d1041d3c065f2fb70573f2dc91aa786c50a14e73996"
+  },
+  {
+    "slide": 22,
+    "id": "page-marker-bg",
+    "name": "page-marker-bg",
+    "type": "image",
+    "source": "generated_decoration",
+    "path": "layers/slide_22/page-marker-bg.png",
+    "bbox": {
+      "x": 92,
+      "y": 118,
+      "w": 180,
+      "h": 52
+    },
+    "z": 22,
+    "editable": false,
+    "role": "page_marker",
+    "source_asset": "",
+    "notes": "Rendered v6 page marker.",
+    "sha256": "b459296512c8f490b12e791e8cd8ff0b631e5e78890468ae19e68920c567ab41"
+  }
+]
