@@ -1,4 +1,4 @@
 interface:
   display_name: "Premium PPTX Producer"
   short_description: "Build polished, editable PPTX decks from source files"
-  default_prompt: "Use -pptx-producer to turn my materials and requirements into a polished editable PPTX deck."
+  default_prompt: "Use $premium-pptx-producer to turn my materials and requirements into a polished editable PPTX deck."

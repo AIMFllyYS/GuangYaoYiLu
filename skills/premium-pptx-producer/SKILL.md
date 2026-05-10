@@ -1,85 +1,60 @@
 ---
 name: premium-pptx-producer
-description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+description: Create high-end, real, editable PowerPoint/PPTX decks from uploaded materials and requirements. Use when Codex needs to build or substantially refine a professional deck, organize source files, generate image-first visual masters, split generated visuals into reusable layers, handle real photos or logos, assemble slides with native PPTX text/pictures/shapes, or validate a PPTX deliverable for package health, visual QA, and UTF-8 safety.
 ---
 
-# Premium Pptx Producer
+# Premium PPTX Producer
 
-## Overview
+## Operating Rules
 
-[TODO: 1-2 sentences explaining what this skill enables]
+- Preserve UTF-8. Read and write Chinese text with explicit UTF-8 encoding.
+- Treat user materials as evidence. Do not invent names, logos, dates, awards, or quoted facts unless the user explicitly asks for creative filler.
+- Start by organizing the working folder before making slides. Use `scripts/scaffold_pptx_project.py` when no clean structure exists.
+- Prefer a mature PPTX generator: python-pptx, PptxGenJS, PowerPoint/Codex presentation runtime, or a clean template parent. Do not handwrite a full OOXML ZIP package.
+- Keep the first stable version static and robust. Add animation only after the static PPTX opens cleanly and visual QA passes.
+- Do not flatten the whole deck into one image per slide when editability matters. Backgrounds can be raster images; titles, body copy, logos, real photos, charts, and labels should be native PPTX objects whenever practical.
 
-## Structuring This Skill
+## Workflow
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+1. **Ingest and sort materials**
+   - Create a project workspace with `00_input`, `01_brief`, `02_generation`, `03_assembly`, `04_final`, and `05_qa`.
+   - Separate requirements, source documents, source images, logos, generated full-slide images, generated layers, manifests, assembly scripts, previews, and final deliverables.
+   - Build an asset inventory before design decisions: file type, source, likely role, and whether the asset must remain real/unmodified.
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" -> "Reading" -> "Creating" -> "Editing"
-- Structure: ## Overview -> ## Workflow Decision Tree -> ## Step 1 -> ## Step 2...
+2. **Write the deck brief**
+   - Summarize audience, purpose, output format, slide ratio, language, brand constraints, must-use assets, and non-negotiable facts.
+   - Convert user requirements into a slide plan with one row per slide: goal, narrative role, core message, evidence files, visual type, generated-image need, real-photo need, and QA notes.
+   - Read `references/guangyaoyilu-lessons.md` for the project-derived production pattern.
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" -> "Merge PDFs" -> "Split PDFs" -> "Extract Text"
-- Structure: ## Overview -> ## Quick Start -> ## Task Category 1 -> ## Task Category 2...
+3. **Design visual masters**
+   - Generate or request full-slide visual masters first when a rich style is needed.
+   - Prompt masters to be layer-friendly: clean logo zone, no page numbers, no placeholder text, clear object boundaries, high contrast between subjects and background, and no long paragraphs burned into the image.
+   - Keep artistic title lettering as generated image art only when it is a visual anchor; keep ordinary titles, captions, labels, body text, and quotes as editable PPTX text.
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" -> "Colors" -> "Typography" -> "Features"
-- Structure: ## Overview -> ## Guidelines -> ## Specifications -> ## Usage...
+4. **Split into composition layers**
+   - Generate or prepare full-canvas PNG layers, not cropped random tiles: `background`, `deco_border`, `deco_props`, `art_title`, `figure`, `infograph`, `logo`, `photo_*`.
+   - Put real photos and official logos into their own files and place them directly in PPTX; do not re-generate or stylize them unless the user asks.
+   - For each slide, create a manifest with semantic ids, type, source, bbox, z-order, editability, and animation group. Read `references/workspace-contract.md` before writing manifests.
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" -> numbered capability list
-- Structure: ## Overview -> ## Core Capabilities -> ### 1. Feature -> ### 2. Feature...
+5. **Assemble PPTX**
+   - Use manifest coordinates and a fixed canvas conversion to add layers and native text boxes.
+   - Name important shapes consistently: `slide-title`, `subtitle`, `body-01`, `photo-01`, `logo-primary`, `art-title`, `background`.
+   - Generate preview PNGs from the same manifest for fast visual review.
+   - Keep scripts deterministic and rerunnable; avoid manual edits that cannot be reproduced unless recording them in QA notes.
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+6. **Validate and iterate**
+   - Run package checks, image checks, shape-count checks, forbidden-text scans, visual preview review, and UTF-8/mojibake scans.
+   - Use `scripts/validate_pptx_artifact.py` for baseline validation, then apply the stronger checklist in `references/quality-gates.md`.
+   - If a slide fails, fix the smallest responsible artifact: brief, prompt, layer, manifest, or assembly code.
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+7. **Deliver**
+   - Final output should include PPTX, rendered preview/PDF when possible, slide previews, manifests, source scripts, QA report, and known gaps.
+   - State clearly whether PowerPoint desktop open/save verification was performed. If not, mark it as a remaining gate.
 
-## [TODO: Replace with the first main section based on chosen structure]
+## Resource Use
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
-
-## Resources (optional)
-
-Create only the resource directories this skill actually needs. Delete this section if no resources are required.
-
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
-
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
-
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
-
-**Note:** Scripts may be executed without loading into context, but can still be read by Codex for patching or environment adjustments.
-
-### references/
-Documentation and reference material intended to be loaded into context to inform Codex's process and thinking.
-
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
-
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Codex should reference while working.
-
-### assets/
-Files not intended to be loaded into context, but rather used within the output Codex produces.
-
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
-
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
-
----
-
-**Not every skill requires all three types of resources.**
+- `scripts/scaffold_pptx_project.py`: create the recommended workspace and starter brief/plan/QA files.
+- `scripts/validate_pptx_artifact.py`: inspect a PPTX package for common structural, media, shape, forbidden-text, and optional UTF-8 issues.
+- `references/guangyaoyilu-lessons.md`: lessons distilled from the final stable `PPT-last` and `PPT-last-manual` workflow.
+- `references/workspace-contract.md`: folder contract, manifest schema, layer naming, and native-object rules.
+- `references/quality-gates.md`: validation and delivery checklist.
