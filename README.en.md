@@ -9,7 +9,7 @@ This repository archives the **deliverable showcase and office-style working mat
 ## Contents
 
 - Important notice · PPTX skill · Repository map · Subdirectory README index
-- Narrative arc · Triple-pipeline workflow · Timeline · Deliverables
+- Narrative arc · Triple-pipeline workflow · Deck & summary-book timelines · Deliverables
 - Root helper files · Git & large files · Further reading · Licensing
 
 ## Important notice (rights & use)
@@ -91,14 +91,21 @@ graph LR
 | Character art | Medium | Low | High |
 | Infographics / maps | Medium | Low | High |
 
-## Timeline (extract)
+## Defense deck timeline (extract)
+
+| When | Milestone |
+|------|-----------|
+| **~2026-05-08** | First **draft** deck due |
+| **~13:00 on 2026-05-10** | **Final v1** slide deck (submittable cut) due |
+
+## Summary-book timeline (extract, league submission cadence)
 
 | When | Milestone |
 |------|-----------|
 | Before noon 4/27 | First draft |
 | 4/27 PM | Full chapters + merge |
 | 4/28 AM | Proof + dynamic version |
-| **4/28 5:00 PM** | **Submission deadline** |
+| **4/28 5:00 PM** | **Summary-book submission deadline** |
 
 ## Deliverables (summary book)
 
