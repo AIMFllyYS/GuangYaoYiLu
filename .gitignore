@@ -32,3 +32,4 @@ desktop.ini
 __pycache__/
 *.pyc
 
+temp/
