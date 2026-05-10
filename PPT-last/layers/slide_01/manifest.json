@@ -4,7 +4,7 @@
     "w": 1920,
     "h": 1080
   },
-  "generation_note": "Regenerated from updated prompt files. The base image is a high-fidelity cleaned reference-style cover with only explicit pollution removed; editable textboxes are overlaid for audit/editing while preserving reference visual fidelity in the absence of model-native gpt-image-2 layer generation.",
+  "generation_note": "Regenerated from updated prompt files. Explicit pollution removed; editable cover text glyphs were cleaned from the high-fidelity reference-style base and restored through PPT textboxes.",
   "layers": [
     {
       "id": "background",
@@ -105,13 +105,13 @@
       "content": "光 / 药 / 医 / 路 · 同向而行",
       "bbox": {
         "x": 600,
-        "y": 150,
+        "y": 148,
         "w": 715,
-        "h": 48
+        "h": 42
       },
       "z": 80,
       "font": "微软雅黑",
-      "font_size": 25,
+      "font_size": 21,
       "color": "RGB(47,55,43)",
       "align": "center",
       "char_spacing": 6
@@ -120,14 +120,14 @@
       "id": "subtitle",
       "content": "瑶光引路·汇聚光药医路的青年力量",
       "bbox": {
-        "x": 575,
-        "y": 558,
-        "w": 770,
-        "h": 48
+        "x": 645,
+        "y": 502,
+        "w": 650,
+        "h": 42
       },
       "z": 80,
       "font": "微软雅黑",
-      "font_size": 23,
+      "font_size": 22,
       "color": "RGB(45,106,69)",
       "align": "center"
     },
@@ -135,10 +135,10 @@
       "id": "tagline",
       "content": "以光启智·以药济世·以医护人·以路同行",
       "bbox": {
-        "x": 650,
-        "y": 620,
+        "x": 655,
+        "y": 558,
         "w": 620,
-        "h": 40
+        "h": 38
       },
       "z": 80,
       "font": "宋体",
@@ -151,7 +151,7 @@
       "content": "光",
       "bbox": {
         "x": 650,
-        "y": 780,
+        "y": 726,
         "w": 60,
         "h": 38
       },
@@ -166,7 +166,7 @@
       "content": "药",
       "bbox": {
         "x": 830,
-        "y": 780,
+        "y": 726,
         "w": 60,
         "h": 38
       },
@@ -181,7 +181,7 @@
       "content": "医",
       "bbox": {
         "x": 1010,
-        "y": 780,
+        "y": 726,
         "w": 60,
         "h": 38
       },
@@ -196,7 +196,7 @@
       "content": "路",
       "bbox": {
         "x": 1190,
-        "y": 780,
+        "y": 726,
         "w": 60,
         "h": 38
       },
