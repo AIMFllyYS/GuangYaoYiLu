@@ -1,12 +1,22 @@
 # Quality Gates
 
-Run these gates before calling a PPTX finished.
+Run these gates before calling a PPTX finished. Treat `baseline smoke` as the first technical check and `final strict` as the delivery gate.
+
+## Baseline Smoke
+
+- The file is a readable PPTX zip.
+- Core package relationships resolve.
+- Slides and media can be counted.
+- Media images can be decoded.
+- Forbidden placeholder text is absent from slide XML.
+
+Passing baseline smoke means "the artifact is inspectable"; it does not prove the deck is final-delivery safe.
 
 ## Package Gate
 
 - ZIP CRC passes.
 - Required PPTX parts exist: `[Content_Types].xml`, `_rels/.rels`, `ppt/presentation.xml`, presentation rels.
-- Prefer packages that include slide masters, slide layouts, theme, and presentation properties.
+- Final strict packages include slide masters, slide layouts, theme, and presentation properties.
 - Relationship targets resolve and do not point to unexpected external files.
 - Slide count matches expectation.
 - Media files are readable by Pillow or an equivalent image decoder.
@@ -44,6 +54,17 @@ At least one of these should pass for final delivery:
 
 If none is available, report the missing application-level verification as a known gap.
 
+## Final Strict
+
+Use strict validation for deliverables intended to leave the workspace:
+
+- No missing master/layout/theme/presentation properties.
+- No external relationships.
+- No slide is a single flattened picture unless explicitly allowed as emergency static delivery.
+- At least one native text shape exists when the deck claims editable text.
+- Shape statistics are reported for every slide.
+- Application-level validation status is stated clearly, even when unavailable.
+
 ## Delivery Report
 
 Include:
@@ -57,6 +78,7 @@ Native text:
 Native pictures:
 Native shapes/tables/charts:
 Handwritten OOXML:
+Single-image slide count:
 Package validation:
 Visual validation:
 PowerPoint/open-save validation:

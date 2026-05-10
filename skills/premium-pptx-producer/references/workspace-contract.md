@@ -34,6 +34,24 @@ project/
 ## Slide Manifest
 
 Each slide manifest should be UTF-8 JSON and use pixel coordinates against a declared canvas.
+Manifests live under `03_assembly/manifests/` and are resolved relative to the workspace root unless a file path is absolute.
+
+Required top-level fields:
+
+- `slide`: 1-based slide number.
+- `canvas`: pixel canvas object with `w` and `h`.
+- `elements`: array of slide objects.
+
+Required element fields:
+
+- `id`: stable semantic id.
+- `type`: `image`, `text`, or `shape`.
+- `source`: provenance such as `native`, `official_asset`, `real_photo`, `generated_background`, `generated_layer`, or `visual_guess`.
+- `bbox`: pixel rectangle with `x`, `y`, `w`, `h`.
+- `z`: stacking order, lower first.
+- `editable`: true only for native PPTX objects.
+
+Image elements also require `file`. Text elements also require `text`, `font`, `font_size`, `color`, and `align`.
 
 ```json
 {
@@ -87,3 +105,36 @@ Each slide manifest should be UTF-8 JSON and use pixel coordinates against a dec
 - Official logos: preserve aspect ratio; use direct placement; do not stylize without permission.
 - Real photos: keep original copies in `00_input/source-images`; place processed/cropped copies in `02_generation/generated_layers` only when needed.
 - Generated visuals: keep prompts with their output paths so a slide can be regenerated.
+
+## Visual Master Prompt Template
+
+Use this when generating a full-slide visual master for later splitting:
+
+```text
+Create a high-end 16:9 slide visual master at 1920x1080.
+Style and mood: <deck style>.
+Slide purpose: <one sentence>.
+Composition: <major regions and visual hierarchy>.
+
+Hard constraints:
+- Keep the top-left logo area clean and empty.
+- Do not include page numbers, placeholder labels, watermarks, or UI control text.
+- Do not burn long paragraphs, quotes, captions, or dense body copy into the image.
+- Leave clear contrast between foreground elements and background so layers can be separated later.
+- Keep real-photo slots clean, rectangular, and uncluttered if photos will be inserted later.
+- Preserve object boundaries for decorative props, figures, title art, and infographics.
+```
+
+## Transparent Layer Prompt Template
+
+Use this when generating a separate PNG layer for composition:
+
+```text
+Create only the <element name> layer for slide <number>.
+Canvas must remain 1920x1080.
+The element must appear at approximately x=<x>, y=<y>, w=<w>, h=<h>.
+Everything outside the element must be transparent alpha.
+No background texture, no page number, no placeholder text, no watermark.
+Do not include body paragraphs or captions.
+Make edges clean enough for PPTX overlay composition.
+```

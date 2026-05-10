@@ -39,12 +39,14 @@ description: Create high-end, real, editable PowerPoint/PPTX decks from uploaded
 5. **Assemble PPTX**
    - Use manifest coordinates and a fixed canvas conversion to add layers and native text boxes.
    - Name important shapes consistently: `slide-title`, `subtitle`, `body-01`, `photo-01`, `logo-primary`, `art-title`, `background`.
+   - Use `scripts/build_pptx_from_manifest.py` when the deck follows the workspace manifest contract.
    - Generate preview PNGs from the same manifest for fast visual review.
    - Keep scripts deterministic and rerunnable; avoid manual edits that cannot be reproduced unless recording them in QA notes.
 
 6. **Validate and iterate**
    - Run package checks, image checks, shape-count checks, forbidden-text scans, visual preview review, and UTF-8/mojibake scans.
-   - Use `scripts/validate_pptx_artifact.py` for baseline validation, then apply the stronger checklist in `references/quality-gates.md`.
+   - Use `scripts/validate_pptx_artifact.py` for baseline validation and `--strict-final` for final-delivery gating.
+   - Apply the stronger checklist in `references/quality-gates.md` before calling a PPTX finished.
    - If a slide fails, fix the smallest responsible artifact: brief, prompt, layer, manifest, or assembly code.
 
 7. **Deliver**
@@ -54,7 +56,8 @@ description: Create high-end, real, editable PowerPoint/PPTX decks from uploaded
 ## Resource Use
 
 - `scripts/scaffold_pptx_project.py`: create the recommended workspace and starter brief/plan/QA files.
+- `scripts/build_pptx_from_manifest.py`: assemble manifest-defined image/text elements into PPTX and preview PNG files.
 - `scripts/validate_pptx_artifact.py`: inspect a PPTX package for common structural, media, shape, forbidden-text, and optional UTF-8 issues.
 - `references/guangyaoyilu-lessons.md`: lessons distilled from the final stable `PPT-last` and `PPT-last-manual` workflow.
-- `references/workspace-contract.md`: folder contract, manifest schema, layer naming, and native-object rules.
-- `references/quality-gates.md`: validation and delivery checklist.
+- `references/workspace-contract.md`: folder contract, manifest schema, layer naming, image-generation prompts, and native-object rules.
+- `references/quality-gates.md`: baseline smoke, final strict validation, and delivery checklist.
