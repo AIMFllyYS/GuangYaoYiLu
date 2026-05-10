@@ -22,7 +22,7 @@ This repository archives the **deliverable showcase and office-style working mat
 
 **→ [skills index & setup](skills/README.en.md)** · Full license: [skills/LICENSE](skills/LICENSE)
 
-Canonical package name: **`pptx-layer-merge`** (evolved/renamed from an earlier working title; **trust the current directory**).
+Self-maintained Agent Skill **`pptx-layer-merge`** — assembles editable native PPTX from layered manifests with multi-level validation. Technical experience and known gaps: [skills/experience.en.md](skills/experience.en.md).
 
 ## Repository map
 

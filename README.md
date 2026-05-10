@@ -22,7 +22,7 @@
 
 ## PPTX 分层技能（Apache-2.0）
 
-为支撑高质量、可编辑答辩稿，本仓库维护自研技能包 **`pptx-layer-merge`**（由旧名演进更名，以当前目录为准）：
+为支撑高质量、可编辑答辩稿，本仓库维护自研 Agent Skill **`pptx-layer-merge`**——从分层 manifest 组装原生可编辑 PPTX 并做多层级校验。技能沉淀与实战困境详见 [skills/experience.md](skills/experience.md)。
 
 **→ [skills 说明与安装入口](skills/README.md)**（许可全文：[skills/LICENSE](skills/LICENSE)）
 

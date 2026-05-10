@@ -1,42 +1,136 @@
-# PPTX 分层组装技能（pptx-layer-merge）
+# pptx-layer-merge
 
-[**English**](README.en.md)
+[**English**](README.en.md) · 许可：[Apache-2.0](LICENSE)
 
-本目录包含自研 **Agent Skill：`pptx-layer-merge`**（由旧版名称演进、**以本目录为唯一正式名称**），用于在严格 UTF-8 与「可编辑原生 PPTX」约束下，从素材、brief、分层 PNG 与 manifest 组装幻灯片并做包级校验。
+> 从分层 manifest 组装可编辑、包结构健康的 PPTX 幻灯片，并做多层级校验。
 
-**许可**： [`LICENSE`](LICENSE)（**Apache License 2.0**；版权：**AIMFllyYS（羽升）**，2026）。
+---
 
-**与本仓库团支部成品的关系**：`skills/` 下的脚本与文档以 Apache-2.0 单独授权；**不等于**仓库内 `交付物/`、`输出终稿/` 等团支部内容开放源码或开放重用，详见根目录 [README.md](../README.md) 的权利声明。
+## Overview
 
-## 全库导航
+`pptx-layer-merge` 是一个 **Agent Skill**，解决以下问题：
 
-各主目录的导读与英文章节见根目录 **[README.md](../README.md)** 中的「子目录 README 索引」及 **[README.en.md](../README.en.md)**；**[调研报告](../调研报告/README.md)** 中亦收录了与本技能相关的流水线结论。
+- AI/Codex 生成的 PPTX 常因手写 OOXML 缺少 master/layout/theme 而被 PowerPoint 判定损坏。
+- 整页 PNG 作为唯一对象无法编辑；按网格切片（header/left_field/…）不等于 PowerPoint 元素级分层。
+- 缺乏从「视觉设计」到「可交付 PPTX」的标准化合约层。
 
-## 包含内容
+本技能通过 **manifest-driven 流水线**（素材整理 → brief → 视觉生成 → 分层 → 组装 → 校验 → 交付）将这些问题系统性地解决，输出原生可编辑 PPTX + preview PNG + 校验报告。
 
-| 路径 | 说明 |
+## Status & Maturity
+
+| 维度 | 状态 |
 |------|------|
-| [`pptx-layer-merge/scripts/`](pptx-layer-merge/scripts/) | 脚手架、manifest 组装、PPTX 校验等 Python 脚本 |
-| [`pptx-layer-merge/references/`](pptx-layer-merge/references/) | 工作区约定、质检门槛、本项目沉淀的经验 |
-| [`pptx-layer-merge/agents/`](pptx-layer-merge/agents/) | 代理侧配置示例（如 `openai.yaml`） |
+| 规范文档 | ✅ 稳定（SKILL.md + 3 references） |
+| 脚本 | ✅ 可用（scaffold / build / validate） |
+| 验证链 | ⚠️ 部分覆盖（package smoke + PIL + UTF-8；缺 OpenXmlValidator + headless render） |
+| 端到端 demo | ❌ 尚无一键 smoke test |
+| 动画支持 | ❌ 设计上延后（先静态后动画） |
 
-## 如何安装到你的环境
+详细困境清单 → [experience.md](experience.md)
 
-以下为常见用法，具体以各产品当期文档为准。
+## When to Use
 
-1. **整包复制**：将 **`pptx-layer-merge/`** 目录复制到你的 Agent skills 存放位置（或与项目约定的 `skills/` 路径），保证 `SKILL.md` 在技能根目录。
-2. **Cursor**：将技能文件夹放入 Cursor 所识别的 Agent Skills / 用户 skills 目录（参见 Cursor 文档中 *Agent Skills* / `SKILL.md` 约定），或在对话中通过工作区相对路径引用本仓库中的 [`pptx-layer-merge/SKILL.md`](pptx-layer-merge/SKILL.md)。
-3. **Codex / 其他 CLI**：按对应工具的 skill 发现规则，指向包含 `SKILL.md` 的 `pptx-layer-merge` 根目录。
+**适用：**
 
-依赖：脚本侧通常需要 **Python 3** 与 **`python-pptx`** 等（见各脚本头部或项目内交付物 README）。
+- 需要从 AI 生成的全页视觉图 + 真实照片 + logo 组装出**可编辑原生 PPTX**
+- 需要 manifest 作为视觉设计与 PPTX 组装之间的合约
+- 需要多层级校验（package → shape → visual → UTF-8）
+- 需要 preview PNG 在无 PowerPoint 环境下做视觉 QA
 
-## 再次声明
+**不适用：**
 
-- 使用、再分发 `skills/` 子树时，请保留 **Apache-2.0 全文**（[`LICENSE`](LICENSE)）及版权信息。
-- 勿将本技能授权误解为对仓库内团支部正文的许可。
+- 只需要一张截图/PDF，不需要可编辑 PPTX
+- 已有成熟 PowerPoint 模板 + VBA 宏流水线
+- 需要复杂动画/视频嵌入（当前 skill 不覆盖）
 
-## 链接
+## Quick Start
 
-- [技能主文档（SKILL.md）](pptx-layer-merge/SKILL.md)
-- [Apache-2.0 许可证全文](LICENSE)
-- [仓库首页（中文）](../README.md) · [English](../README.en.md)
+```bash
+# 1. 创建工作区
+python scripts/scaffold_pptx_project.py ./my-deck --title "项目答辩" --slides 12
+
+# 2. 编写 manifest（手动或由 Agent 生成），放入 03_assembly/manifests/
+
+# 3. 组装 + 校验
+python scripts/build_pptx_from_manifest.py ./my-deck \
+  --manifest-dir 03_assembly/manifests \
+  --out 04_final/pptx/deck.pptx \
+  --preview-dir 03_assembly/previews \
+  --expected-slides 12
+
+python scripts/validate_pptx_artifact.py ./my-deck/04_final/pptx/deck.pptx \
+  --expected-slides 12 --strict-final
+```
+
+依赖：Python 3 + `python-pptx` + `Pillow`
+
+## Architecture
+
+```mermaid
+graph LR
+    A[00_input<br/>素材/照片/logo] --> B[01_brief<br/>deck_brief + slide_plan]
+    B --> C[02_generation<br/>全页视觉 + 分层 PNG]
+    C --> D[03_assembly<br/>manifest JSON + 脚本]
+    D --> E[04_final<br/>PPTX + PDF]
+    D --> F[03_assembly/previews<br/>PNG preview]
+    E --> G[05_qa<br/>校验报告]
+```
+
+## Scripts API
+
+| 脚本 | 用途 | 关键参数 | 输出 |
+|------|------|----------|------|
+| `scaffold_pptx_project.py` | 创建标准工作区 | `output_dir`, `--title`, `--slides`, `--ratio` | 目录结构 + starter 文件 |
+| `build_pptx_from_manifest.py` | 从 manifest 组装 PPTX + preview | `workspace`, `--manifest-dir`, `--out`, `--preview-dir`, `--expected-slides` | `.pptx` + slide PNG |
+| `validate_pptx_artifact.py` | 多层级 PPTX 校验 | `pptx`, `--expected-slides`, `--scan-text-root`, `--strict-final` | JSON 报告（stdout） |
+
+脚本位于 [`pptx-layer-merge/scripts/`](pptx-layer-merge/scripts/)。
+
+## Quality Gates
+
+校验分为 **Baseline Smoke**（包完整性）和 **Final Strict**（交付级）两档：
+
+- Baseline：ZIP CRC / 必要 part / relationship / 媒体图片 / forbidden text / slide 数量
+- Strict：master/layout/theme 存在 / 无外部 relationship / 非单图 slide / native text 存在
+
+完整规则 → [`references/quality-gates.md`](pptx-layer-merge/references/quality-gates.md)
+
+## Compatibility
+
+| 环境 | 安装方式 | 状态 |
+|------|----------|------|
+| **Cursor** | 将 `pptx-layer-merge/` 放入 Agent Skills 目录，确保 `SKILL.md` 在根 | ✅ 已验证 |
+| **Codex CLI** | 指向包含 `SKILL.md` 的目录 | ✅ 已验证 |
+| **Kiro / 通用 CLI** | 同 Codex，按工具的 skill discovery 规则配置 | 🟡 应可用（未实测） |
+| **GitHub Actions** | 脚本直接调用，无需 skill loader | ✅ 脚本独立可运行 |
+
+## Roadmap & Known Gaps
+
+当前 7 项未闭环困境（含 commit 证据与候选解法）→ **[experience.md](experience.md)**
+
+近期优先：
+1. 端到端 smoke test 脚本
+2. `--template` 模板母体注入
+3. 跨平台字体 fallback
+
+## License
+
+**Apache License 2.0** — 版权：**AIMFllyYS（羽升）**，2026。
+
+许可全文：[`LICENSE`](LICENSE)
+
+### 与本仓库团支部成品的关系
+
+`skills/` 下的脚本与文档以 Apache-2.0 单独授权。这**不等于**仓库内 `交付物/`、`输出终稿/` 等团支部内容开放源码或开放重用。详见根目录 [README.md](../README.md) 的权利声明。
+
+## Links
+
+| 资源 | 路径 |
+|------|------|
+| 技能主文档 | [`pptx-layer-merge/SKILL.md`](pptx-layer-merge/SKILL.md) |
+| 工作区约定 | [`references/workspace-contract.md`](pptx-layer-merge/references/workspace-contract.md) |
+| 质检门槛 | [`references/quality-gates.md`](pptx-layer-merge/references/quality-gates.md) |
+| 项目经验 | [`references/guangyaoyilu-lessons.md`](pptx-layer-merge/references/guangyaoyilu-lessons.md) |
+| 技术沉淀 | [`experience.md`](experience.md) · [`experience.en.md`](experience.en.md) |
+| 仓库首页 | [`../README.md`](../README.md) · [`../README.en.md`](../README.en.md) |
+| 调研报告 | [`../调研报告/PPT生成与元素级分层/`](../调研报告/PPT生成与元素级分层/) |
