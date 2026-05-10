@@ -70,11 +70,11 @@ Use strict validation for deliverables intended to leave the workspace:
 Before changing this skill, validate the package itself and a temporary Chinese-titled smoke workspace:
 
 ```powershell
-py -3.12 C:\Users\AIMFl\.codex\skills\.system\skill-creator\scripts\quick_validate.py .\skills\premium-pptx-producer
-python .\skills\premium-pptx-producer\scripts\scaffold_pptx_project.py $env:TEMP\premium-pptx-scaffold-smoke --title "广曜一路答辩测试" --slides 2 --force
-python .\skills\premium-pptx-producer\scripts\build_pptx_from_manifest.py <temp-workspace> --manifest-dir 03_assembly\manifests --out 04_final\pptx\smoke.pptx --preview-dir 03_assembly\previews --expected-slides 2
-python .\skills\premium-pptx-producer\scripts\validate_pptx_artifact.py <temp-workspace>\04_final\pptx\smoke.pptx --expected-slides 2 --scan-text-root .\skills\premium-pptx-producer
-git diff --check -- skills\premium-pptx-producer
+py -3.12 C:\Users\AIMFl\.codex\skills\.system\skill-creator\scripts\quick_validate.py .\skills\pptx-layer-merge
+python .\skills\pptx-layer-merge\scripts\scaffold_pptx_project.py $env:TEMP\pptx-layer-merge-scaffold-smoke --title "广曜一路答辩测试" --slides 2 --force
+python .\skills\pptx-layer-merge\scripts\build_pptx_from_manifest.py <temp-workspace> --manifest-dir 03_assembly\manifests --out 04_final\pptx\smoke.pptx --preview-dir 03_assembly\previews --expected-slides 2
+python .\skills\pptx-layer-merge\scripts\validate_pptx_artifact.py <temp-workspace>\04_final\pptx\smoke.pptx --expected-slides 2 --scan-text-root .\skills\pptx-layer-merge
+git diff --check -- skills\pptx-layer-merge
 ```
 
 Delete temporary smoke workspaces after the checks.

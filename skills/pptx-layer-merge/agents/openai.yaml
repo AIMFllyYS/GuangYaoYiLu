@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPTX-Layer-merge"
+  short_description: "Build polished, editable PPTX decks from source files"
+  default_prompt: "Use $pptx-layer-merge to turn my materials and requirements into a polished editable PPTX deck."
