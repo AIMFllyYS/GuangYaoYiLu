@@ -1,0 +1,210 @@
+{
+  "slide": 1,
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "layers": [
+    {
+      "id": "background",
+      "file": "background.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "z": 0,
+      "type": "image",
+      "transparent": false
+    },
+    {
+      "id": "deco_border",
+      "file": "deco_border.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "z": 10,
+      "type": "image",
+      "transparent": true
+    },
+    {
+      "id": "deco_props",
+      "file": "deco_props.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "z": 20,
+      "type": "image",
+      "transparent": true
+    },
+    {
+      "id": "figure",
+      "file": "figure.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "z": 30,
+      "type": "image",
+      "transparent": true
+    },
+    {
+      "id": "infograph",
+      "file": "infograph.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "z": 40,
+      "type": "image",
+      "transparent": true
+    },
+    {
+      "id": "art_title",
+      "file": "art_title.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "z": 50,
+      "type": "image",
+      "transparent": true
+    },
+    {
+      "id": "hust_logo",
+      "file": "hust_logo.png",
+      "bbox": {
+        "x": 46,
+        "y": 24,
+        "w": 270,
+        "h": 65
+      },
+      "z": 60,
+      "type": "image",
+      "transparent": true,
+      "fit": "stretch"
+    }
+  ],
+  "textboxes": [
+    {
+      "id": "top_line",
+      "content": "光 / 药 / 医 / 路 · 同向而行",
+      "bbox": {
+        "x": 600,
+        "y": 147,
+        "w": 715,
+        "h": 50
+      },
+      "z": 80,
+      "font": "微软雅黑",
+      "font_size": 28,
+      "color": "RGB(47,55,43)",
+      "align": "center",
+      "char_spacing": 6
+    },
+    {
+      "id": "subtitle",
+      "content": "瑶光引路·汇聚光药医路的青年力量",
+      "bbox": {
+        "x": 580,
+        "y": 560,
+        "w": 760,
+        "h": 52
+      },
+      "z": 80,
+      "font": "微软雅黑",
+      "font_size": 28,
+      "color": "RGB(45,106,69)",
+      "align": "center"
+    },
+    {
+      "id": "tagline",
+      "content": "以光启智·以药济世·以医护人·以路同行",
+      "bbox": {
+        "x": 662,
+        "y": 620,
+        "w": 600,
+        "h": 42
+      },
+      "z": 80,
+      "font": "宋体",
+      "font_size": 24,
+      "color": "RGB(47,55,43)",
+      "align": "center"
+    },
+    {
+      "id": "icon_light",
+      "content": "光",
+      "bbox": {
+        "x": 650,
+        "y": 777,
+        "w": 60,
+        "h": 40
+      },
+      "z": 80,
+      "font": "微软雅黑",
+      "font_size": 26,
+      "color": "RGB(47,55,43)",
+      "align": "center"
+    },
+    {
+      "id": "icon_medicine",
+      "content": "药",
+      "bbox": {
+        "x": 830,
+        "y": 777,
+        "w": 60,
+        "h": 40
+      },
+      "z": 80,
+      "font": "微软雅黑",
+      "font_size": 26,
+      "color": "RGB(47,55,43)",
+      "align": "center"
+    },
+    {
+      "id": "icon_medical",
+      "content": "医",
+      "bbox": {
+        "x": 1010,
+        "y": 777,
+        "w": 60,
+        "h": 40
+      },
+      "z": 80,
+      "font": "微软雅黑",
+      "font_size": 26,
+      "color": "RGB(47,55,43)",
+      "align": "center"
+    },
+    {
+      "id": "icon_road",
+      "content": "路",
+      "bbox": {
+        "x": 1190,
+        "y": 777,
+        "w": 60,
+        "h": 40
+      },
+      "z": 80,
+      "font": "微软雅黑",
+      "font_size": 26,
+      "color": "RGB(47,55,43)",
+      "align": "center"
+    }
+  ],
+  "photo_slots": []
+}
