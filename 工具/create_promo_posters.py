@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "宣传海报"
+OUT = ROOT / "交付物" / "宣传" / "宣传海报"
 PREVIEW = OUT / "preview"
 
 A4_W = 2480
@@ -174,14 +174,14 @@ def rounded_panel(
 
 
 def load_logo() -> Image.Image:
-    logo = Image.open(ROOT / "答辩PPT_v4" / "source_assets" / "hust_logo_official_layer.png").convert("RGBA")
+    logo = Image.open(ROOT / "交付物" / "答辩PPT" / "答辩PPT_v4" / "source_assets" / "hust_logo_official_layer.png").convert("RGBA")
     return resize_keep(logo, width=470)
 
 
 def load_yaoguang(width: int) -> Image.Image:
     candidates = [
-        ROOT / "Antigravity" / "CH04_看板娘" / "yaoguang_fullbody.png",
-        ROOT / "Antigravity" / "_shared" / "yaoguang.png",
+        ROOT / "总结书流水线" / "Antigravity" / "CH04_看板娘" / "yaoguang_fullbody.png",
+        ROOT / "总结书流水线" / "Antigravity" / "_shared" / "yaoguang.png",
     ]
     for p in candidates:
         if p.exists():
@@ -261,7 +261,7 @@ def draw_mountains(canvas: Image.Image, greenish: bool = True) -> None:
 
 
 def make_winter_poster() -> Image.Image:
-    bg = cover(ROOT / "Antigravity" / "_shared" / "hometown_cover_bg.png", (A4_W, A4_H))
+    bg = cover(ROOT / "总结书流水线" / "Antigravity" / "_shared" / "hometown_cover_bg.png", (A4_W, A4_H))
     canvas = Image.new("RGBA", (A4_W, A4_H), CREAM + (255,))
     canvas.alpha_composite(bg)
     wash = Image.new("RGBA", (A4_W, A4_H), (251, 246, 232, 166))
@@ -337,8 +337,8 @@ def make_winter_poster() -> Image.Image:
 
 
 def make_yekaitai_poster() -> Image.Image:
-    bg_left = cover(ROOT / "Antigravity" / "_shared" / "volunteer_cover_bg.png", (A4_W, A4_H))
-    bg_right = cover(ROOT / "Antigravity" / "_shared" / "yekaitai_cover_bg.png", (A4_W, A4_H))
+    bg_left = cover(ROOT / "总结书流水线" / "Antigravity" / "_shared" / "volunteer_cover_bg.png", (A4_W, A4_H))
+    bg_right = cover(ROOT / "总结书流水线" / "Antigravity" / "_shared" / "yekaitai_cover_bg.png", (A4_W, A4_H))
     mask = Image.new("L", (A4_W, A4_H), 0)
     md = ImageDraw.Draw(mask)
     md.rectangle((A4_W // 2 - 40, 0, A4_W, A4_H), fill=255)

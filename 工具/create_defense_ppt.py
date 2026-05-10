@@ -13,7 +13,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "答辩PPT"
+BOOK = ROOT / "总结书流水线"
+OUT = ROOT / "交付物" / "答辩PPT" / "答辩PPT"
 ASSETS = OUT / "assets"
 PREVIEW = OUT / "preview_png"
 
@@ -126,6 +127,8 @@ def fit_cover(src: Path, dest: Path, w: int, h: int) -> Path:
 
 
 def asset(name: str) -> Path:
+    if str(name).startswith("Antigravity/"):
+        return BOOK / name
     return ROOT / name
 
 

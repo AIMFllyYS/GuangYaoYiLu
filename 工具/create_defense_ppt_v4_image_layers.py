@@ -14,9 +14,9 @@ from validate_pptx_package import validate_pptx
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "答辩PPT_v4"
-V3 = ROOT / "答辩PPT_v3"
-SUPPLEMENT = ROOT / "补充性PPT"
+OUT = ROOT / "交付物" / "答辩PPT" / "答辩PPT_v4"
+V3 = ROOT / "交付物" / "答辩PPT" / "答辩PPT_v3"
+SUPPLEMENT = ROOT / "交付物" / "答辩PPT" / "补充性PPT"
 FULL = OUT / "full_ai_slides"
 LAYERS = OUT / "layers"
 PREVIEW = OUT / "preview_png"

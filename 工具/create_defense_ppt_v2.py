@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw, ImageOps
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "答辩PPT_v2"
+OUT = ROOT / "交付物" / "答辩PPT" / "答辩PPT_v2"
 ASSETS = OUT / "assets"
 PREVIEW = OUT / "preview_png"
 BG_DIR = OUT / "generated_backgrounds"

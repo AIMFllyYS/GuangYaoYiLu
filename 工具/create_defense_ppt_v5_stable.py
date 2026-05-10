@@ -29,10 +29,10 @@ from validate_pptx_package import validate_pptx
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "答辩PPT_v5"
-V4 = ROOT / "答辩PPT_v4"
-SUPPLEMENT = ROOT / "补充性PPT"
-MERCH_REF = ROOT / "瑶光文创"
+OUT = ROOT / "交付物" / "答辩PPT" / "答辩PPT_v5"
+V4 = ROOT / "交付物" / "答辩PPT" / "答辩PPT_v4"
+SUPPLEMENT = ROOT / "交付物" / "答辩PPT" / "补充性PPT"
+MERCH_REF = ROOT / "交付物" / "周边" / "瑶光文创"
 ASSETS = OUT / "assets"
 PREVIEW = OUT / "preview_png"
 PPTX_NAME = "光药医路_5分钟稳定答辩PPT_v5.pptx"
@@ -351,7 +351,7 @@ def prepare_assets() -> dict[str, Path]:
         if fallback.exists():
             shutil.copy2(fallback, merch)
     if not merch.exists():
-        raise FileNotFoundError("缺少文创产品底图，请先放入 答辩PPT_v5/assets/ai_merch_base.png")
+        raise FileNotFoundError("缺少文创产品底图，请先放入 交付物/答辩PPT/答辩PPT_v5/assets/ai_merch_base.png")
     logo = V4 / "source_assets" / "hust_logo_official_layer.png"
     if not logo.exists():
         raise FileNotFoundError(logo)
@@ -928,18 +928,18 @@ def write_qa(pptx_path: Path, previews: list[Path], pdf_path: Path, contact_shee
 
 ## 输出
 
-- PPTX：`答辩PPT_v5/{PPTX_NAME}`
-- 静态预览 PDF：`答辩PPT_v5/{PDF_NAME}`
-- 预览图：`答辩PPT_v5/preview_png/slide_01.png` 至 `slide_22.png`
-- 总览图：`答辩PPT_v5/preview_contact_sheet.png`
-- 元素清单：`答辩PPT_v5/element_manifest.json`
-- 文本清单：`答辩PPT_v5/text_manifest.json`
-- 讲稿：`答辩PPT_v5/{SCRIPT_NAME}`
+- PPTX：`交付物/答辩PPT/答辩PPT_v5/{PPTX_NAME}`
+- 静态预览 PDF：`交付物/答辩PPT/答辩PPT_v5/{PDF_NAME}`
+- 预览图：`交付物/答辩PPT/答辩PPT_v5/preview_png/slide_01.png` 至 `slide_22.png`
+- 总览图：`交付物/答辩PPT/答辩PPT_v5/preview_contact_sheet.png`
+- 元素清单：`交付物/答辩PPT/答辩PPT_v5/element_manifest.json`
+- 文本清单：`交付物/答辩PPT/答辩PPT_v5/text_manifest.json`
+- 讲稿：`交付物/答辩PPT/答辩PPT_v5/{SCRIPT_NAME}`
 
 ## 已执行检查
 
 - 生成脚本：`python 工具/create_defense_ppt_v5_stable.py`
-- PPTX 包结构：`python 工具/validate_pptx_package.py 答辩PPT_v5/{PPTX_NAME} --expected-slides 22`
+- PPTX 包结构：`python 工具/validate_pptx_package.py 交付物/答辩PPT/答辩PPT_v5/{PPTX_NAME} --expected-slides 22`
 - 图片可读性：PIL 校验 {len(previews)} 张预览图和 PPTX 内 {media_count} 张媒体图片。
 - UTF-8 安全：脚本写入 `.json`、`.md` 均显式使用 UTF-8。
 - Git 空白检查：`git diff --check` 通过。

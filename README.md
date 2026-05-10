@@ -19,27 +19,34 @@
 ## 🗂️ 项目结构
 
 ```
-总结书材料/
-├── 素材库/           ← 所有原始材料（文档/PPT/照片/视频，内的docx与pdf均已无损转为md供AI读取）
-│   ├── 01通知文件/
-│   ├── 02总策划书/
-│   ├── 03破冰活动/
-│   ├── 04嘉年华/
-│   ├── 05冬暖青日/
-│   ├── 06三月活动/
-│   ├── 07四月活动/
-│   └── 08人员与合照/
+光药医路 仓库根目录/
+├── 素材库/              ← 原始材料（docx/pdf 等已批量转 md 供阅读）
+│   ├── branding/       ← 对外统一标识位（如 hust_logo）
+│   └── …
 │
-├── Flow/             ← Google Flow 完整产出（CH01~CH15）
-├── NotebookLM/       ← Google NotebookLM 完整产出（CH01~CH15）
-├── Antigravity/      ← Antigravity AI 完整产出（CH01~CH15，含 brief.md）
+├── 总结书流水线/        ← 多渠道「全书」草稿
+│   ├── NotebookLM/
+│   └── Antigravity/     ← CH01~CH15，含 brief、compositor 等
 │
-├── 输出终稿/          ← 三渠道择优后的最终成品
-├── 工具/              ← 辅助脚本（Python/PowerShell）
+├── 交付物/              ← 答辩 PPT、海报、周边等可交付成果
+│   ├── 答辩PPT/         ← 答辩PPT、答辩PPT_v2 … v6、补充性PPT
+│   ├── 快速答辩/        ← 当前使用的分层 + build_pptx（canonical）
+│   ├── 答辩PPT_legacy/  ← 历史单页实验与 prompt，详见其 README
+│   ├── 宣传/宣传海报/
+│   └── 周边/瑶光文创/
 │
-├── README.md          ← 本文件（项目总览）
-└── Plan.md            ← 详细规划文档（章节规格/设计规范/产出要求）
+├── 输出终稿/            ← 总结书择优定稿
+├── 工具/                ← Python/PowerShell 辅助脚本
+├── 逐字稿/
+├── 调研报告/
+├── skills/              ← 与编辑器技能相关的参考（可选）
+│
+├── README.md            ← 本文件
+└── Plan.md              ← 章节规格 / 设计规范
 ```
+
+> Google Flow 目录若本地未创建可忽略；以 `总结书流水线/` 与 `输出终稿/` 为准。
+
 
 > 📖 详细的章节规划、设计规范和逐章产出规格见 **[Plan.md](Plan.md)**
 
