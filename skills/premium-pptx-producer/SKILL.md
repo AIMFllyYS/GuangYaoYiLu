@@ -58,6 +58,6 @@ description: Create high-end, real, editable PowerPoint/PPTX decks from uploaded
 - `scripts/scaffold_pptx_project.py`: create the recommended workspace and starter brief/plan/QA files.
 - `scripts/build_pptx_from_manifest.py`: assemble manifest-defined image/text elements into PPTX and preview PNG files.
 - `scripts/validate_pptx_artifact.py`: inspect a PPTX package for common structural, media, shape, forbidden-text, and optional UTF-8 issues.
-- `references/guangyaoyilu-lessons.md`: lessons distilled from the final stable `PPT-last` and `PPT-last-manual` workflow.
+- `references/guangyaoyilu-lessons.md`: lessons distilled from this project's final stable delivery workflow.
 - `references/workspace-contract.md`: folder contract, manifest schema, layer naming, image-generation prompts, and native-object rules.
 - `references/quality-gates.md`: baseline smoke, final strict validation, and delivery checklist.

@@ -65,6 +65,20 @@ Use strict validation for deliverables intended to leave the workspace:
 - Shape statistics are reported for every slide.
 - Application-level validation status is stated clearly, even when unavailable.
 
+## Skill Self-Validation
+
+Before changing this skill, validate the package itself and a temporary Chinese-titled smoke workspace:
+
+```powershell
+py -3.12 C:\Users\AIMFl\.codex\skills\.system\skill-creator\scripts\quick_validate.py .\skills\premium-pptx-producer
+python .\skills\premium-pptx-producer\scripts\scaffold_pptx_project.py $env:TEMP\premium-pptx-scaffold-smoke --title "广曜一路答辩测试" --slides 2 --force
+python .\skills\premium-pptx-producer\scripts\build_pptx_from_manifest.py <temp-workspace> --manifest-dir 03_assembly\manifests --out 04_final\pptx\smoke.pptx --preview-dir 03_assembly\previews --expected-slides 2
+python .\skills\premium-pptx-producer\scripts\validate_pptx_artifact.py <temp-workspace>\04_final\pptx\smoke.pptx --expected-slides 2 --scan-text-root .\skills\premium-pptx-producer
+git diff --check -- skills\premium-pptx-producer
+```
+
+Delete temporary smoke workspaces after the checks.
+
 ## Delivery Report
 
 Include:

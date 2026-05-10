@@ -1,6 +1,6 @@
 # GuangYaoYiLu-Derived PPTX Lessons
 
-These rules are distilled from this project only, especially `PPT-last`, `PPT-last-manual`, and the local PPT generation reports.
+These rules are distilled from this project only, especially `交付物/答辩PPT_legacy`（历史 prompt）、`交付物/快速答辩`（当前快速构建）, and the local PPT generation reports.
 
 ## Production Shape
 
