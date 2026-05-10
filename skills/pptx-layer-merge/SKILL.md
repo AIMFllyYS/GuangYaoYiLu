@@ -3,7 +3,7 @@ name: pptx-layer-merge
 description: Create high-end, real, editable PowerPoint/PPTX decks from uploaded materials and requirements. Use when Codex needs to build or substantially refine a professional deck, organize source files, generate image-first visual masters, split generated visuals into reusable layers, handle real photos or logos, assemble slides with native PPTX text/pictures/shapes, or validate a PPTX deliverable for package health, visual QA, and UTF-8 safety.
 ---
 
-# PPTX-Layer-merge
+# pptx-layer-merge
 
 ## Operating Rules
 
