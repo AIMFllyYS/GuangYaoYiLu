@@ -1,6 +1,6 @@
 # 📋 总结书项目详细规划
 
-> 本文档是 [README.md](README.md) 的配套文档，包含完整的设计规范、逐章产出规格和编造内容清单。
+> 本文档是仓库总览 **[README.md](README.md)**（**[English](README.en.md)**）在以 **A4 竖版总结书** 为主线时的配套说明，涵盖设计规范、逐章产出规格与编造内容边界；答辩 PPT / 技能 / 工具另见 **[交付物 README](交付物/README.md)**、**[skills](skills/README.md)**、**[工具](工具/README.md)**。
 
 ---
 

@@ -1,5 +1,14 @@
 # 工具与 Skills 调研
 
+## 0. 本仓库自研技能（推荐使用仓库内副本）
+
+本项目在仓库内维护可复用的 PPTX 分层与校验技能 **`pptx-layer-merge`**（曾用名已统一为此目录名；以当前路径为准），位于：
+
+`skills/pptx-layer-merge/`
+
+- 索引与授权说明：**[skills/README.md](../../skills/README.md)** · 许可：**[skills/LICENSE](../../skills/LICENSE)**（Apache-2.0，版权 AIMFllyYS（羽升））。
+- 下列各节中涉及 **Codex 运行时自带 Presentations skill** 的路径，仍可作为**外部参考**；若需与本项目交付流程对齐，请优先阅读仓库内 `pptx-layer-merge` 的 `SKILL.md` 与 `references/`。
+
 ## 1. 本地已安装 skill
 
 最相关的是本地 Codex `Presentations` skill：
