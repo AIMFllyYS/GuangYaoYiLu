@@ -62,7 +62,7 @@ Image elements also require `file`. Text elements also require `text`, `font`, `
       "id": "background",
       "type": "image",
       "source": "generated_background",
-      "file": "../generated_layers/slide_01/background.png",
+      "file": "02_generation/generated_layers/slide_01/background.png",
       "bbox": {"x": 0, "y": 0, "w": 1920, "h": 1080},
       "z": 0,
       "editable": false,
