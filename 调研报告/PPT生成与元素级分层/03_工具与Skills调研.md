@@ -13,7 +13,7 @@
 
 最相关的是本地 Codex `Presentations` skill：
 
-`C:/Users/AIMFl/.codex/plugins/cache/openai-primary-runtime/presentations/26.426.12240/skills/presentations/SKILL.md`
+`~/.codex/plugins/cache/codex-runtime/presentations/[运行时版本]/skills/presentations/SKILL.md`
 
 关键要求：
 

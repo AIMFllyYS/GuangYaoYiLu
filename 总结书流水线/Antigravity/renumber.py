@@ -1,7 +1,8 @@
 """重新编号全书页码 + 统一背景路径"""
 import json, os
+from pathlib import Path
 
-base = r"c:\Users\Lenovo\Downloads\总结书材料\Antigravity"
+base = os.environ.get("GYYL_ANTIGRAVITY_DIR", str(Path(__file__).resolve().parent))
 chapters = sorted([d for d in os.listdir(base) if d.startswith("CH") and os.path.isdir(os.path.join(base, d))])
 
 page_counter = 1

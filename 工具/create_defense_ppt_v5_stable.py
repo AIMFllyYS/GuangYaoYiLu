@@ -10,6 +10,7 @@ elements as native PowerPoint shapes/text/pictures where practical.
 
 import hashlib
 import json
+import os
 import shutil
 import tempfile
 import zipfile
@@ -59,10 +60,22 @@ FONTS = {
     "song": "C:/Windows/Fonts/simsun.ttc",
 }
 
-AI_MERCH_SOURCE = Path(
-    "C:/Users/AIMFl/.codex/generated_images/019e0b62-fd8f-72c1-a3ca-4781328159d0/"
-    "ig_09f4f6660e451e010169feec17f0648190890a4a18a7bcc306.png"
-)
+
+def try_resolve_ai_merch_png() -> Path | None:
+    """可选：从 ~/.codex/generated_images/<GYYL_CODEX_SESSION>/ 取用 PNG。"""
+
+    session = os.environ.get("GYYL_CODEX_SESSION", "").strip()
+    if not session:
+        return None
+    base_dir = Path.home() / ".codex" / "generated_images" / session
+    if not base_dir.is_dir():
+        return None
+    pick = os.environ.get("GYYL_CODEX_IMAGE", "").strip()
+    if pick:
+        cand = base_dir / pick
+        return cand if cand.is_file() else None
+    pngs = sorted(base_dir.glob("*.png"), key=lambda p: p.stat().st_mtime)
+    return pngs[-1] if pngs else None
 
 
 @dataclass
@@ -343,8 +356,10 @@ def make_yaoguang_mark() -> Path:
 def prepare_assets() -> dict[str, Path]:
     mark = make_yaoguang_mark()
     merch = ASSETS / "ai_merch_base.png"
-    if not merch.exists() and AI_MERCH_SOURCE.exists():
-        shutil.copy2(AI_MERCH_SOURCE, merch)
+    if not merch.exists():
+        ai_src = try_resolve_ai_merch_png()
+        if ai_src is not None:
+            shutil.copy2(ai_src, merch)
     if not merch.exists():
         # Deterministic fallback: use the user-provided notebook reference as a product-form source.
         fallback = MERCH_REF / "本子就是车线本换下封面.png"

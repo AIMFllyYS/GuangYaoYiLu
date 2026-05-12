@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 import os
 import shutil
+from pathlib import Path
 
-root = r"c:\Users\Lenovo\Downloads\总结书材料"
+root = os.environ.get("GYYL_ROOT", str(Path.cwd()))
 
 chapters = [
     "CH01_封面",

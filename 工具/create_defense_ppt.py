@@ -464,7 +464,7 @@ def build_slides() -> list[Slide]:
     title(s, "跨班混编：让联合支部真正运转", COLORS["red"])
     s.shapes.append(Shape("rect", 4.5, 1.36, 4.35, 0.72, COLORS["green"], radius=0.1))
     s.texts.append(TextBox("联合团支部“光药医路”", 4.72, 1.54, 3.9, 0.38, 20, COLORS["white"], True, "hei", "ctr"))
-    for i, name in enumerate(["艾宇杭\n药学", "张子栋\n光电", "高雨佳\n基医"]):
+    for i, name in enumerate(["团支书·药学支部\n药学", "团支书·光电支部\n光电", "团支书·基医支部\n基医"]):
         x = 1.58 + i * 4.16
         s.shapes.append(Shape("rect", x, 2.68, 2.8, 0.78, COLORS["white"], line=COLORS["gold"], radius=0.08))
         s.texts.append(TextBox(name, x + 0.2, 2.84, 2.4, 0.42, 18, COLORS["ink"], True, "yahei", "ctr"))
