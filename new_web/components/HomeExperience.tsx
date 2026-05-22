@@ -79,7 +79,7 @@ export function HomeExperience() {
       <section className="story-rail" aria-label="活动特色">
         {activityHighlights.map((item) => (
           <article key={item.title}>
-            <Image src={item.image} width={620} height={420} alt={item.title} />
+            <Image src={item.image} width={620} height={420} alt={item.title} loading="eager" />
             <div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>

@@ -33,7 +33,7 @@ function buildMessages(query: string, mode: RequestMode, localContext: string) {
   <subtitle>一句适合卡片副标题的话</subtitle>
   <summary>120字以内摘要</summary>
   <properties>
-    <item label="性味归经">内容，不确定写“需查阅药典或专业资料”</item>
+    <item label="性味归经">优先采用本地参考中已给出的性味归经；不确定再写“需查阅药典或专业资料”</item>
     <item label="传统认识">内容</item>
     <item label="现代视角">内容</item>
   </properties>
@@ -44,12 +44,12 @@ function buildMessages(query: string, mode: RequestMode, localContext: string) {
   </insights>
   <research>
     <status>${isResearch ? "聚焦近期研究、质量控制或现代药理进展" : "可补充相关研究方向"}</status>
-    <detail>如果启用了联网检索，请概括检索到的信息；若无法确认最新性，必须明确写出“需进一步核验最新文献”。</detail>
+    <detail>如果启用了联网检索，请概括高可靠信息；若搜索结果主要来自论坛、文档搬运站、百科或营销站，必须明确写出“当前检索结果不足以确认最新研究结论，需进一步核验 PubMed/CNKI/期刊官网”。</detail>
   </research>
   <safety>风险边界和不适合自行使用的情况</safety>
   <sources>
-    <source>来源或检索线索1；没有可靠来源则写“需核验”</source>
-    <source>来源或检索线索2；没有可靠来源则写“需核验”</source>
+    <source>只列高可靠来源或检索线索，如 PubMed、CNKI、期刊官网、国家药典/药监/中医药主管部门；没有可靠来源则写“未检索到高可靠来源，需核验”</source>
+    <source>不要把知乎、豆丁、原创力文档、营销号当作研究来源</source>
   </sources>
 </yaoguangCard>
 `
@@ -71,9 +71,9 @@ function buildBody(query: string, mode: RequestMode, localContext: string, withS
     body.tools = [
       {
         type: "web_search",
-        max_keyword: 3,
+        max_keyword: 5,
         force_search: true,
-        limit: 2,
+        limit: 3,
         user_location: {
           type: "approximate",
           country: "China",
