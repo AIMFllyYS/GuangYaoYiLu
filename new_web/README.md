@@ -13,7 +13,7 @@ npm run dev
 在 `.env.local` 中设置：
 
 - `MIMO_API_KEY`：小米 MiMo API Key
-- `MIMO_MODEL`：默认 `mimo-v2.5`
+- `MIMO_MODEL`：默认 `mimo-v2.5-pro`
 - `MIMO_BASE_URL`：默认 `https://api.xiaomimimo.com/v1`
 - `MIMO_ENABLE_WEB_SEARCH`：研究成果模式是否尝试启用联网检索工具
 
