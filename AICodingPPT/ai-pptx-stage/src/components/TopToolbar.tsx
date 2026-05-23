@@ -5,11 +5,22 @@ type TopToolbarProps = {
   total: number;
   slideTitle: string;
   zoomLabel: string;
+  showMode: boolean;
   onPrev: () => void;
   onNext: () => void;
+  onToggleShow: () => void;
 };
 
-export function TopToolbar({ currentIndex, total, slideTitle, zoomLabel, onPrev, onNext }: TopToolbarProps) {
+export function TopToolbar({
+  currentIndex,
+  total,
+  slideTitle,
+  zoomLabel,
+  showMode,
+  onPrev,
+  onNext,
+  onToggleShow
+}: TopToolbarProps) {
   return (
     <header className="top-toolbar" aria-label="编辑工具栏">
       <div className="toolbar-group title-group">
@@ -34,7 +45,12 @@ export function TopToolbar({ currentIndex, total, slideTitle, zoomLabel, onPrev,
         <button type="button" title="选择工具">
           <MousePointer2 size={18} />
         </button>
-        <button type="button" title="放映预览">
+        <button
+          type="button"
+          className={showMode ? "is-active" : undefined}
+          title={showMode ? "退出放映裁切" : "放映裁切预览"}
+          onClick={onToggleShow}
+        >
           <Play size={18} />
         </button>
         <button type="button" title="适合窗口">

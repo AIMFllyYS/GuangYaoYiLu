@@ -91,6 +91,12 @@ select {
   border-color: rgba(70, 201, 255, 0.42);
 }
 
+.toolbar-group button.is-active {
+  color: #061014;
+  border-color: rgba(70, 201, 255, 0.72);
+  background: var(--cyan);
+}
+
 .title-group strong {
   display: block;
   margin-top: 2px;
@@ -125,6 +131,15 @@ select {
   grid-template-columns: 310px minmax(620px, 1fr) 360px;
   gap: 16px;
   min-height: 0;
+}
+
+.editor-grid.is-show-mode {
+  grid-template-columns: 0 minmax(620px, 1fr) 0;
+}
+
+.editor-grid.is-show-mode .side-panel {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .eyebrow {
@@ -420,6 +435,40 @@ h1 {
 .scene-world.is-show .slide-frame {
   overflow: hidden;
   border-color: transparent;
+}
+
+.morph-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 50;
+  width: 960px;
+  height: 540px;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  pointer-events: none;
+}
+
+.morph-element {
+  position: absolute;
+  white-space: pre-wrap;
+  transform-origin: center;
+}
+
+.morph-text {
+  display: flex;
+  align-items: flex-start;
+}
+
+.morph-asset {
+  display: block;
+}
+
+.morph-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .stage-rulers {
