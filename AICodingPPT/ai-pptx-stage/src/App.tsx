@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import { InspectorPanel } from "./components/InspectorPanel";
 import { LayerPanel } from "./components/LayerPanel";
@@ -29,6 +29,8 @@ export default function App() {
   const [showMode, setShowMode] = useState(false);
   const [morphState, setMorphState] = useState<MorphState | null>(null);
   const [zoom, setZoom] = useState<number>(FIT_ZOOM);
+  const stageRef = useRef<HTMLElement | null>(null);
+  const editorZoomRef = useRef<number | null>(null);
   const selectedElement = useMemo(() => findElement(currentSlide, selectedId), [currentSlide, selectedId]);
   const validationIssues = useMemo(() => validateDeck(deck), [deck]);
   const slideChecklist = useMemo(() => slidePptxChecklist(deck, currentSlide), [deck, currentSlide]);
@@ -42,6 +44,44 @@ export default function App() {
   const finishMorph = useCallback(() => {
     setMorphState(null);
   }, []);
+
+  const fullscreenFitZoom = useCallback(() => {
+    const viewportWidth = window.screen?.width || window.innerWidth;
+    const viewportHeight = window.screen?.height || window.innerHeight;
+    return Math.min(viewportWidth / deck.size.width, viewportHeight / deck.size.height);
+  }, [deck.size.height, deck.size.width]);
+
+  const restoreEditorZoom = useCallback(() => {
+    setZoom(editorZoomRef.current ?? FIT_ZOOM);
+    editorZoomRef.current = null;
+  }, []);
+
+  const enterShowPreview = useCallback(async () => {
+    const stage = stageRef.current;
+    editorZoomRef.current = zoom;
+    setZoom(fullscreenFitZoom());
+    setShowMode(true);
+
+    if (!stage?.requestFullscreen) {
+      return;
+    }
+
+    try {
+      await stage.requestFullscreen();
+    } catch {
+      restoreEditorZoom();
+      setShowMode(false);
+    }
+  }, [fullscreenFitZoom, restoreEditorZoom, zoom]);
+
+  const exitShowPreview = useCallback(async () => {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+      return;
+    }
+    setShowMode(false);
+    restoreEditorZoom();
+  }, [restoreEditorZoom]);
 
   const goToSlide = useCallback((nextIndex: number) => {
     const bounded = (nextIndex + deck.slides.length) % deck.slides.length;
@@ -73,12 +113,24 @@ export default function App() {
         goToSlide(currentIndex - 1);
       }
       if (event.key === "Escape") {
-        setShowMode(false);
+        void exitShowPreview();
       }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentIndex, goToSlide]);
+  }, [currentIndex, exitShowPreview, goToSlide]);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      if (!document.fullscreenElement) {
+        setShowMode(false);
+        restoreEditorZoom();
+      }
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, [restoreEditorZoom]);
 
   const handleMoveElement = (id: string, dx: number, dy: number) => {
     if (showMode) {
@@ -131,7 +183,13 @@ export default function App() {
         onPrev={() => goToSlide(currentIndex - 1)}
         onNext={() => goToSlide(currentIndex + 1)}
         showMode={showMode}
-        onToggleShow={() => setShowMode((current) => !current)}
+        onToggleShow={() => {
+          if (showMode) {
+            void exitShowPreview();
+            return;
+          }
+          void enterShowPreview();
+        }}
         onZoomIn={() => changeZoom("in")}
         onZoomOut={() => changeZoom("out")}
         onZoomFit={() => changeZoom("fit")}
@@ -147,7 +205,7 @@ export default function App() {
           onToggleVisibility={handleToggleVisibility}
           onToggleLock={handleToggleLock}
         />
-        <section className="stage-shell" style={stageStyle} aria-label="AI PPTX stage preview">
+        <section ref={stageRef} className="stage-shell" style={stageStyle} aria-label="AI PPTX stage preview">
           <SceneRenderer
             deck={deck}
             slide={currentSlide}

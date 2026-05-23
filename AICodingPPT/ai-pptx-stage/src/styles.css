@@ -361,6 +361,15 @@ h1 {
   box-shadow: var(--shadow-stage);
 }
 
+.stage-shell:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  border-radius: 0;
+  background: #050607;
+  box-shadow: none;
+}
+
 .side-panel {
   min-height: 0;
   overflow: hidden;

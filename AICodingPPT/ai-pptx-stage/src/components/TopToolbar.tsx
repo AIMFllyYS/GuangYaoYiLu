@@ -78,8 +78,8 @@ export function TopToolbar({
         <button
           className={showMode ? "icon-button is-active" : "icon-button"}
           type="button"
-          title={showMode ? "退出放映裁切" : "放映裁切预览"}
-          aria-label={showMode ? "退出放映裁切预览" : "进入放映裁切预览"}
+          title={showMode ? "退出全屏放映" : "全屏放映预览"}
+          aria-label={showMode ? "退出全屏放映预览" : "进入全屏放映预览"}
           onClick={onToggleShow}
         >
           <MonitorPlay size={18} />

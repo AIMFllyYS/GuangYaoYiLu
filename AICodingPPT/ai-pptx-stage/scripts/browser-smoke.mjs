@@ -47,6 +47,10 @@ try {
   assert(inspectorText.includes("PPTX Manual Sync"), "inspector missing PPTX sync data");
 
   await page.locator(".top-toolbar button").nth(3).click();
+  await page.waitForFunction(() => document.fullscreenElement?.classList.contains("stage-shell"));
+  const fullscreenFrame = await page.locator(".slide-frame").boundingBox();
+  assert(fullscreenFrame && fullscreenFrame.width > frameBox.width, "fullscreen preview did not enlarge slide frame");
+
   await page.keyboard.press("ArrowRight");
   await page.waitForSelector(".morph-overlay", { state: "attached", timeout: 1000 });
 
