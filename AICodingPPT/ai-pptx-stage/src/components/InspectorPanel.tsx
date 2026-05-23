@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Clipboard, ClipboardCheck, ClipboardList } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Clipboard, ClipboardCheck, ClipboardList, Info, Ruler, TerminalSquare } from "lucide-react";
 import { elementPatchSnippet } from "../deck/exporters";
 import { pptxParameterLines, toPptxInches } from "../deck/pptx";
 import type { SlideElement, SlideSpec } from "../deck/types";
@@ -26,7 +26,10 @@ export function InspectorPanel({ slide, element, slideChecklist, issues }: Inspe
       </div>
       <div className="inspector-content">
         <section>
-          <h3>Page Sync</h3>
+          <h3>
+            <ClipboardList size={14} aria-hidden="true" />
+            PPTX Manual Sync
+          </h3>
           <CopyButton label="复制当前页 PPTX 清单" value={slideChecklist} />
         </section>
         {!element ? (
@@ -36,7 +39,10 @@ export function InspectorPanel({ slide, element, slideChecklist, issues }: Inspe
         ) : (
           <>
             <section>
-              <h3>AI Source</h3>
+              <h3>
+                <TerminalSquare size={14} aria-hidden="true" />
+                AI Source
+              </h3>
               <ParamGrid
                 rows={[
                   ["slide", slide.id],
@@ -52,7 +58,10 @@ export function InspectorPanel({ slide, element, slideChecklist, issues }: Inspe
               <CopyButton label="复制 TS patch" value={elementPatchSnippet(slide, element)} />
             </section>
             <section>
-              <h3>Geometry</h3>
+              <h3>
+                <Ruler size={14} aria-hidden="true" />
+                Geometry
+              </h3>
               <ParamGrid
                 rows={[
                   ["x", String(element.x)],
@@ -65,14 +74,20 @@ export function InspectorPanel({ slide, element, slideChecklist, issues }: Inspe
               />
             </section>
             <section>
-              <h3>PPTX Manual Sync</h3>
+              <h3>
+                <ClipboardList size={14} aria-hidden="true" />
+                Selection Pane
+              </h3>
               <ParamGrid rows={pptxParameterLines(element).map((line) => line.split(": ") as [string, string])} />
               <PptxHint element={element} />
             </section>
           </>
         )}
         <section>
-          <h3>Validation</h3>
+          <h3>
+            <CheckCircle2 size={14} aria-hidden="true" />
+            Validation
+          </h3>
           <ValidationReport issues={slideIssues} />
         </section>
       </div>
@@ -103,7 +118,7 @@ function CopyButton({ label, value }: { label: string; value: string }) {
   };
 
   return (
-    <button className="copy-button" type="button" onClick={copy}>
+    <button className={copied ? "copy-button is-copied" : "copy-button"} type="button" onClick={copy} aria-live="polite">
       {copied ? <ClipboardCheck size={14} /> : <Clipboard size={14} />}
       {copied ? "已复制" : label}
     </button>
@@ -119,13 +134,28 @@ function ValidationReport({ issues }: { issues: ValidationIssue[] }) {
     <ul className="validation-list">
       {issues.map((issue, index) => (
         <li key={`${issue.slideId}-${issue.elementId ?? "slide"}-${index}`} className={`validation-${issue.level}`}>
-          <strong>{issue.level}</strong>
+          <strong>
+            <SeverityIcon level={issue.level} />
+            {issue.level}
+          </strong>
           <span>{issue.elementId ?? issue.slideId}</span>
           <p>{issue.message}</p>
         </li>
       ))}
     </ul>
   );
+}
+
+function SeverityIcon({ level }: { level: ValidationIssue["level"] }) {
+  if (level === "error") {
+    return <AlertTriangle size={13} aria-hidden="true" />;
+  }
+
+  if (level === "warning") {
+    return <Info size={13} aria-hidden="true" />;
+  }
+
+  return <CheckCircle2 size={13} aria-hidden="true" />;
 }
 
 function PptxHint({ element }: { element: SlideElement }) {

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import type { CSSProperties, PointerEvent } from "react";
 import type { DeckSpec, SlideElement, SlideSpec } from "../deck/types";
 
@@ -14,6 +14,7 @@ type SceneRendererProps = {
 export function SceneRenderer({ deck, slide, selectedId, mode = "editor", onSelect, onMoveElement }: SceneRendererProps) {
   const sortedElements = [...slide.elements].sort((a, b) => a.z - b.z);
   const dragRef = useRef<{ id: string; lastX: number; lastY: number } | null>(null);
+  const [draggingId, setDraggingId] = useState<string | null>(null);
 
   const startDrag = (id: string, event: PointerEvent<HTMLElement>) => {
     if (mode !== "editor") {
@@ -24,6 +25,7 @@ export function SceneRenderer({ deck, slide, selectedId, mode = "editor", onSele
       lastX: event.clientX,
       lastY: event.clientY
     };
+    setDraggingId(id);
     event.currentTarget.setPointerCapture(event.pointerId);
   };
 
@@ -41,11 +43,18 @@ export function SceneRenderer({ deck, slide, selectedId, mode = "editor", onSele
 
   const endDrag = () => {
     dragRef.current = null;
+    setDraggingId(null);
   };
+
+  const sceneClassName = [
+    "scene-world",
+    mode === "show" ? "is-show" : "",
+    draggingId ? "is-dragging" : ""
+  ].filter(Boolean).join(" ");
 
   return (
     <div
-      className={mode === "show" ? "scene-world is-show" : "scene-world"}
+      className={sceneClassName}
       style={{ "--deck-width": deck.size.width, "--deck-height": deck.size.height } as CSSProperties}
     >
       <div className="pasteboard-grid" />
@@ -56,6 +65,7 @@ export function SceneRenderer({ deck, slide, selectedId, mode = "editor", onSele
               key={element.id}
               element={element}
               selected={selectedId === element.id}
+              dragging={draggingId === element.id}
               onSelect={onSelect}
               onStartDrag={startDrag}
               onDrag={moveDrag}
@@ -77,13 +87,14 @@ export function SceneRenderer({ deck, slide, selectedId, mode = "editor", onSele
 type SceneElementProps = {
   element: SlideElement;
   selected?: boolean;
+  dragging?: boolean;
   onSelect?: (id: string) => void;
   onStartDrag?: (id: string, event: PointerEvent<HTMLElement>) => void;
   onDrag?: (event: PointerEvent<HTMLElement>) => void;
   onEndDrag?: () => void;
 };
 
-function SceneElement({ element, selected, onSelect, onStartDrag, onDrag, onEndDrag }: SceneElementProps) {
+function SceneElement({ element, selected, dragging, onSelect, onStartDrag, onDrag, onEndDrag }: SceneElementProps) {
   if (element.visible === false) {
     return null;
   }
@@ -105,7 +116,12 @@ function SceneElement({ element, selected, onSelect, onStartDrag, onDrag, onEndD
     "--element-shadow": element.style.shadow ?? "none"
   } as CSSProperties;
 
-  const className = selected ? "scene-element is-selected" : "scene-element";
+  const className = [
+    "scene-element",
+    selected ? "is-selected" : "",
+    dragging ? "is-dragging" : "",
+    element.locked ? "is-locked" : ""
+  ].filter(Boolean).join(" ");
   const handlePointerDown = (event: PointerEvent<HTMLElement>) => {
     event.stopPropagation();
     onSelect?.(element.id);
@@ -133,6 +149,8 @@ function SceneElement({ element, selected, onSelect, onStartDrag, onDrag, onEndD
         onPointerMove={onDrag}
         onPointerUp={onEndDrag}
         onPointerCancel={onEndDrag}
+        onLostPointerCapture={onEndDrag}
+        aria-grabbed={dragging}
       >
         {element.content}
       </div>
@@ -156,6 +174,8 @@ function SceneElement({ element, selected, onSelect, onStartDrag, onDrag, onEndD
         onPointerMove={onDrag}
         onPointerUp={onEndDrag}
         onPointerCancel={onEndDrag}
+        onLostPointerCapture={onEndDrag}
+        aria-grabbed={dragging}
       />
     );
   }
@@ -171,7 +191,9 @@ function SceneElement({ element, selected, onSelect, onStartDrag, onDrag, onEndD
         onPointerMove={onDrag}
         onPointerUp={onEndDrag}
         onPointerCancel={onEndDrag}
+        onLostPointerCapture={onEndDrag}
         aria-label={element.alt ?? element.name}
+        aria-grabbed={dragging}
       >
         {element.asset}
       </div>
@@ -189,6 +211,8 @@ function SceneElement({ element, selected, onSelect, onStartDrag, onDrag, onEndD
         onPointerMove={onDrag}
         onPointerUp={onEndDrag}
         onPointerCancel={onEndDrag}
+        onLostPointerCapture={onEndDrag}
+        aria-grabbed={dragging}
       >
         {element.children.map((child) => (
           <SceneElement key={child.id} element={child} onSelect={onSelect} />
@@ -207,7 +231,9 @@ function SceneElement({ element, selected, onSelect, onStartDrag, onDrag, onEndD
       onPointerMove={onDrag}
       onPointerUp={onEndDrag}
       onPointerCancel={onEndDrag}
+      onLostPointerCapture={onEndDrag}
       aria-label={element.name}
+      aria-grabbed={dragging}
     />
   );
 }
