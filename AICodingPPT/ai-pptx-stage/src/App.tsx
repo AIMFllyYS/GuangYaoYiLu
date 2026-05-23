@@ -6,6 +6,8 @@ import { sampleDeck } from "./deck/sampleDeck";
 import { SceneRenderer } from "./components/SceneRenderer";
 import { TopToolbar } from "./components/TopToolbar";
 import { findElement, nudgeElement, setLayerDirection, updateElement } from "./deck/editing";
+import { slidePptxChecklist } from "./deck/exporters";
+import { validateDeck } from "./deck/validation";
 import type { SlideSpec } from "./deck/types";
 
 type MorphState = {
@@ -23,6 +25,8 @@ export default function App() {
   const [showMode, setShowMode] = useState(false);
   const [morphState, setMorphState] = useState<MorphState | null>(null);
   const selectedElement = useMemo(() => findElement(currentSlide, selectedId), [currentSlide, selectedId]);
+  const validationIssues = useMemo(() => validateDeck(deck), [deck]);
+  const slideChecklist = useMemo(() => slidePptxChecklist(deck, currentSlide), [deck, currentSlide]);
 
   const finishMorph = useCallback(() => {
     setMorphState(null);
@@ -133,7 +137,12 @@ export default function App() {
             />
           ) : null}
         </section>
-        <InspectorPanel slide={currentSlide} element={selectedElement} />
+        <InspectorPanel
+          slide={currentSlide}
+          element={selectedElement}
+          slideChecklist={slideChecklist}
+          issues={validationIssues}
+        />
       </section>
     </main>
   );

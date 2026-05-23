@@ -1,13 +1,20 @@
-import { ClipboardList } from "lucide-react";
+import { useState } from "react";
+import { Clipboard, ClipboardCheck, ClipboardList } from "lucide-react";
+import { elementPatchSnippet } from "../deck/exporters";
 import { pptxParameterLines, toPptxInches } from "../deck/pptx";
 import type { SlideElement, SlideSpec } from "../deck/types";
+import type { ValidationIssue } from "../deck/validation";
 
 type InspectorPanelProps = {
   slide: SlideSpec;
   element?: SlideElement;
+  slideChecklist: string;
+  issues: ValidationIssue[];
 };
 
-export function InspectorPanel({ slide, element }: InspectorPanelProps) {
+export function InspectorPanel({ slide, element, slideChecklist, issues }: InspectorPanelProps) {
+  const slideIssues = issues.filter((issue) => issue.slideId === slide.id);
+
   return (
     <aside className="side-panel inspector-panel" aria-label="参数面板">
       <div className="panel-title">
@@ -17,47 +24,58 @@ export function InspectorPanel({ slide, element }: InspectorPanelProps) {
         </div>
         <ClipboardList size={17} aria-hidden="true" />
       </div>
-      {!element ? (
-        <div className="empty-state">
-          <p>选择一个元素后，这里会展示 TypeScript 源数据、PPTX 英寸参数和选择窗格命名建议。</p>
-        </div>
-      ) : (
-        <div className="inspector-content">
-          <section>
-            <h3>AI Source</h3>
-            <ParamGrid
-              rows={[
-                ["slide", slide.id],
-                ["id", element.id],
-                ["type", element.type],
-                ["morphKey", element.morphKey ?? "-"],
-                ["name", element.name],
-                ["z", String(element.z)],
-                ["locked", String(Boolean(element.locked))],
-                ["visible", String(element.visible !== false)]
-              ]}
-            />
-          </section>
-          <section>
-            <h3>Geometry</h3>
-            <ParamGrid
-              rows={[
-                ["x", String(element.x)],
-                ["y", String(element.y)],
-                ["w", String(element.w)],
-                ["h", String(element.h)],
-                ["rotate", `${element.rotate}deg`],
-                ["opacity", String(element.opacity)]
-              ]}
-            />
-          </section>
-          <section>
-            <h3>PPTX Manual Sync</h3>
-            <ParamGrid rows={pptxParameterLines(element).map((line) => line.split(": ") as [string, string])} />
-            <PptxHint element={element} />
-          </section>
-        </div>
-      )}
+      <div className="inspector-content">
+        <section>
+          <h3>Page Sync</h3>
+          <CopyButton label="复制当前页 PPTX 清单" value={slideChecklist} />
+        </section>
+        {!element ? (
+          <div className="empty-state">
+            <p>选择一个元素后，这里会展示 TypeScript 源数据、PPTX 英寸参数和选择窗格命名建议。</p>
+          </div>
+        ) : (
+          <>
+            <section>
+              <h3>AI Source</h3>
+              <ParamGrid
+                rows={[
+                  ["slide", slide.id],
+                  ["id", element.id],
+                  ["type", element.type],
+                  ["morphKey", element.morphKey ?? "-"],
+                  ["name", element.name],
+                  ["z", String(element.z)],
+                  ["locked", String(Boolean(element.locked))],
+                  ["visible", String(element.visible !== false)]
+                ]}
+              />
+              <CopyButton label="复制 TS patch" value={elementPatchSnippet(slide, element)} />
+            </section>
+            <section>
+              <h3>Geometry</h3>
+              <ParamGrid
+                rows={[
+                  ["x", String(element.x)],
+                  ["y", String(element.y)],
+                  ["w", String(element.w)],
+                  ["h", String(element.h)],
+                  ["rotate", `${element.rotate}deg`],
+                  ["opacity", String(element.opacity)]
+                ]}
+              />
+            </section>
+            <section>
+              <h3>PPTX Manual Sync</h3>
+              <ParamGrid rows={pptxParameterLines(element).map((line) => line.split(": ") as [string, string])} />
+              <PptxHint element={element} />
+            </section>
+          </>
+        )}
+        <section>
+          <h3>Validation</h3>
+          <ValidationReport issues={slideIssues} />
+        </section>
+      </div>
     </aside>
   );
 }
@@ -75,6 +93,41 @@ function ParamGrid({ rows }: { rows: [string, string][] }) {
   );
 }
 
+function CopyButton({ label, value }: { label: string; value: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const copy = async () => {
+    await navigator.clipboard.writeText(value);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1200);
+  };
+
+  return (
+    <button className="copy-button" type="button" onClick={copy}>
+      {copied ? <ClipboardCheck size={14} /> : <Clipboard size={14} />}
+      {copied ? "已复制" : label}
+    </button>
+  );
+}
+
+function ValidationReport({ issues }: { issues: ValidationIssue[] }) {
+  if (issues.length === 0) {
+    return <p className="validation-empty">当前页没有发现校验问题。</p>;
+  }
+
+  return (
+    <ul className="validation-list">
+      {issues.map((issue, index) => (
+        <li key={`${issue.slideId}-${issue.elementId ?? "slide"}-${index}`} className={`validation-${issue.level}`}>
+          <strong>{issue.level}</strong>
+          <span>{issue.elementId ?? issue.slideId}</span>
+          <p>{issue.message}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function PptxHint({ element }: { element: SlideElement }) {
   const inches = toPptxInches(element);
 
@@ -88,4 +141,3 @@ function PptxHint({ element }: { element: SlideElement }) {
     </div>
   );
 }
-

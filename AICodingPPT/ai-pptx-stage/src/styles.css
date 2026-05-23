@@ -385,6 +385,80 @@ h1 {
   line-height: 1.65;
 }
 
+.copy-button {
+  display: inline-flex;
+  width: 100%;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  border: 1px solid rgba(70, 201, 255, 0.28);
+  border-radius: 9px;
+  color: #dff7ff;
+  background: rgba(70, 201, 255, 0.08);
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  border-color: rgba(70, 201, 255, 0.62);
+  background: rgba(70, 201, 255, 0.13);
+}
+
+.validation-empty {
+  margin: 0;
+  color: rgba(238, 248, 255, 0.66);
+  font-size: 12px;
+}
+
+.validation-list {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.validation-list li {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.validation-list strong {
+  display: inline-flex;
+  min-width: 54px;
+  margin-right: 8px;
+  color: #ffffff;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.validation-list span {
+  color: rgba(238, 248, 255, 0.58);
+  font-size: 11px;
+}
+
+.validation-list p {
+  margin: 7px 0 0;
+  color: rgba(238, 248, 255, 0.78);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.validation-error {
+  border-color: rgba(255, 91, 121, 0.38) !important;
+}
+
+.validation-warning {
+  border-color: rgba(255, 207, 91, 0.32) !important;
+}
+
+.validation-info {
+  border-color: rgba(70, 201, 255, 0.24) !important;
+}
+
 .scene-world {
   position: relative;
   width: 100%;
