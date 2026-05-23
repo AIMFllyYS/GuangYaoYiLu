@@ -6,7 +6,10 @@ Deck id: `guang-yao-yi-lu-final-defense`
 
 - `决赛PPT/PPT要求/PPT每面要求.docx`
 - `决赛PPT/PPT要求/1` 至 `决赛PPT/PPT要求/9` 中的图片素材
-- 政策页参考公开政策来源：健康中国建设、中医药传承创新发展相关官方资料
+- 政策页参考公开政策来源：
+  - 中华人民共和国国家卫生健康委员会：《“健康中国2030”规划纲要》
+  - 中华人民共和国国家卫生健康委员会：《中医药发展战略规划纲要（2016－2030年）》
+  - 中国政府网：《中共中央 国务院关于促进中医药传承创新发展的意见》
 
 ## 叙事结构
 
@@ -27,3 +30,12 @@ Deck id: `guang-yao-yi-lu-final-defense`
 - 以青黛绿、草本绿、药金、宣纸白为主，穿插政策红和科技青。
 - 保持 `wave-utopia-demo` 的答辩舞台感：画布外元素参与 Morph、深浅背景切换、对象命名稳定。
 - 所有可迁移内容使用真实文本、基础形状、图片、SVG/icon 和 group。
+
+## 验证记录
+
+- `npm run typecheck`：通过
+- `npm run build`：通过
+- `npm run validate:decks`：通过
+- `npm run validate:utf8`：通过
+- `npm run smoke:browser`：通过，使用 `AI_PPTX_STAGE_URL=http://127.0.0.1:5174`
+- 新 deck 预览补充检查：通过，确认 `guang-yao-yi-lu-final-defense` 首屏可见、页数为 `1 / 10`、首屏图片资源加载成功、可见文本未发现乱码标记
