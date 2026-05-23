@@ -1,6 +1,6 @@
 import { defineSlide, ellipse, image, rect, text } from "../../../../deck/authoring";
 
-const A = "/src/decks/guang-yao-yi-lu-final-defense/assets/";
+const asset = (name: string) => new URL(`../../assets/${name}`, import.meta.url).href;
 
 export const slide = defineSlide({
   id: "004-team-brand",
@@ -44,7 +44,7 @@ export const slide = defineSlide({
       id: "brand-logo-primary",
       morphKey: "!!brand-logo-primary",
       name: "主 Logo",
-      asset: `${A}logo-dark.jpg`,
+      asset: asset("logo-dark.jpg"),
       alt: "光药医路 Logo",
       x: 70,
       y: 58,
@@ -57,7 +57,7 @@ export const slide = defineSlide({
       id: "brand-logo-secondary",
       morphKey: "!!brand-logo-secondary",
       name: "副 Logo",
-      asset: `${A}logo-secondary.png`,
+      asset: asset("logo-secondary.png"),
       alt: "联合团支部 Logo",
       x: 176,
       y: 60,
@@ -103,9 +103,9 @@ export const slide = defineSlide({
       style: { fontSize: 27, color: "rgba(223,246,229,.78)", fontWeight: 500 }
     }),
     ...([
-      ["team-photo-pharmacy", "药", "药学（中外）2503", `${A}team-photo-pharmacy.jpg`, 128],
-      ["team-photo-optics", "光", "光电 2506", `${A}team-photo-optics.jpg`, 500],
-      ["team-photo-medicine", "医", "基础医学（强基）2501", `${A}team-photo-medicine.png`, 872]
+      ["team-photo-pharmacy", "药", "药学（中外）2503", asset("team-photo-pharmacy.jpg"), 128],
+      ["team-photo-optics", "光", "光电 2506", asset("team-photo-optics.jpg"), 500],
+      ["team-photo-medicine", "医", "基础医学（强基）2501", asset("team-photo-medicine.png"), 872]
     ] as const).map(([id, , label, asset, x]) =>
       image({
         id,
@@ -165,7 +165,7 @@ export const slide = defineSlide({
       id: "promo-poster",
       morphKey: "!!promo-poster",
       name: "宣传海报",
-      asset: `${A}promo-poster-1.png`,
+      asset: asset("promo-poster-1.png"),
       alt: "宣传海报",
       x: 1300,
       y: 276,
@@ -178,7 +178,7 @@ export const slide = defineSlide({
       id: "yaoguang-helper",
       morphKey: "!!yaoguang-helper",
       name: "瑶光助手",
-      asset: `${A}yaoguang-1.jpg`,
+      asset: asset("yaoguang-1.jpg"),
       alt: "瑶光助手形象",
       x: 1580,
       y: 330,

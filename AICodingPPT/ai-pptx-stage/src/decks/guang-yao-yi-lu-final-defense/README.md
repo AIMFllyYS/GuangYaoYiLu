@@ -39,3 +39,4 @@ Deck id: `guang-yao-yi-lu-final-defense`
 - `npm run validate:utf8`：通过
 - `npm run smoke:browser`：通过，使用 `AI_PPTX_STAGE_URL=http://127.0.0.1:5174`
 - 新 deck 预览补充检查：通过，确认 `guang-yao-yi-lu-final-defense` 首屏可见、页数为 `1 / 10`、首屏图片资源加载成功、可见文本未发现乱码标记
+- 图片打包补充检查：通过，页面图片已改为 `new URL("../../assets/...", import.meta.url).href`，生产预览确认首屏图片走 `/assets/` 打包产物加载

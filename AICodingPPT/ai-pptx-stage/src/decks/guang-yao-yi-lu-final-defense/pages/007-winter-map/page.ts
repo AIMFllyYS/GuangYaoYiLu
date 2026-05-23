@@ -1,6 +1,6 @@
 import { defineSlide, ellipse, image, line, rect, text } from "../../../../deck/authoring";
 
-const A = "/src/decks/guang-yao-yi-lu-final-defense/assets/";
+const asset = (name: string) => new URL(`../../assets/${name}`, import.meta.url).href;
 
 export const slide = defineSlide({
   id: "007-winter-map",
@@ -44,7 +44,7 @@ export const slide = defineSlide({
       id: "brand-logo-primary",
       morphKey: "!!brand-logo-primary",
       name: "主 Logo",
-      asset: `${A}logo-light.jpg`,
+      asset: asset("logo-light.jpg"),
       alt: "光药医路 Logo",
       x: 70,
       y: 58,
@@ -57,7 +57,7 @@ export const slide = defineSlide({
       id: "brand-logo-secondary",
       morphKey: "!!brand-logo-secondary",
       name: "副 Logo",
-      asset: `${A}logo-secondary.png`,
+      asset: asset("logo-secondary.png"),
       alt: "联合团支部 Logo",
       x: 176,
       y: 60,
@@ -106,7 +106,7 @@ export const slide = defineSlide({
       id: "winter-map",
       morphKey: "!!winter-map",
       name: "地图展示",
-      asset: `${A}winter-map.jpg`,
+      asset: asset("winter-map.jpg"),
       alt: "路线地图示意",
       x: 112,
       y: 350,
@@ -153,7 +153,7 @@ export const slide = defineSlide({
       id: "winter-talk-a",
       morphKey: "!!winter-talk-a",
       name: "母校宣讲图 A",
-      asset: `${A}winter-talk-a.png`,
+      asset: asset("winter-talk-a.png"),
       alt: "母校宣讲",
       x: 910,
       y: 355,
@@ -166,7 +166,7 @@ export const slide = defineSlide({
       id: "winter-talk-b",
       morphKey: "!!winter-talk-b",
       name: "母校宣讲图 B",
-      asset: `${A}winter-talk-b.jpg`,
+      asset: asset("winter-talk-b.jpg"),
       alt: "母校宣讲",
       x: 910,
       y: 638,
@@ -179,7 +179,7 @@ export const slide = defineSlide({
       id: "winter-museum",
       morphKey: "!!winter-museum",
       name: "实地考察图",
-      asset: `${A}winter-museum.jpg`,
+      asset: asset("winter-museum.jpg"),
       alt: "实地考察",
       x: 1350,
       y: 500,

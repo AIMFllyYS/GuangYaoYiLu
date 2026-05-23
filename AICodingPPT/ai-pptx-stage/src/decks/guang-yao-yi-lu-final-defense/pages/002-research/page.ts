@@ -1,6 +1,6 @@
 import { defineSlide, ellipse, image, rect, text } from "../../../../deck/authoring";
 
-const A = "/src/decks/guang-yao-yi-lu-final-defense/assets/";
+const asset = (name: string) => new URL(`../../assets/${name}`, import.meta.url).href;
 
 const findings = [
   ["认知水平", "常见药食同源药材辨识度较高，冷门草本认知偏弱。"],
@@ -51,7 +51,7 @@ export const slide = defineSlide({
       id: "brand-logo-primary",
       morphKey: "!!brand-logo-primary",
       name: "主 Logo",
-      asset: `${A}logo-light.jpg`,
+      asset: asset("logo-light.jpg"),
       alt: "光药医路 Logo",
       x: 70,
       y: 58,
@@ -64,7 +64,7 @@ export const slide = defineSlide({
       id: "brand-logo-secondary",
       morphKey: "!!brand-logo-secondary",
       name: "副 Logo",
-      asset: `${A}logo-secondary.png`,
+      asset: asset("logo-secondary.png"),
       alt: "联合团支部 Logo",
       x: 176,
       y: 60,
@@ -113,7 +113,7 @@ export const slide = defineSlide({
       id: "survey-card-a",
       morphKey: "!!survey-card-a",
       name: "问卷截图 A",
-      asset: `${A}research-survey-1.png`,
+      asset: asset("research-survey-1.png"),
       alt: "问卷截图",
       x: 128,
       y: 365,
@@ -126,7 +126,7 @@ export const slide = defineSlide({
       id: "survey-card-b",
       morphKey: "!!survey-card-b",
       name: "问卷截图 B",
-      asset: `${A}research-survey-2.png`,
+      asset: asset("research-survey-2.png"),
       alt: "问卷截图",
       x: 490,
       y: 392,
@@ -140,7 +140,7 @@ export const slide = defineSlide({
         id: `result-chart-${i + 1}`,
         morphKey: `!!result-chart-${i + 1}`,
         name: `调研结果图 ${i + 1}`,
-        asset: `${A}research-result-${i + 1}.jpg`,
+        asset: asset(`research-result-${i + 1}.jpg`),
         alt: "调研结果饼图",
         x: 890 + (i % 2) * 290,
         y: 335 + Math.floor(i / 2) * 230,

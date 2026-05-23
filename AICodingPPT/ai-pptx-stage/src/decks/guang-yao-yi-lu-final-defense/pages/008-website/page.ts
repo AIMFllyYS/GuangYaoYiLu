@@ -1,6 +1,6 @@
 import { defineSlide, ellipse, image, line, rect, text } from "../../../../deck/authoring";
 
-const A = "/src/decks/guang-yao-yi-lu-final-defense/assets/";
+const asset = (name: string) => new URL(`../../assets/${name}`, import.meta.url).href;
 
 const features = [
   ["十四字主题", "固定活动精神锚点"],
@@ -53,7 +53,7 @@ export const slide = defineSlide({
       id: "brand-logo-primary",
       morphKey: "!!brand-logo-primary",
       name: "主 Logo",
-      asset: `${A}logo-dark.jpg`,
+      asset: asset("logo-dark.jpg"),
       alt: "光药医路 Logo",
       x: 70,
       y: 58,
@@ -66,7 +66,7 @@ export const slide = defineSlide({
       id: "brand-logo-secondary",
       morphKey: "!!brand-logo-secondary",
       name: "副 Logo",
-      asset: `${A}logo-secondary.png`,
+      asset: asset("logo-secondary.png"),
       alt: "联合团支部 Logo",
       x: 176,
       y: 60,
@@ -179,7 +179,7 @@ export const slide = defineSlide({
       id: "yaoguang-helper",
       morphKey: "!!yaoguang-helper",
       name: "瑶光助手",
-      asset: `${A}yaoguang-1.jpg`,
+      asset: asset("yaoguang-1.jpg"),
       alt: "瑶光助手形象",
       x: 760,
       y: 466,

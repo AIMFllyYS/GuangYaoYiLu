@@ -1,6 +1,6 @@
 import { defineSlide, ellipse, image, rect, text } from "../../../../deck/authoring";
 
-const A = "/src/decks/guang-yao-yi-lu-final-defense/assets/";
+const asset = (name: string) => new URL(`../../assets/${name}`, import.meta.url).href;
 
 export const slide = defineSlide({
   id: "009-volunteer",
@@ -44,7 +44,7 @@ export const slide = defineSlide({
       id: "brand-logo-primary",
       morphKey: "!!brand-logo-primary",
       name: "主 Logo",
-      asset: `${A}logo-light.jpg`,
+      asset: asset("logo-light.jpg"),
       alt: "光药医路 Logo",
       x: 70,
       y: 58,
@@ -57,7 +57,7 @@ export const slide = defineSlide({
       id: "brand-logo-secondary",
       morphKey: "!!brand-logo-secondary",
       name: "副 Logo",
-      asset: `${A}logo-secondary.png`,
+      asset: asset("logo-secondary.png"),
       alt: "联合团支部 Logo",
       x: 176,
       y: 60,
@@ -106,7 +106,7 @@ export const slide = defineSlide({
       id: "volunteer-photo-a",
       morphKey: "!!volunteer-photo-a",
       name: "志愿服务照片 A",
-      asset: `${A}volunteer-photo-a.jpg`,
+      asset: asset("volunteer-photo-a.jpg"),
       alt: "社区志愿服务",
       x: 120,
       y: 350,
@@ -119,7 +119,7 @@ export const slide = defineSlide({
       id: "volunteer-photo-b",
       morphKey: "!!volunteer-photo-b",
       name: "志愿服务照片 B",
-      asset: `${A}volunteer-photo-b.jpg`,
+      asset: asset("volunteer-photo-b.jpg"),
       alt: "社区志愿服务",
       x: 588,
       y: 350,
@@ -132,7 +132,7 @@ export const slide = defineSlide({
       id: "volunteer-photo-c",
       morphKey: "!!volunteer-photo-c",
       name: "志愿服务照片 C",
-      asset: `${A}volunteer-photo-c.jpg`,
+      asset: asset("volunteer-photo-c.jpg"),
       alt: "社区志愿服务",
       x: 1124,
       y: 350,
@@ -145,7 +145,7 @@ export const slide = defineSlide({
       id: "volunteer-photo-d",
       morphKey: "!!volunteer-photo-d",
       name: "志愿服务照片 D",
-      asset: `${A}volunteer-photo-d.jpg`,
+      asset: asset("volunteer-photo-d.jpg"),
       alt: "社区志愿服务",
       x: 1480,
       y: 350,

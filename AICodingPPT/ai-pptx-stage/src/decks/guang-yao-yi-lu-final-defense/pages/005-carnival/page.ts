@@ -1,6 +1,6 @@
 import { defineSlide, ellipse, image, rect, text } from "../../../../deck/authoring";
 
-const A = "/src/decks/guang-yao-yi-lu-final-defense/assets/";
+const asset = (name: string) => new URL(`../../assets/${name}`, import.meta.url).href;
 
 const games = [
   ["捣药", "从器具入手，体验传统制药动作"],
@@ -50,7 +50,7 @@ export const slide = defineSlide({
       id: "brand-logo-primary",
       morphKey: "!!brand-logo-primary",
       name: "主 Logo",
-      asset: `${A}logo-light.jpg`,
+      asset: asset("logo-light.jpg"),
       alt: "光药医路 Logo",
       x: 70,
       y: 58,
@@ -63,7 +63,7 @@ export const slide = defineSlide({
       id: "brand-logo-secondary",
       morphKey: "!!brand-logo-secondary",
       name: "副 Logo",
-      asset: `${A}logo-secondary.png`,
+      asset: asset("logo-secondary.png"),
       alt: "联合团支部 Logo",
       x: 176,
       y: 60,
@@ -112,7 +112,7 @@ export const slide = defineSlide({
       id: "carnival-main-photo",
       morphKey: "!!carnival-main-photo",
       name: "嘉年华主图",
-      asset: `${A}carnival-photo-a.jpg`,
+      asset: asset("carnival-photo-a.jpg"),
       alt: "嘉年华活动现场",
       x: 110,
       y: 350,
@@ -125,7 +125,7 @@ export const slide = defineSlide({
       id: "carnival-side-photo-a",
       morphKey: "!!carnival-side-photo-a",
       name: "嘉年华现场小图 A",
-      asset: `${A}carnival-photo-b.jpg`,
+      asset: asset("carnival-photo-b.jpg"),
       alt: "嘉年华活动现场",
       x: 830,
       y: 350,
@@ -138,7 +138,7 @@ export const slide = defineSlide({
       id: "carnival-poster",
       morphKey: "!!carnival-poster",
       name: "嘉年华宣传海报",
-      asset: `${A}carnival-poster.png`,
+      asset: asset("carnival-poster.png"),
       alt: "光药医路海报",
       x: 1260,
       y: 328,
@@ -151,7 +151,7 @@ export const slide = defineSlide({
       id: "mini-program",
       morphKey: "!!mini-program",
       name: "小程序展示",
-      asset: `${A}mini-program.jpg`,
+      asset: asset("mini-program.jpg"),
       alt: "小程序内部界面",
       x: 1585,
       y: 378,

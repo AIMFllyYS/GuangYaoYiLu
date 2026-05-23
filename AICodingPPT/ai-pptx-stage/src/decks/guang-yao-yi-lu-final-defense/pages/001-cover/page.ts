@@ -1,6 +1,6 @@
 import { defineSlide, ellipse, image, line, rect, text } from "../../../../deck/authoring";
 
-const A = "/src/decks/guang-yao-yi-lu-final-defense/assets/";
+const asset = (name: string) => new URL(`../../assets/${name}`, import.meta.url).href;
 
 export const slide = defineSlide({
   id: "001-cover",
@@ -17,7 +17,7 @@ export const slide = defineSlide({
       id: "cover-photo-a",
       morphKey: "!!cover-photo-a",
       name: "封面合照左",
-      asset: `${A}cover-photo-a.jpg`,
+      asset: asset("cover-photo-a.jpg"),
       alt: "活动合照",
       x: -60,
       y: 80,
@@ -31,7 +31,7 @@ export const slide = defineSlide({
       id: "cover-photo-b",
       morphKey: "!!cover-photo-b",
       name: "封面合照右",
-      asset: `${A}cover-photo-b.jpg`,
+      asset: asset("cover-photo-b.jpg"),
       alt: "活动合照",
       x: 1230,
       y: 110,
@@ -45,7 +45,7 @@ export const slide = defineSlide({
       id: "cover-photo-c",
       morphKey: "!!cover-photo-c",
       name: "封面合照底部",
-      asset: `${A}cover-photo-c.jpg`,
+      asset: asset("cover-photo-c.jpg"),
       alt: "活动现场",
       x: 1030,
       y: 650,
@@ -113,7 +113,7 @@ export const slide = defineSlide({
       id: "brand-logo-primary",
       morphKey: "!!brand-logo-primary",
       name: "主 Logo",
-      asset: `${A}logo-dark.jpg`,
+      asset: asset("logo-dark.jpg"),
       alt: "光药医路 Logo",
       x: 82,
       y: 68,
@@ -126,7 +126,7 @@ export const slide = defineSlide({
       id: "brand-logo-secondary",
       morphKey: "!!brand-logo-secondary",
       name: "副 Logo",
-      asset: `${A}logo-secondary.png`,
+      asset: asset("logo-secondary.png"),
       alt: "联合团支部 Logo",
       x: 210,
       y: 72,

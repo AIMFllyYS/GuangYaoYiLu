@@ -1,6 +1,6 @@
 import { defineSlide, ellipse, image, rect, text } from "../../../../deck/authoring";
 
-const A = "/src/decks/guang-yao-yi-lu-final-defense/assets/";
+const asset = (name: string) => new URL(`../../assets/${name}`, import.meta.url).href;
 
 export const slide = defineSlide({
   id: "010-ending",
@@ -66,7 +66,7 @@ export const slide = defineSlide({
       id: "brand-logo-primary",
       morphKey: "!!brand-logo-primary",
       name: "主 Logo",
-      asset: `${A}logo-dark.jpg`,
+      asset: asset("logo-dark.jpg"),
       alt: "光药医路 Logo",
       x: 70,
       y: 58,
@@ -79,7 +79,7 @@ export const slide = defineSlide({
       id: "brand-logo-secondary",
       morphKey: "!!brand-logo-secondary",
       name: "副 Logo",
-      asset: `${A}logo-secondary.png`,
+      asset: asset("logo-secondary.png"),
       alt: "联合团支部 Logo",
       x: 176,
       y: 60,
@@ -92,7 +92,7 @@ export const slide = defineSlide({
       id: "ending-photo-a",
       morphKey: "!!volunteer-photo-a",
       name: "结尾照片流 A",
-      asset: `${A}cover-photo-a.jpg`,
+      asset: asset("cover-photo-a.jpg"),
       alt: "活动照片",
       x: -30,
       y: 206,
@@ -107,7 +107,7 @@ export const slide = defineSlide({
       id: "ending-photo-b",
       morphKey: "!!volunteer-photo-b",
       name: "结尾照片流 B",
-      asset: `${A}carnival-photo-c.jpeg`,
+      asset: asset("carnival-photo-c.jpeg"),
       alt: "活动照片",
       x: 310,
       y: 610,
@@ -122,7 +122,7 @@ export const slide = defineSlide({
       id: "ending-photo-c",
       morphKey: "!!museum-photo-c",
       name: "结尾照片流 C",
-      asset: `${A}museum-photo-c.jpg`,
+      asset: asset("museum-photo-c.jpg"),
       alt: "活动照片",
       x: 1230,
       y: 196,
@@ -137,7 +137,7 @@ export const slide = defineSlide({
       id: "ending-photo-d",
       morphKey: "!!winter-talk-a",
       name: "结尾照片流 D",
-      asset: `${A}winter-talk-a.png`,
+      asset: asset("winter-talk-a.png"),
       alt: "活动照片",
       x: 1420,
       y: 640,

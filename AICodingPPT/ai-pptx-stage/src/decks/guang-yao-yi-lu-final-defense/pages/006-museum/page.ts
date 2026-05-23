@@ -1,6 +1,6 @@
 import { defineSlide, ellipse, image, rect, text } from "../../../../deck/authoring";
 
-const A = "/src/decks/guang-yao-yi-lu-final-defense/assets/";
+const asset = (name: string) => new URL(`../../assets/${name}`, import.meta.url).href;
 
 export const slide = defineSlide({
   id: "006-museum",
@@ -44,7 +44,7 @@ export const slide = defineSlide({
       id: "brand-logo-primary",
       morphKey: "!!brand-logo-primary",
       name: "主 Logo",
-      asset: `${A}logo-dark.jpg`,
+      asset: asset("logo-dark.jpg"),
       alt: "光药医路 Logo",
       x: 70,
       y: 58,
@@ -57,7 +57,7 @@ export const slide = defineSlide({
       id: "brand-logo-secondary",
       morphKey: "!!brand-logo-secondary",
       name: "副 Logo",
-      asset: `${A}logo-secondary.png`,
+      asset: asset("logo-secondary.png"),
       alt: "联合团支部 Logo",
       x: 176,
       y: 60,
@@ -106,7 +106,7 @@ export const slide = defineSlide({
       id: "museum-photo-main",
       morphKey: "!!museum-photo-main",
       name: "博物馆主图",
-      asset: `${A}museum-photo-a.jpg`,
+      asset: asset("museum-photo-a.jpg"),
       alt: "叶开泰博物馆活动",
       x: 120,
       y: 350,
@@ -119,7 +119,7 @@ export const slide = defineSlide({
       id: "museum-photo-b",
       morphKey: "!!museum-photo-b",
       name: "博物馆图片流 B",
-      asset: `${A}museum-photo-b.jpg`,
+      asset: asset("museum-photo-b.jpg"),
       alt: "叶开泰博物馆活动",
       x: 690,
       y: 340,
@@ -132,7 +132,7 @@ export const slide = defineSlide({
       id: "museum-photo-c",
       morphKey: "!!museum-photo-c",
       name: "博物馆图片流 C",
-      asset: `${A}museum-photo-c.jpg`,
+      asset: asset("museum-photo-c.jpg"),
       alt: "叶开泰博物馆活动",
       x: 1138,
       y: 340,
