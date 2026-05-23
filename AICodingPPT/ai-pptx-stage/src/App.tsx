@@ -3,12 +3,12 @@ import type { CSSProperties } from "react";
 import { InspectorPanel } from "./components/InspectorPanel";
 import { LayerPanel } from "./components/LayerPanel";
 import { MorphOverlay } from "./components/MorphOverlay";
-import { sampleDeck } from "./deck/sampleDeck";
 import { SceneRenderer } from "./components/SceneRenderer";
 import { TopToolbar } from "./components/TopToolbar";
 import { findElement, nudgeElement, setLayerDirection, updateElement } from "./deck/editing";
 import { slidePptxChecklist } from "./deck/exporters";
 import { validateDeck } from "./deck/validation";
+import { deckEntries, defaultDeckId, getDeckEntry } from "./decks";
 import type { SlideSpec } from "./deck/types";
 
 type MorphState = {
@@ -22,7 +22,8 @@ const ZOOM_LEVELS = [0.35, 0.4, 0.5, 0.6, 0.75, 0.9, 1] as const;
 const FIT_ZOOM = 0.5;
 
 export default function App() {
-  const [deck, setDeck] = useState(sampleDeck);
+  const [selectedDeckId, setSelectedDeckId] = useState(defaultDeckId);
+  const [deck, setDeck] = useState(() => getDeckEntry(defaultDeckId).deck);
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentSlide = deck.slides[currentIndex] ?? deck.slides[0];
   const [selectedId, setSelectedId] = useState<string | undefined>(currentSlide.elements[0]?.id);
@@ -34,6 +35,7 @@ export default function App() {
   const selectedElement = useMemo(() => findElement(currentSlide, selectedId), [currentSlide, selectedId]);
   const validationIssues = useMemo(() => validateDeck(deck), [deck]);
   const slideChecklist = useMemo(() => slidePptxChecklist(deck, currentSlide), [deck, currentSlide]);
+  const deckOptions = useMemo(() => deckEntries.map((entry) => ({ id: entry.id, title: entry.title })), []);
   const zoomLabel = `${Math.round(zoom * 100)}%`;
   const stageStyle = {
     "--stage-zoom": zoom,
@@ -157,6 +159,17 @@ export default function App() {
     setDeck((current) => setLayerDirection(current, currentSlide.id, id, direction));
   };
 
+  const handleDeckChange = (deckId: string) => {
+    const nextEntry = getDeckEntry(deckId);
+    setSelectedDeckId(nextEntry.id);
+    setDeck(nextEntry.deck);
+    setCurrentIndex(0);
+    setSelectedId(nextEntry.deck.slides[0]?.elements[0]?.id);
+    setMorphState(null);
+    setShowMode(false);
+    setZoom(FIT_ZOOM);
+  };
+
   const handleToggleVisibility = (id: string) => {
     const element = findElement(currentSlide, id);
     if (!element) {
@@ -176,12 +189,15 @@ export default function App() {
   return (
     <main className="editor-frame">
       <TopToolbar
+        deckId={selectedDeckId}
+        deckOptions={deckOptions}
         currentIndex={currentIndex}
         total={deck.slides.length}
         slideTitle={currentSlide.title}
         zoomLabel={zoomLabel}
         onPrev={() => goToSlide(currentIndex - 1)}
         onNext={() => goToSlide(currentIndex + 1)}
+        onDeckChange={handleDeckChange}
         showMode={showMode}
         onToggleShow={() => {
           if (showMode) {

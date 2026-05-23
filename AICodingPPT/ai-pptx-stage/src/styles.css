@@ -219,6 +219,36 @@ textarea:focus-visible {
   white-space: nowrap;
 }
 
+.deck-select-shell {
+  display: inline-flex;
+  min-width: 220px;
+  height: 40px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.deck-select-shell select {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  color: var(--text-primary);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.deck-select-shell select:focus-visible {
+  box-shadow: 0 0 0 2px rgba(84, 200, 243, 0.52);
+}
+
 .app-mark {
   display: inline-flex;
   width: 38px;

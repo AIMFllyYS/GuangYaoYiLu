@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 
 type TopToolbarProps = {
+  deckId: string;
+  deckOptions: Array<{ id: string; title: string }>;
   currentIndex: number;
   total: number;
   slideTitle: string;
@@ -17,6 +19,7 @@ type TopToolbarProps = {
   showMode: boolean;
   onPrev: () => void;
   onNext: () => void;
+  onDeckChange: (deckId: string) => void;
   onToggleShow: () => void;
   onZoomIn: () => void;
   onZoomOut: () => void;
@@ -26,6 +29,8 @@ type TopToolbarProps = {
 };
 
 export function TopToolbar({
+  deckId,
+  deckOptions,
   currentIndex,
   total,
   slideTitle,
@@ -33,6 +38,7 @@ export function TopToolbar({
   showMode,
   onPrev,
   onNext,
+  onDeckChange,
   onToggleShow,
   onZoomIn,
   onZoomOut,
@@ -49,6 +55,16 @@ export function TopToolbar({
           <strong>{slideTitle}</strong>
         </div>
       </div>
+      <label className="deck-select-shell">
+        <span>Deck</span>
+        <select value={deckId} onChange={(event) => onDeckChange(event.target.value)} aria-label="选择 PPT deck">
+          {deckOptions.map((entry) => (
+            <option key={entry.id} value={entry.id}>
+              {entry.title}
+            </option>
+          ))}
+        </select>
+      </label>
       <div className="toolbar-cluster" aria-label="页面导航">
         <button className="icon-button" type="button" onClick={onPrev} title="上一页" aria-label="上一页">
           <ChevronLeft size={18} />
