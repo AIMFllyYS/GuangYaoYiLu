@@ -1,6 +1,6 @@
 import os
 
-root = r"C:\Users\Lenovo\Downloads\总结书材料"
+root = os.environ.get("GYYL_ROOT", os.getcwd())
 skip = {"rename.py", "rename.ps1", "README.md"}
 lines = []
 

@@ -9,7 +9,7 @@ type Payload = {
 };
 
 const baseUrl = process.env.MIMO_BASE_URL || "https://api.xiaomimimo.com/v1";
-const model = process.env.MIMO_MODEL || "mimo-v2.5-pro";
+const model = process.env.MIMO_MODEL || "mimo-v2.5";
 
 function buildMessages(query: string, mode: RequestMode, localContext: string) {
   const isResearch = mode === "research";
@@ -33,11 +33,33 @@ function buildMessages(query: string, mode: RequestMode, localContext: string) {
   <subtitle>一句适合卡片副标题的话</subtitle>
   
   <visual>
-    直接生成一段高度美观且贴合本中药调性与光电背景的原始 SVG 代码（绝对不要包裹 Markdown \`\`\`xml 代码围栏）。要求：
-    1. 必须包含 viewBox="0 0 200 200" 且 width="100%" height="100%"。
-    2. 保持透明背景（融入卡片深邃暗绿背景 #091510）。
-    3. 设计理念为“光谱雷达与五行本草能量”：使用渐变色（如黄芪用璀璨暖金/琥珀黄、丹参用活血朱红/暖光橙、金银花用寒凉青黛/翠绿、枸杞用朱砂红/赤红），绘制出抽象优雅的光谱吸收曲线、同心共振波轨、发光分子/元素点线网络或光束波环。
-    4. 必须包含线性渐变（&lt;linearGradient&gt;）及微弱发光滤镜（&lt;filter id="glow"&gt;），使发光曲线在暗色卡片中呈现流光溢彩的效果。不要绘制繁琐写实的植物叶片，多用几何对称、光谱干涉波纹或太极波形光晕，使其富有极高的国潮与现代科技质感。
+    你是精通中医药学、植物形态学与光谱科学的 SVG 艺术家。请直接输出纯 SVG 代码，绝不要包裹任何 Markdown 围栏或代码块。
+
+    【画布规格】viewBox="0 0 300 300"，width="100%"，height="100%"，背景透明（融入卡片暗绿底色 #0a1a12）。
+
+    【主体——精准植物形态】根据查询词「${query}」，绘制该中药最具辨识度的药用部位：
+      · 枸杞子/浆果类：圆润果实串，朱砂红→深红径向渐变，顶部高光白点，叶片衬托
+      · 丹参/根茎类：弯曲纵剖根茎，暗红木质纹理，细侧根，截面年轮
+      · 黄芪/粗根类：竖切面纹路，琥珀金→暖褐线性渐变，豆科托叶点缀
+      · 金银花/花卉类：对生花蕾+开放花，青白→淡黄渐变，细蕊丝
+      · 陈皮/果皮类：橘皮横切面，散布油胞点，橙黄→橙红渐变
+      · 其他中药：尽力还原该药材的主要药用部位的半写实轮廓与配色
+      使用 SVG path/ellipse/circle 精确描绘，不要用空洞纯几何形状代替。
+
+    【光谱科学叠加层】植物主体周围叠加以下层次：
+      1. 近红外吸收曲线：流畅 path 波形线，标注 2~3 个特征峰数值（如 1605 cm⁻¹，2930 cm⁻¹）
+      2. 活性分子网络：6~8 个小圆节点（r=4）用细线相连，节点旁标注活性成分缩写（如 多糖、丹参酮）
+      3. 多光谱雷达环：外围 2~3 个虚线同心圆，象征多光谱扫描范围
+
+    【色彩体系】按性味配色 — 温热性（黄芪/肉桂）→暖金/朱红/琥珀；寒凉性（金银花/黄连）→青翠/冰蓝/青黛；平性→苍玉/墨绿。
+
+    【必须包含的 SVG 技术特性】
+      &lt;defs&gt; 内定义至少 2 个 linearGradient 或 radialGradient；
+      &lt;filter id="glow"&gt; 包含 feGaussianBlur stdDeviation="2.5" 使节点/曲线有荧光发光感；
+      &lt;text&gt; 左上角：中文药名（font-size 14，bold）+ 拉丁学名（font-size 8，italic）；右下角：主特征峰（格式 1602 cm⁻¹，font-size 8）；
+      整体层次：背景雷达环 → 中层植物体 → 前景光谱曲线+节点+文字。
+
+    【品质标准】输出的 SVG 须令观看者能识别出具体是哪种中药，同时兼具国潮科技美学。SVG 代码语法完整，可直接渲染，无任何 Markdown 包裹。
   </visual>
 
   <imageSearchQuery>该中药最精准的英文学术名或拉丁学名（例如：Astragalus membranaceus 或 Lycium barbarum），不要包含任何中文、解释或标点符号，仅输出学名本身，用于前端匹配维基百科标本插图。</imageSearchQuery>
@@ -72,8 +94,8 @@ function buildBody(query: string, mode: RequestMode, localContext: string, withS
   const body: Record<string, unknown> = {
     model,
     stream: true,
-    temperature: 0.35,
-    max_completion_tokens: 1200,
+    temperature: 0.25,
+    max_completion_tokens: 2400,
     thinking: { type: "disabled" },
     messages: buildMessages(query, mode, localContext)
   };

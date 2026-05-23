@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import html
 import json
+import os
 import shutil
 import zipfile
 from dataclasses import dataclass
@@ -196,7 +197,12 @@ def reset_dirs() -> None:
 
 
 def copy_generated_ai_slides() -> None:
-    source_dir = Path.home() / ".codex" / "generated_images" / "019e019b-5e9b-74c1-8f57-9df8293f8ec1"
+    session = os.environ.get("GYYL_CODEX_SESSION", "").strip()
+    if not session:
+        raise RuntimeError(
+            "请设置环境变量 GYYL_CODEX_SESSION（见 ~/.codex/generated_images/<会话目录>/）后再运行。"
+        )
+    source_dir = Path.home() / ".codex" / "generated_images" / session
     files = sorted(source_dir.glob("*.png"), key=lambda p: p.stat().st_mtime)
     if len(files) < 15:
         raise RuntimeError(f"expected at least 15 generated images in {source_dir}, found {len(files)}")

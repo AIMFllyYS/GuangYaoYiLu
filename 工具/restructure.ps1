@@ -1,5 +1,9 @@
-# 总结书项目重构脚本
-$root = "c:\Users\Lenovo\Downloads\总结书材料"
+# 总结书项目重构脚本（根目录：`$env:GYYL_ROOT`，默认当前目录）
+$root = if ($env:GYYL_ROOT -and $env:GYYL_ROOT.Trim().Length -gt 0) {
+    $env:GYYL_ROOT
+} else {
+    (Get-Location).Path
+}
 Set-Location $root
 
 # 章节列表

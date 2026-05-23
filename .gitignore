@@ -33,3 +33,31 @@ __pycache__/
 *.pyc
 
 temp/
+
+# ===== 敏感凭据 / 本地工具缓存（补强）=====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+id_rsa*
+id_ed25519*
+credentials*
+serviceAccount*.json
+.aws/
+.azure/
+.gcp/
+*secret*
+*.token
+.codex/
+.cache/
+.idea/
+*.sqlite
+*.sqlite3
+*.db
+dump.rdb

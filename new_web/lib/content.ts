@@ -12,6 +12,16 @@ export type Herb = {
   culture: string;
 };
 
+export type TimelineNode = {
+  id: string;
+  phase: string;
+  title: string;
+  date: string;
+  summary: string;
+  color: string;
+  keywords: string[];
+};
+
 export type Branch = {
   name: string;
   short: string;
@@ -19,6 +29,10 @@ export type Branch = {
   color: string;
   focus: string;
   note: string;
+  memberCount: string;
+  leader: string;
+  role: string;
+  intro: string;
 };
 
 export type QuizQuestion = {
@@ -30,8 +44,51 @@ export type QuizQuestion = {
 
 export const themeLine = "金光青黛同济兴，本草杏林华夏清";
 
+export const siteInfo = {
+  name: "光药医路",
+  fullName: "「光药医路」联合团支部",
+  university: "华中科技大学",
+  activity: "本科特色团日",
+  tagline: "从三个班，到一个集体",
+  memberCount: "75 位同学",
+  supervisor: "华中科技大学团委",
+  location: "湖北 · 武汉",
+  yearRange: "2025–2026",
+  contactNote: "合作与反馈请联系各班团支书：药学中外2503班 艾宇杭 (15827190081)、光电2506班 张子栋 (18921667323)、基医强基2501班 高雨佳 (15290074535)，或反馈至邮箱 2499133151@qq.com (宣传负责人 谭茗月)。",
+  rightsNote:
+    "本站内容用于中医药文化科普与团支部活动展示，未经授权请勿转载或商用。除明确标注开源的部分外，页面文案与视觉素材版权归联合团支部及权利人所有。"
+};
+
+export const footerNavGroups = [
+  {
+    title: "站点导航",
+    links: [
+      { href: "#home", label: "主页" },
+      { href: "#arc", label: "成长弧" },
+      { href: "#union", label: "联合支部" },
+      { href: "#herb-lab", label: "中药查询" }
+    ]
+  },
+  {
+    title: "互动体验",
+    links: [
+      { href: "#knowledge", label: "趣味知识" },
+      { href: "#quiz", label: "互动问答" },
+      { href: "#research", label: "研究成果" },
+      { href: "#contact", label: "页脚信息" }
+    ]
+  }
+] as const;
+
+export const footerBranches = [
+  "药学（中外合作办学）2503 班团支部",
+  "光电 2506 班团支部",
+  "基础医学（强基计划实验班）2501 班团支部"
+] as const;
+
 export const navItems = [
   { href: "#home", label: "主页" },
+  { href: "#arc", label: "成长弧" },
   { href: "#union", label: "联合支部" },
   { href: "#herb-lab", label: "中药查询" },
   { href: "#knowledge", label: "趣味知识" },
@@ -44,26 +101,68 @@ export const branches: Branch[] = [
   {
     name: "药学（中外合作办学）2503班团支部",
     short: "药学中外 2503",
-    image: "/images/activity/pharmacy-branch.jpg",
-    color: "#1c8b60",
+    image: "/images/activity/pharmacy-branch-real.jpg",
+    color: "#2D6A45",
     focus: "本草识别、药材质量、健康科普",
-    note: "把中医药的传统经验转译成青年愿意理解、愿意传播的生活知识。"
+    note: "把中医药的传统经验转译成青年愿意理解、愿意传播的生活知识。",
+    memberCount: "26人 (男15 / 女11)",
+    leader: "团支书·药学支部",
+    role: "联合支部总协调 · 传统与国际桥梁",
+    intro: "一支充满国际视野与创新活力的团支部。26位同学怀揣着对药学事业的热忱与对中西医药融合的探索之心，齐聚于此，始终是联合支部的“定海神针”。"
   },
   {
-    name: "光电 2506 班团支部",
+    name: "光电信息科学与工程 2506 班团支部",
     short: "光电 2506",
-    image: "/images/activity/opto-branch.jpg",
-    color: "#e3a424",
+    image: "/images/activity/opto-branch-real.jpg",
+    color: "#B98F46",
     focus: "光谱识别、可视化表达、科技赋能",
-    note: "让近红外、拉曼光谱与成分分析成为认识中医药现代化的一束光。"
+    note: "让近红外、拉曼光谱与成分分析成为认识中医药现代化的一束光。",
+    memberCount: "29人 (男25 / 女4)",
+    leader: "团支书·光电支部",
+    role: "联合支部技术支撑 · 破冰总策划",
+    intro: "来自“中国光谷”人才摇篮。以理工科的严谨与创造力为活动开发小程序、管理账目，用“系统设计”思维让陌生的支部迅速破冰、打破隔阂。"
   },
   {
     name: "基础医学（强基计划实验班）2501班团支部",
     short: "基医强基 2501",
-    image: "/images/activity/medicine-branch.png",
-    color: "#c7433d",
+    image: "/images/activity/medicine-branch-real.png",
+    color: "#AE262B",
     focus: "生命机制、健康教育、医学桥梁",
-    note: "以医学基础训练连接传统智慧与现代健康需求，守住科学表达边界。"
+    note: "以医学基础训练连接传统智慧与现代健康需求，守住科学表达边界。",
+    memberCount: "20人 (男8 / 女12)",
+    leader: "团支书·基医支部",
+    role: "联合支部学术引领 · 视觉海报设计",
+    intro: "基础医学院“强基计划”首批班级。以对生命科学的敬畏，负责领学主题团课、统筹学术深度与主导海报设计，为活动注入宝贵的人文温度与科学严谨度。"
+  }
+];
+
+export const growthArc: TimelineNode[] = [
+  {
+    id: "white",
+    phase: "初识白",
+    title: "破冰相识 · 味冰之夜",
+    date: "2025.12",
+    summary: "从三个班到一个集体，在温馨明亮的初识阶段建立共同语言。",
+    color: "#F6F1E2",
+    keywords: ["破冰", "相识", "联合"]
+  },
+  {
+    id: "red",
+    phase: "思政红",
+    title: "团课学习 · 社区志愿",
+    date: "2026.01–02",
+    summary: "以团课与红建社区服务承接思政主线，把青年责任落到行动里。",
+    color: "#AE262B",
+    keywords: ["团课", "志愿", "社区"]
+  },
+  {
+    id: "green",
+    phase: "药草绿",
+    title: "嘉年华 · 研学考察",
+    date: "2026.03–04",
+    summary: "本草嘉年华、叶开泰博物馆与家乡考察，让药草绿成为成长主线。",
+    color: "#2D6A45",
+    keywords: ["嘉年华", "叶开泰", "研学"]
   }
 ];
 

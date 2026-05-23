@@ -12,10 +12,18 @@
 
 ## 运行环境
 
-建议使用 Codex bundled Python：
+建议使用本机已安装的 Python 3（或 VS Code / Cursor 集成终端中的 `py -3`）。若需复制 Codex 自带的解释器，可使用 `$env:LOCALAPPDATA\Programs\Codex\...\python.exe`（路径因安装而异，勿提交到仓库）。
 
 ```powershell
-& "C:\Users\AIMFl\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" ".\工具\create_defense_ppt_v5_stable.py"
+py -3 ".\工具\create_defense_ppt_v5_stable.py"
+```
+
+如需从 Codex 生成图目录拷贝素材，可先设置：
+
+```powershell
+$env:GYYL_CODEX_SESSION = "<会话子目录名>"
+# 可选：指定具体 PNG 文件名（否则取该目录按时间排序的最后一项）
+# $env:GYYL_CODEX_IMAGE = "某图.png"
 ```
 
 依赖：
