@@ -12,6 +12,12 @@ try {
   await page.goto(url, { waitUntil: "networkidle" });
   await page.waitForSelector(".slide-frame");
 
+  const deckSelector = page.locator('select[aria-label="选择 PPT deck"]');
+  await deckSelector.waitFor();
+  const deckOptions = await deckSelector.locator("option").allTextContents();
+  assert(deckOptions.some((option) => option.includes("Wave Utopia AI Coding 决赛演示")), "deck selector missing migrated demo deck");
+  await deckSelector.selectOption("wave-utopia-demo");
+
   const frameBox = await page.locator(".slide-frame").boundingBox();
   assert(frameBox, "slide frame missing");
   const ratio = Math.round((frameBox.width / frameBox.height) * 1000) / 1000;
@@ -44,6 +50,7 @@ try {
 
   const inspectorText = await page.locator(".inspector-panel").innerText();
   assert(inspectorText.includes("morphKey"), "inspector missing TS data");
+  assert(inspectorText.includes("src/decks/wave-utopia-demo/pages/001-agent-start/page.ts"), "inspector missing page source path");
   assert(inspectorText.includes("PPTX Manual Sync"), "inspector missing PPTX sync data");
 
   await page.locator(".top-toolbar button").nth(3).click();

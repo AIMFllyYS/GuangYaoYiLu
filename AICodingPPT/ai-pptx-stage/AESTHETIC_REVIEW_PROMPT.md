@@ -32,7 +32,7 @@
 - Morph 放映预览，同 `morphKey` 对象跨页平滑变化。
 - Inspector 展示 TS 数据、PPTX 英寸参数、选择窗格命名提示。
 - 复制 TS patch、复制当前页 PPTX 手工复刻清单。
-- `npm run typecheck`、`npm run build`、`npm run validate:utf8`、`npm run smoke:browser` 验证脚本。
+- `npm run typecheck`、`npm run build`、`npm run validate:decks`、`npm run validate:utf8`、`npm run smoke:browser` 验证脚本。
 
 ## 审美目标
 
@@ -113,6 +113,7 @@
 cd D:\project\GuangYaoYiLus\GuangYaoYiLu\AICodingPPT\ai-pptx-stage
 npm run typecheck
 npm run build
+npm run validate:decks
 npm run validate:utf8
 npm run smoke:browser
 ```
