@@ -1,20 +1,21 @@
 import { sampleDeck } from "./deck/sampleDeck";
+import { SceneRenderer } from "./components/SceneRenderer";
 
 export default function App() {
+  const firstSlide = sampleDeck.slides[0];
+
   return (
-    <main className="app-shell">
-      <section className="welcome-panel">
-        <p className="eyebrow">AI-native PPTX Scene System</p>
-        <h1>{sampleDeck.title}</h1>
-        <p className="lede">
-          TypeScript 是作品源文件；浏览器负责预览、调参、图层管理、Morph 验证和 PPTX
-          手工复刻参数展示。
-        </p>
-        <dl className="deck-facts">
+    <main className="app-frame">
+      <header className="topbar">
+        <div>
+          <p className="eyebrow">AI-native PPTX Scene System</p>
+          <h1>{sampleDeck.title}</h1>
+        </div>
+        <dl className="deck-facts compact">
           <div>
             <dt>Canvas</dt>
             <dd>
-              {sampleDeck.size.width} x {sampleDeck.size.height}
+              {sampleDeck.size.width}x{sampleDeck.size.height}
             </dd>
           </div>
           <div>
@@ -22,12 +23,14 @@ export default function App() {
             <dd>{sampleDeck.slides.length}</dd>
           </div>
           <div>
-            <dt>Mode</dt>
-            <dd>TS-first Morph prototype</dd>
+            <dt>Source</dt>
+            <dd>TypeScript</dd>
           </div>
         </dl>
+      </header>
+      <section className="stage-shell" aria-label="AI PPTX stage preview">
+        <SceneRenderer deck={sampleDeck} slide={firstSlide} />
       </section>
     </main>
   );
 }
-
