@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import type { CSSProperties, PointerEvent } from "react";
 import type { DeckSpec, SlideElement, SlideSpec } from "../deck/types";
 
@@ -7,10 +8,40 @@ type SceneRendererProps = {
   selectedId?: string;
   mode?: "editor" | "show";
   onSelect?: (id: string) => void;
+  onMoveElement?: (id: string, dx: number, dy: number) => void;
 };
 
-export function SceneRenderer({ deck, slide, selectedId, mode = "editor", onSelect }: SceneRendererProps) {
+export function SceneRenderer({ deck, slide, selectedId, mode = "editor", onSelect, onMoveElement }: SceneRendererProps) {
   const sortedElements = [...slide.elements].sort((a, b) => a.z - b.z);
+  const dragRef = useRef<{ id: string; lastX: number; lastY: number } | null>(null);
+
+  const startDrag = (id: string, event: PointerEvent<HTMLElement>) => {
+    if (mode !== "editor") {
+      return;
+    }
+    dragRef.current = {
+      id,
+      lastX: event.clientX,
+      lastY: event.clientY
+    };
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  const moveDrag = (event: PointerEvent<HTMLElement>) => {
+    const drag = dragRef.current;
+    if (!drag || !onMoveElement) {
+      return;
+    }
+    const dx = (event.clientX - drag.lastX) * 2;
+    const dy = (event.clientY - drag.lastY) * 2;
+    drag.lastX = event.clientX;
+    drag.lastY = event.clientY;
+    onMoveElement(drag.id, dx, dy);
+  };
+
+  const endDrag = () => {
+    dragRef.current = null;
+  };
 
   return (
     <div
@@ -26,6 +57,9 @@ export function SceneRenderer({ deck, slide, selectedId, mode = "editor", onSele
               element={element}
               selected={selectedId === element.id}
               onSelect={onSelect}
+              onStartDrag={startDrag}
+              onDrag={moveDrag}
+              onEndDrag={endDrag}
             />
           ))}
         </div>
@@ -44,9 +78,12 @@ type SceneElementProps = {
   element: SlideElement;
   selected?: boolean;
   onSelect?: (id: string) => void;
+  onStartDrag?: (id: string, event: PointerEvent<HTMLElement>) => void;
+  onDrag?: (event: PointerEvent<HTMLElement>) => void;
+  onEndDrag?: () => void;
 };
 
-function SceneElement({ element, selected, onSelect }: SceneElementProps) {
+function SceneElement({ element, selected, onSelect, onStartDrag, onDrag, onEndDrag }: SceneElementProps) {
   if (element.visible === false) {
     return null;
   }
@@ -69,9 +106,12 @@ function SceneElement({ element, selected, onSelect }: SceneElementProps) {
   } as CSSProperties;
 
   const className = selected ? "scene-element is-selected" : "scene-element";
-  const handlePointerDown = (event: PointerEvent) => {
+  const handlePointerDown = (event: PointerEvent<HTMLElement>) => {
     event.stopPropagation();
     onSelect?.(element.id);
+    if (!element.locked) {
+      onStartDrag?.(element.id, event);
+    }
   };
 
   if (element.type === "text") {
@@ -90,6 +130,9 @@ function SceneElement({ element, selected, onSelect }: SceneElementProps) {
           textAlign: element.style.textAlign
         }}
         onPointerDown={handlePointerDown}
+        onPointerMove={onDrag}
+        onPointerUp={onEndDrag}
+        onPointerCancel={onEndDrag}
       >
         {element.content}
       </div>
@@ -110,6 +153,9 @@ function SceneElement({ element, selected, onSelect }: SceneElementProps) {
         src={element.asset}
         alt={element.alt ?? element.name}
         onPointerDown={handlePointerDown}
+        onPointerMove={onDrag}
+        onPointerUp={onEndDrag}
+        onPointerCancel={onEndDrag}
       />
     );
   }
@@ -122,6 +168,9 @@ function SceneElement({ element, selected, onSelect }: SceneElementProps) {
         data-morph-key={element.morphKey}
         style={commonStyle}
         onPointerDown={handlePointerDown}
+        onPointerMove={onDrag}
+        onPointerUp={onEndDrag}
+        onPointerCancel={onEndDrag}
         aria-label={element.alt ?? element.name}
       >
         {element.asset}
@@ -137,6 +186,9 @@ function SceneElement({ element, selected, onSelect }: SceneElementProps) {
         data-morph-key={element.morphKey}
         style={commonStyle}
         onPointerDown={handlePointerDown}
+        onPointerMove={onDrag}
+        onPointerUp={onEndDrag}
+        onPointerCancel={onEndDrag}
       >
         {element.children.map((child) => (
           <SceneElement key={child.id} element={child} onSelect={onSelect} />
@@ -152,6 +204,9 @@ function SceneElement({ element, selected, onSelect }: SceneElementProps) {
       data-morph-key={element.morphKey}
       style={commonStyle}
       onPointerDown={handlePointerDown}
+      onPointerMove={onDrag}
+      onPointerUp={onEndDrag}
+      onPointerCancel={onEndDrag}
       aria-label={element.name}
     />
   );
