@@ -5,13 +5,14 @@ import type { DeckSpec, SlideElement, SlideSpec } from "../deck/types";
 type SceneRendererProps = {
   deck: DeckSpec;
   slide: SlideSpec;
+  zoom: number;
   selectedId?: string;
   mode?: "editor" | "show";
   onSelect?: (id: string) => void;
   onMoveElement?: (id: string, dx: number, dy: number) => void;
 };
 
-export function SceneRenderer({ deck, slide, selectedId, mode = "editor", onSelect, onMoveElement }: SceneRendererProps) {
+export function SceneRenderer({ deck, slide, zoom, selectedId, mode = "editor", onSelect, onMoveElement }: SceneRendererProps) {
   const sortedElements = [...slide.elements].sort((a, b) => a.z - b.z);
   const dragRef = useRef<{ id: string; lastX: number; lastY: number } | null>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
@@ -34,8 +35,8 @@ export function SceneRenderer({ deck, slide, selectedId, mode = "editor", onSele
     if (!drag || !onMoveElement) {
       return;
     }
-    const dx = (event.clientX - drag.lastX) * 2;
-    const dy = (event.clientY - drag.lastY) * 2;
+    const dx = (event.clientX - drag.lastX) / zoom;
+    const dy = (event.clientY - drag.lastY) / zoom;
     drag.lastX = event.clientX;
     drag.lastY = event.clientY;
     onMoveElement(drag.id, dx, dy);

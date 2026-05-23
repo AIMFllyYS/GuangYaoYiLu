@@ -18,6 +18,11 @@ type TopToolbarProps = {
   onPrev: () => void;
   onNext: () => void;
   onToggleShow: () => void;
+  onZoomIn: () => void;
+  onZoomOut: () => void;
+  onZoomFit: () => void;
+  canZoomIn: boolean;
+  canZoomOut: boolean;
 };
 
 export function TopToolbar({
@@ -28,7 +33,12 @@ export function TopToolbar({
   showMode,
   onPrev,
   onNext,
-  onToggleShow
+  onToggleShow,
+  onZoomIn,
+  onZoomOut,
+  onZoomFit,
+  canZoomIn,
+  canZoomOut
 }: TopToolbarProps) {
   return (
     <header className="top-toolbar" aria-label="编辑工具栏">
@@ -74,13 +84,13 @@ export function TopToolbar({
         >
           <MonitorPlay size={18} />
         </button>
-        <button className="icon-button" type="button" title="适合窗口" aria-label="适合窗口">
+        <button className="icon-button" type="button" title="适合窗口" aria-label="适合窗口" onClick={onZoomFit}>
           <Maximize2 size={18} />
         </button>
-        <button className="icon-button" type="button" title="缩小" aria-label="缩小">
+        <button className="icon-button" type="button" title="缩小" aria-label="缩小" onClick={onZoomOut} disabled={!canZoomOut}>
           <ZoomOut size={18} />
         </button>
-        <button className="icon-button" type="button" title="放大" aria-label="放大">
+        <button className="icon-button" type="button" title="放大" aria-label="放大" onClick={onZoomIn} disabled={!canZoomIn}>
           <ZoomIn size={18} />
         </button>
       </div>

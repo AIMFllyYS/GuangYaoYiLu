@@ -180,6 +180,19 @@ textarea:focus-visible {
   background: var(--surface-raised-hover);
 }
 
+.icon-button:disabled,
+.toolbar-group button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.icon-button:disabled:hover,
+.toolbar-group button:disabled:hover {
+  color: var(--text-muted);
+  border-color: var(--border-subtle);
+  background: var(--surface-raised);
+}
+
 .icon-button:active,
 .toolbar-group button:active,
 .layer-actions button:active {
@@ -791,8 +804,8 @@ h1 {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 960px;
-  height: 540px;
+  width: var(--stage-width, 960px);
+  height: var(--stage-height, 540px);
   overflow: visible;
   transform: translate(-50%, -50%);
   border: 1px solid rgba(244, 247, 251, 0.24);
@@ -831,7 +844,7 @@ h1 {
   top: 0;
   width: 1920px;
   height: 1080px;
-  transform: scale(0.5);
+  transform: scale(var(--stage-zoom, 0.5));
   transform-origin: left top;
 }
 
@@ -869,8 +882,8 @@ h1 {
   left: 50%;
   top: 50%;
   z-index: 50;
-  width: 960px;
-  height: 540px;
+  width: var(--stage-width, 960px);
+  height: var(--stage-height, 540px);
   overflow: hidden;
   transform: translate(-50%, -50%);
   background: transparent;

@@ -20,6 +20,18 @@ try {
   const outside = await page.locator('[data-element-id="outside-cyan-glow"]').boundingBox();
   assert(outside && outside.width > 0, "off-canvas Morph element missing");
 
+  await page.locator(".top-toolbar button").nth(6).click();
+  const zoomedInFrame = await page.locator(".slide-frame").boundingBox();
+  assert(zoomedInFrame && zoomedInFrame.width > frameBox.width, "zoom in did not enlarge slide frame");
+
+  await page.locator(".top-toolbar button").nth(5).click();
+  const zoomedOutFrame = await page.locator(".slide-frame").boundingBox();
+  assert(zoomedOutFrame && Math.abs(zoomedOutFrame.width - frameBox.width) < 2, "zoom out did not return to previous scale");
+
+  await page.locator(".top-toolbar button").nth(4).click();
+  const fitFrame = await page.locator(".slide-frame").boundingBox();
+  assert(fitFrame && Math.abs(fitFrame.width - frameBox.width) < 2, "fit zoom did not restore default scale");
+
   const target = page.locator('[data-element-id="human-line-01"]').first();
   const before = await target.boundingBox();
   assert(before, "draggable element missing");
@@ -60,4 +72,3 @@ function assert(condition, message) {
     throw new Error(message);
   }
 }
-
