@@ -23,14 +23,25 @@ function buildMessages(query: string, mode: RequestMode, localContext: string) {
     {
       role: "user",
       content: `
-任务：${isResearch ? "围绕中医药最新研究成果做可核验摘要" : "生成一张中药查询卡片"}。
+任务：${isResearch ? "围绕中医药最新研究成果做可核验摘要并绘制光谱与匹配图像" : "生成一张中药查询卡片并绘制光谱与匹配图像"}。
 用户查询：${query}
 本地参考：${localContext || "无"}
 
-请输出这个 XML 结构，标签必须完整：
+请输出这个 XML 结构，标签必须完整，并且不要包裹任何 Markdown 围栏代码块：
 <yaoguangCard>
   <title>简短标题</title>
   <subtitle>一句适合卡片副标题的话</subtitle>
+  
+  <visual>
+    直接生成一段高度美观且贴合本中药调性与光电背景的原始 SVG 代码（绝对不要包裹 Markdown \`\`\`xml 代码围栏）。要求：
+    1. 必须包含 viewBox="0 0 200 200" 且 width="100%" height="100%"。
+    2. 保持透明背景（融入卡片深邃暗绿背景 #091510）。
+    3. 设计理念为“光谱雷达与五行本草能量”：使用渐变色（如黄芪用璀璨暖金/琥珀黄、丹参用活血朱红/暖光橙、金银花用寒凉青黛/翠绿、枸杞用朱砂红/赤红），绘制出抽象优雅的光谱吸收曲线、同心共振波轨、发光分子/元素点线网络或光束波环。
+    4. 必须包含线性渐变（&lt;linearGradient&gt;）及微弱发光滤镜（&lt;filter id="glow"&gt;），使发光曲线在暗色卡片中呈现流光溢彩的效果。不要绘制繁琐写实的植物叶片，多用几何对称、光谱干涉波纹或太极波形光晕，使其富有极高的国潮与现代科技质感。
+  </visual>
+
+  <imageSearchQuery>该中药最精准的英文学术名或拉丁学名（例如：Astragalus membranaceus 或 Lycium barbarum），不要包含任何中文、解释或标点符号，仅输出学名本身，用于前端匹配维基百科标本插图。</imageSearchQuery>
+
   <summary>120字以内摘要</summary>
   <properties>
     <item label="性味归经">优先采用本地参考中已给出的性味归经；不确定再写“需查阅药典或专业资料”</item>
