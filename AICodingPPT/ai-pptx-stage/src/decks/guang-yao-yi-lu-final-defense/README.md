@@ -63,10 +63,13 @@ Deck id: `guang-yao-yi-lu-final-defense`
 
 ## 验证记录
 
-阶段性验证会在最终验证阶段补充。必跑命令包括：
+2026-05-24 最终验证：
 
-- `npm run typecheck`
-- `npm run build`
-- `npm run validate:decks`
-- `npm run validate:utf8`
-- `npm run smoke:browser`
+- `npm run typecheck`：通过。
+- `npm run build`：通过；Vite 输出确认 generated 背景、photos 照片、brand 图片与研究图表均被静态打包。存在默认 chunk size 提示，不影响本 deck 预览。
+- `npm run validate:decks`：通过。
+- `npm run validate:utf8`：通过。
+- `AI_PPTX_STAGE_URL=http://127.0.0.1:5174 npm run smoke:browser`：通过。
+- 额外 Playwright 检查：下拉选项包含 `guang-yao-yi-lu-final-defense`，切换后显示 `1 / 30`，并检查第 1、4、8、11、14、18、21、24、27、30 页图片均加载成功，可导航到 `30 / 30`，可见文本未发现 mojibake 标记。
+
+手工迁移到 PowerPoint 时，请继续遵守本目录 `notes.md` 中的每页说明：背景图只作氛围，正文保留真实文本；跨页 Morph 对象使用 `!!` 开头命名，且同名对象保持一一匹配。
