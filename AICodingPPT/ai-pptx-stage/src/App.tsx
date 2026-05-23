@@ -243,6 +243,7 @@ export default function App() {
           ) : null}
         </section>
         <InspectorPanel
+          deck={deck}
           slide={currentSlide}
           element={selectedElement}
           slideChecklist={slideChecklist}

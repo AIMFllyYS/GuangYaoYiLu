@@ -16,16 +16,20 @@ export type DeckEntry = {
 const deckModules = import.meta.glob<DeckModule>("./*/deck.ts", { eager: true });
 
 const discoveredDecks = Object.entries(deckModules)
-  .map(([path, module]) => {
+  .map<DeckEntry | undefined>(([path, module]) => {
     const deck = module.default ?? module.deck;
     if (!deck) {
       return undefined;
     }
+    const sourcePath = `src/decks/${path.replace("./", "")}`;
     return {
       id: deck.id,
       title: deck.title,
-      path: `src/decks/${path.replace("./", "")}`,
-      deck
+      path: sourcePath,
+      deck: {
+        ...deck,
+        sourcePath: deck.sourcePath ?? sourcePath
+      }
     };
   })
   .filter((entry): entry is DeckEntry => Boolean(entry))
@@ -35,7 +39,10 @@ const fallbackDeck: DeckEntry = {
   id: sampleDeck.id,
   title: sampleDeck.title,
   path: "src/deck/sampleDeck.ts",
-  deck: sampleDeck
+  deck: {
+    ...sampleDeck,
+    sourcePath: sampleDeck.sourcePath ?? "src/deck/sampleDeck.ts"
+  }
 };
 
 export const deckEntries = discoveredDecks.length > 0 ? discoveredDecks : [fallbackDeck];

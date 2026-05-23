@@ -83,6 +83,7 @@ export type SlideTransition = {
 export type SlideSpec = {
   id: string;
   title: string;
+  sourcePath?: string;
   background: string;
   elements: SlideElement[];
   transition?: SlideTransition;
@@ -91,6 +92,7 @@ export type SlideSpec = {
 export type DeckSpec = {
   id: string;
   title: string;
+  sourcePath?: string;
   size: {
     width: number;
     height: number;
@@ -120,4 +122,3 @@ export type BuilderInput = {
   style?: ElementStyle;
   pptx?: Partial<PptxSync>;
 };
-

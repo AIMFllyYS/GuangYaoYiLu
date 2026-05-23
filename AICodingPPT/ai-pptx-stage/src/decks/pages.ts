@@ -18,7 +18,11 @@ for (const [path, module] of Object.entries(pageModules)) {
 
   const [, deckId, pageId] = match;
   const slides = slidesByDeck.get(deckId) ?? [];
-  slides.push({ ...slide, id: slide.id || pageId });
+  slides.push({
+    ...slide,
+    id: slide.id || pageId,
+    sourcePath: slide.sourcePath ?? `src/decks/${deckId}/pages/${pageId}/page.ts`
+  });
   slidesByDeck.set(deckId, slides);
 }
 

@@ -2,7 +2,8 @@ import { pptxParameterLines } from "./pptx";
 import type { DeckSpec, SlideElement, SlideSpec } from "./types";
 
 export function elementPatchSnippet(slide: SlideSpec, element: SlideElement): string {
-  return `overrideElement("${slide.id}", "${element.morphKey ?? element.id}", {
+  const sourceHeader = slide.sourcePath ? `// ${slide.sourcePath}\n` : "";
+  return `${sourceHeader}overrideElement("${slide.id}", "${element.morphKey ?? element.id}", {
   x: ${element.x},
   y: ${element.y},
   w: ${element.w},
@@ -16,7 +17,9 @@ export function elementPatchSnippet(slide: SlideSpec, element: SlideElement): st
 export function slidePptxChecklist(deck: DeckSpec, slide: SlideSpec): string {
   const lines = [
     `Deck: ${deck.title}`,
+    `Deck source: ${deck.sourcePath ?? "-"}`,
     `Slide: ${slide.id} / ${slide.title}`,
+    `Slide source: ${slide.sourcePath ?? "-"}`,
     `Canvas: ${deck.size.width} x ${deck.size.height}`,
     "",
     "PPTX Manual Sync Checklist"
@@ -36,4 +39,3 @@ export function slidePptxChecklist(deck: DeckSpec, slide: SlideSpec): string {
 
   return lines.join("\n");
 }
-

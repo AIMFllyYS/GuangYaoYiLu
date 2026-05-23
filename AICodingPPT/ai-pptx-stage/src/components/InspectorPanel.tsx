@@ -2,17 +2,18 @@ import { useState } from "react";
 import { AlertTriangle, CheckCircle2, Clipboard, ClipboardCheck, ClipboardList, Info, Ruler, TerminalSquare } from "lucide-react";
 import { elementPatchSnippet } from "../deck/exporters";
 import { pptxParameterLines, toPptxInches } from "../deck/pptx";
-import type { SlideElement, SlideSpec } from "../deck/types";
+import type { DeckSpec, SlideElement, SlideSpec } from "../deck/types";
 import type { ValidationIssue } from "../deck/validation";
 
 type InspectorPanelProps = {
+  deck: DeckSpec;
   slide: SlideSpec;
   element?: SlideElement;
   slideChecklist: string;
   issues: ValidationIssue[];
 };
 
-export function InspectorPanel({ slide, element, slideChecklist, issues }: InspectorPanelProps) {
+export function InspectorPanel({ deck, slide, element, slideChecklist, issues }: InspectorPanelProps) {
   const slideIssues = issues.filter((issue) => issue.slideId === slide.id);
 
   return (
@@ -45,7 +46,10 @@ export function InspectorPanel({ slide, element, slideChecklist, issues }: Inspe
               </h3>
               <ParamGrid
                 rows={[
+                  ["deck", deck.id],
                   ["slide", slide.id],
+                  ["deckSource", deck.sourcePath ?? "-"],
+                  ["pageSource", slide.sourcePath ?? "-"],
                   ["id", element.id],
                   ["type", element.type],
                   ["morphKey", element.morphKey ?? "-"],
