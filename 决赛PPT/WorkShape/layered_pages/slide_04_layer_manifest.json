@@ -1,0 +1,316 @@
+{
+  "slide": 4,
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "mode": "premium image-first semantic layer merge",
+  "reference_image": "决赛PPT/输出终稿/image2_premium_ppt_v2/slides/slide_04.png",
+  "output_pptx": "决赛PPT/WorkShape/layered_pages/slide_04_layered.pptx",
+  "powerpoint_preview": "决赛PPT/WorkShape/layered_pages/slide_04_layered_powerpoint_export.png",
+  "elements": [
+    {
+      "id": "background-base-image2-muted",
+      "type": "image",
+      "source": "generated_background_from_image2_reference",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_04_background_base.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "editable": false
+    },
+    {
+      "id": "slide-title",
+      "type": "text",
+      "source": "native",
+      "text": "三支部同行：75 名青年共建“光药医路”",
+      "font": "KaiTi",
+      "font_size": 26.5,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 270,
+        "y": 34,
+        "w": 1380,
+        "h": 66
+      },
+      "editable": true
+    },
+    {
+      "id": "members-title-text",
+      "type": "text",
+      "source": "native",
+      "text": "人员组成",
+      "font": "Microsoft YaHei",
+      "font_size": 15,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 174,
+        "y": 207,
+        "w": 282,
+        "h": 44
+      },
+      "editable": true
+    },
+    {
+      "id": "group-text-1",
+      "type": "text",
+      "source": "native",
+      "text": "药学（中外）\n2503",
+      "font": "Microsoft YaHei",
+      "font_size": 16.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 245,
+        "y": 297,
+        "w": 290,
+        "h": 60
+      },
+      "editable": true
+    },
+    {
+      "id": "group-photo-1",
+      "type": "image",
+      "source": "visual_reference_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_04_pharmacy_photo.png",
+      "bbox": {
+        "x": 245,
+        "y": 365,
+        "w": 290,
+        "h": 58
+      },
+      "editable": false
+    },
+    {
+      "id": "group-text-2",
+      "type": "text",
+      "source": "native",
+      "text": "光电2506",
+      "font": "Microsoft YaHei",
+      "font_size": 16.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 245,
+        "y": 477,
+        "w": 290,
+        "h": 60
+      },
+      "editable": true
+    },
+    {
+      "id": "group-photo-2",
+      "type": "image",
+      "source": "visual_reference_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_04_opto_photo.png",
+      "bbox": {
+        "x": 245,
+        "y": 545,
+        "w": 290,
+        "h": 58
+      },
+      "editable": false
+    },
+    {
+      "id": "group-text-3",
+      "type": "text",
+      "source": "native",
+      "text": "基础医学（强基）\n2501",
+      "font": "Microsoft YaHei",
+      "font_size": 16.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 245,
+        "y": 657,
+        "w": 290,
+        "h": 60
+      },
+      "editable": true
+    },
+    {
+      "id": "group-photo-3",
+      "type": "image",
+      "source": "visual_reference_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_04_medicine_photo.png",
+      "bbox": {
+        "x": 245,
+        "y": 725,
+        "w": 290,
+        "h": 58
+      },
+      "editable": false
+    },
+    {
+      "id": "youth-count-main",
+      "type": "text",
+      "source": "native",
+      "text": "75",
+      "font": "KaiTi",
+      "font_size": 70,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 650,
+        "y": 205,
+        "w": 420,
+        "h": 150
+      },
+      "editable": true
+    },
+    {
+      "id": "name-origin-title-text",
+      "type": "text",
+      "source": "native",
+      "text": "名称由来",
+      "font": "Microsoft YaHei",
+      "font_size": 14.5,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 739,
+        "y": 480,
+        "w": 302,
+        "h": 42
+      },
+      "editable": true
+    },
+    {
+      "id": "origin-text-0",
+      "type": "text",
+      "source": "native",
+      "text": "光电取“光”",
+      "font": "Microsoft YaHei",
+      "font_size": 12.8,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 630,
+        "y": 665,
+        "w": 140,
+        "h": 40
+      },
+      "editable": true
+    },
+    {
+      "id": "origin-text-1",
+      "type": "text",
+      "source": "native",
+      "text": "药学取“药”",
+      "font": "Microsoft YaHei",
+      "font_size": 12.8,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 820,
+        "y": 665,
+        "w": 140,
+        "h": 40
+      },
+      "editable": true
+    },
+    {
+      "id": "origin-text-2",
+      "type": "text",
+      "source": "native",
+      "text": "基医取“医”",
+      "font": "Microsoft YaHei",
+      "font_size": 12.8,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 1010,
+        "y": 665,
+        "w": 140,
+        "h": 40
+      },
+      "editable": true
+    },
+    {
+      "id": "origin-result-text",
+      "type": "text",
+      "source": "native",
+      "text": "光药医路",
+      "font": "KaiTi",
+      "font_size": 42,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 660,
+        "y": 782,
+        "w": 470,
+        "h": 74
+      },
+      "editable": true
+    },
+    {
+      "id": "visual-title-text",
+      "type": "text",
+      "source": "native",
+      "text": "文宣视觉",
+      "font": "Microsoft YaHei",
+      "font_size": 15,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 1324,
+        "y": 207,
+        "w": 302,
+        "h": 44
+      },
+      "editable": true
+    },
+    {
+      "id": "visual-subtitle",
+      "type": "text",
+      "source": "native",
+      "text": "真实海报 · Logo · 瑶光助手",
+      "font": "Microsoft YaHei",
+      "font_size": 15,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 1288,
+        "y": 255,
+        "w": 425,
+        "h": 38
+      },
+      "editable": true
+    },
+    {
+      "id": "visual-assets-layer",
+      "type": "image",
+      "source": "visual_reference_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_04_visual_assets_layer.png",
+      "bbox": {
+        "x": 1238,
+        "y": 260,
+        "w": 620,
+        "h": 700
+      },
+      "editable": false
+    },
+    {
+      "id": "conclusion-text",
+      "type": "text",
+      "source": "native",
+      "text": "以三支部合力，汇75名青年之光，行中医药文化传播之路",
+      "font": "Microsoft YaHei",
+      "font_size": 16.5,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 380,
+        "y": 975,
+        "w": 1160,
+        "h": 52
+      },
+      "editable": true
+    }
+  ]
+}
