@@ -4,11 +4,13 @@
 
 ## 目标
 
-本项目不是 PPTX 生成器，也不是网页幻灯片工具。它是一个 AI 原生的 TS 版 PPTX 编排系统：
+本项目是 AI 原生的 TS 版 PPTX 生产平台：
 
 - TypeScript deck spec 是作品源文件。
-- 浏览器负责预览、拖动调参、图层管理、Morph 验证和 PPTX 手工复刻参数展示。
-- 最终真实 PPTX 由人工在 PowerPoint 中按 Inspector 参数和 `morphKey` 复刻。
+- 浏览器负责预览、拖动调参、图层管理、Morph 验证和导出状态反馈。
+- `npm run export:pptx` 负责生成真实 `.pptx`，默认可编辑对象优先。
+- zip/XML 后处理会写入 Morph transition，并检查 slide 数、中文 XML、图片嵌入和 `!!objectName`。
+- AI 创作体系只提供本地脚手架、brief、prompt 包、素材索引和评审清单，不接入模型 API 或密钥。
 
 ## 允许修改范围
 
@@ -25,7 +27,10 @@ src/App.tsx
 src/components/**
 src/deck/types.ts
 src/deck/builders.ts
+src/deck/presets.ts
 src/deck/pptx.ts
+src/deck/pptx-export.ts
+src/deck/pptx-package.ts
 src/deck/morph.ts
 src/styles.css
 scripts/**
@@ -150,11 +155,34 @@ import {
   image,
   icon,
   group,
+  infoCard,
+  logoLockup,
+  morphKey,
+  pageNumber,
+  photoStrip,
+  sectionTitle,
+  watermark,
   wide16x9
 } from "../../../deck/authoring";
 ```
 
 相对路径按页面深度调整，但必须指向 `src/deck/authoring.ts`。
+
+## 新作脚手架
+
+新建 deck 优先使用：
+
+```bash
+npm run deck:new -- --id <deck-id> --title "<PPT 标题>" --slides <n>
+```
+
+生成后再运行：
+
+```bash
+npm run ai:brief -- --deck <deck-id>
+```
+
+`dist/ai-briefs/<deck-id>.md` 可以直接交给 Codex/AI 作为创作上下文。Prompt 包在 `prompts/review-prompts.md`。
 
 ## 验证
 
@@ -165,12 +193,22 @@ npm run typecheck
 npm run build
 npm run validate:utf8
 npm run validate:decks
+npm run validate:assets
+npm run validate:layout
+npm run validate:export -- --deck <deck-id>
 ```
 
-涉及交互、放映、缩放、Morph、Inspector 时，还必须启动 dev server 后运行：
+涉及交互、放映、缩放、Morph、Inspector 或导出按钮时，还必须启动 dev server 后运行：
 
 ```bash
 npm run smoke:browser
+npm run validate:visual -- --deck <deck-id> --pages 1,3,5
+```
+
+发布前运行总闸：
+
+```bash
+npm run verify
 ```
 
 ## 交付说明

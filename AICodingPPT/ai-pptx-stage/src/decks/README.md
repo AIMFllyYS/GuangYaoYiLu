@@ -18,6 +18,17 @@ src/styles.css
 scripts/**
 ```
 
+系统层升级任务可以修改上述文件；普通新作不要修改。
+
+## 快速新建
+
+```bash
+npm run deck:new -- --id <deck-id> --title "<PPT 标题>" --slides <n>
+npm run ai:brief -- --deck <deck-id>
+```
+
+脚手架会生成 `deck.ts`、`theme.ts`、`README.md`、`assets/` 和每页 `page.ts/notes.md`。Deck selector 会通过 `import.meta.glob` 自动发现新 deck，不需要改中心注册文件。
+
 ## 目录协议
 
 每套 PPT：
@@ -45,3 +56,14 @@ scripts/**
 - 文本使用 `text()`，不要做成图片。
 - 跨页 Morph 元素使用 `!!` 开头的 `morphKey`。
 - 页面可以自由写 TypeScript helper，但最终必须通过 authoring API 输出 PPTX-compatible 元素。
+
+## 导出与校验
+
+```bash
+npm run export:pptx -- --deck <deck-id>
+npm run validate:assets -- --deck <deck-id>
+npm run validate:layout -- --deck <deck-id>
+npm run validate:export -- --deck <deck-id>
+```
+
+导出的 `.pptx`、报告、截图和 AI brief 都写入 ignored `dist/`。复杂 CSS 允许降级，但必须进入导出 report 的 `unsupportedEffects`。
