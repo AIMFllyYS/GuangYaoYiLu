@@ -1,0 +1,192 @@
+{
+  "slide": 10,
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "mode": "premium image-first semantic layer merge",
+  "reference_image": "决赛PPT/输出终稿/image2_premium_ppt_v2/slides/slide_10.png",
+  "output_pptx": "决赛PPT/WorkShape/layered_pages/slide_10_layered.pptx",
+  "powerpoint_preview": "决赛PPT/WorkShape/layered_pages/slide_10_layered_powerpoint_export.png",
+  "elements": [
+    {
+      "id": "background-base-image2-muted",
+      "type": "image",
+      "source": "generated_background_from_image2_reference",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_10_background_base.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "editable": false
+    },
+    {
+      "id": "slide-title",
+      "type": "text",
+      "source": "native",
+      "text": "光药医路，青春同行",
+      "font": "KaiTi",
+      "font_size": 44,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 360,
+        "y": 70,
+        "w": 1200,
+        "h": 118
+      },
+      "editable": true
+    },
+    {
+      "id": "subtitle",
+      "type": "text",
+      "source": "native",
+      "text": "以光启智，以药济人，以医护心",
+      "font": "Microsoft YaHei",
+      "font_size": 21,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 580,
+        "y": 224,
+        "w": 760,
+        "h": 58
+      },
+      "editable": true
+    },
+    {
+      "id": "filmstrip-layer",
+      "type": "image",
+      "source": "real_photo_filmstrip_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_10_filmstrip_layer.png",
+      "bbox": {
+        "x": 25,
+        "y": 320,
+        "w": 1870,
+        "h": 390
+      },
+      "editable": false
+    },
+    {
+      "id": "film-label-0-text",
+      "type": "text",
+      "source": "native",
+      "text": "趣味嘉年华路演",
+      "font": "Microsoft YaHei",
+      "font_size": 11.5,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 109,
+        "y": 640,
+        "w": 242,
+        "h": 52
+      },
+      "editable": true
+    },
+    {
+      "id": "film-label-1-text",
+      "type": "text",
+      "source": "native",
+      "text": "走进叶开泰博物馆",
+      "font": "Microsoft YaHei",
+      "font_size": 11.5,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 459,
+        "y": 640,
+        "w": 242,
+        "h": 52
+      },
+      "editable": true
+    },
+    {
+      "id": "film-label-2-text",
+      "type": "text",
+      "source": "native",
+      "text": "青暖冬日·母校宣讲",
+      "font": "Microsoft YaHei",
+      "font_size": 11.5,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 804,
+        "y": 640,
+        "w": 242,
+        "h": 52
+      },
+      "editable": true
+    },
+    {
+      "id": "film-label-3-text",
+      "type": "text",
+      "source": "native",
+      "text": "社区志愿服务",
+      "font": "Microsoft YaHei",
+      "font_size": 11.5,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 1184,
+        "y": 640,
+        "w": 242,
+        "h": 52
+      },
+      "editable": true
+    },
+    {
+      "id": "film-label-4-text",
+      "type": "text",
+      "source": "native",
+      "text": "科普网站建设中",
+      "font": "Microsoft YaHei",
+      "font_size": 11.5,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 1539,
+        "y": 640,
+        "w": 242,
+        "h": 52
+      },
+      "editable": true
+    },
+    {
+      "id": "conclusion-text",
+      "type": "text",
+      "source": "native",
+      "text": "让中医药文化在青年实践中焕发新的生机",
+      "font": "Microsoft YaHei",
+      "font_size": 18.0,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 380,
+        "y": 742,
+        "w": 1160,
+        "h": 52
+      },
+      "editable": true
+    },
+    {
+      "id": "thanks-text",
+      "type": "text",
+      "source": "native",
+      "text": "谢谢聆听",
+      "font": "KaiTi",
+      "font_size": 52,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 650,
+        "y": 830,
+        "w": 620,
+        "h": 120
+      },
+      "editable": true
+    }
+  ]
+}
