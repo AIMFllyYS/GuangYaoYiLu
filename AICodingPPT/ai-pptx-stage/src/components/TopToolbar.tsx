@@ -6,8 +6,10 @@ import {
   Info,
   Maximize2,
   MonitorPlay,
+  Moon,
   MousePointer2,
   ScanLine,
+  SunMedium,
   ZoomIn,
   ZoomOut
 } from "lucide-react";
@@ -26,6 +28,7 @@ type TopToolbarProps = {
     totalWarnings: number;
   };
   showMode: boolean;
+  themeMode: "light" | "dark";
   onPrev: () => void;
   onNext: () => void;
   onDeckChange: (deckId: string) => void;
@@ -33,6 +36,7 @@ type TopToolbarProps = {
   onZoomIn: () => void;
   onZoomOut: () => void;
   onZoomFit: () => void;
+  onToggleTheme: () => void;
   canZoomIn: boolean;
   canZoomOut: boolean;
 };
@@ -46,6 +50,7 @@ export function TopToolbar({
   zoomLabel,
   validationCounts,
   showMode,
+  themeMode,
   onPrev,
   onNext,
   onDeckChange,
@@ -53,6 +58,7 @@ export function TopToolbar({
   onZoomIn,
   onZoomOut,
   onZoomFit,
+  onToggleTheme,
   canZoomIn,
   canZoomOut
 }: TopToolbarProps) {
@@ -69,6 +75,7 @@ export function TopToolbar({
     : hasWarnings
       ? `当前页 ${validationCounts.slideWarnings} 个 PPTX 复刻提醒，总计 ${validationCounts.totalWarnings} 个提醒`
       : "没有校验错误或警告";
+  const nextThemeLabel = themeMode === "light" ? "切换到深色 GPT 风格" : "切换到浅色新玻璃模式";
 
   return (
     <header className="top-toolbar" aria-label="编辑工具栏">
@@ -145,6 +152,9 @@ export function TopToolbar({
         </button>
         <button className="icon-button" type="button" title="放大" aria-label="放大" onClick={onZoomIn} disabled={!canZoomIn}>
           <ZoomIn size={18} />
+        </button>
+        <button className="icon-button theme-toggle" type="button" title={nextThemeLabel} aria-label={nextThemeLabel} onClick={onToggleTheme}>
+          {themeMode === "light" ? <Moon size={18} /> : <SunMedium size={18} />}
         </button>
       </div>
     </header>

@@ -18,8 +18,20 @@ type MorphState = {
   durationMs: number;
 };
 
+type ThemeMode = "light" | "dark";
+
 const ZOOM_LEVELS = [0.35, 0.4, 0.5, 0.6, 0.75, 0.9, 1] as const;
 const FIT_ZOOM = 0.5;
+const THEME_STORAGE_KEY = "ai-pptx-stage-theme";
+
+function getInitialTheme(): ThemeMode {
+  if (typeof window === "undefined") {
+    return "light";
+  }
+
+  const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+  return stored === "dark" || stored === "light" ? stored : "light";
+}
 
 function shouldKeepShortcutLocal(target: EventTarget | null) {
   if (!(target instanceof HTMLElement)) {
@@ -30,6 +42,7 @@ function shouldKeepShortcutLocal(target: EventTarget | null) {
 }
 
 export default function App() {
+  const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialTheme);
   const [selectedDeckId, setSelectedDeckId] = useState(defaultDeckId);
   const [deck, setDeck] = useState(() => getDeckEntry(defaultDeckId).deck);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -63,6 +76,17 @@ export default function App() {
     "--stage-width": `${deck.size.width * zoom}px`,
     "--stage-height": `${deck.size.height * zoom}px`
   } as CSSProperties;
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const themeColor = themeMode === "light" ? "#eef4f8" : "#212121";
+
+    root.dataset.theme = themeMode;
+    root.style.colorScheme = themeMode;
+    root.classList.toggle("dark", themeMode === "dark");
+    window.localStorage.setItem(THEME_STORAGE_KEY, themeMode);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", themeColor);
+  }, [themeMode]);
 
   const finishMorph = useCallback(() => {
     setMorphState(null);
@@ -224,6 +248,7 @@ export default function App() {
         slideTitle={currentSlide.title}
         zoomLabel={zoomLabel}
         validationCounts={validationCounts}
+        themeMode={themeMode}
         onPrev={() => goToSlide(currentIndex - 1)}
         onNext={() => goToSlide(currentIndex + 1)}
         onDeckChange={handleDeckChange}
@@ -238,6 +263,7 @@ export default function App() {
         onZoomIn={() => changeZoom("in")}
         onZoomOut={() => changeZoom("out")}
         onZoomFit={() => changeZoom("fit")}
+        onToggleTheme={() => setThemeMode((current) => (current === "light" ? "dark" : "light"))}
         canZoomIn={zoom < ZOOM_LEVELS[ZOOM_LEVELS.length - 1]}
         canZoomOut={zoom > ZOOM_LEVELS[0]}
       />
