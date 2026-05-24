@@ -511,7 +511,7 @@ export function HomeExperience() {
       <SiteNav />
 
       <main className="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-12" id="home">
-        
+
         {/* 极美环境光斑 */}
         <div className="bg-glow-ambient" aria-hidden="true" />
 
@@ -569,7 +569,7 @@ export function HomeExperience() {
 
         {/* ==================== 2. Interactive Dashboard Grid (Three columns) ==================== */}
         <section className="grid gap-6 md:grid-cols-12 items-stretch" id="dashboard">
-          
+
           {/* ==================== Column 1 (Width: 4/12) ==================== */}
           <div className="md:col-span-4 flex flex-col gap-6">
             {/* 2.1 Search Specimen Input */}
@@ -579,7 +579,7 @@ export function HomeExperience() {
                   <Search className="size-3.5" />
                   <span>SPECIMEN SEARCH / 本草集</span>
                 </div>
-                
+
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -624,7 +624,7 @@ export function HomeExperience() {
                   )}
                 </form>
               </div>
-              
+
               <div className="mt-4 border-t border-primary/5 pt-3.5 flex items-center justify-between text-[10px] text-muted-foreground/60 leading-normal">
                 <BookmarkCheck className="size-3.5 text-[#b98f46] shrink-0" />
                 <span className="pl-1">输入后点击右侧魔法星，即刻拉起流式 AI 解析</span>
@@ -725,7 +725,7 @@ export function HomeExperience() {
 
                 {/* Research x3 List */}
                 <div className="space-y-4">
-                  
+
                   {/* Research Card 1 */}
                   <button
                     type="button"
@@ -1004,7 +1004,7 @@ export function HomeExperience() {
 
                 {/* Stacked Polaroid Photos unfolding/spreading out in a wide arc stack as scroll progress advances */}
                 <div className="relative w-full h-full flex items-center justify-center">
-                  
+
                   {/* Polaroid Photo 1 (破冰相识) */}
                   <motion.div
                     style={{
@@ -1240,7 +1240,7 @@ export function HomeExperience() {
                 aria-live="polite"
                 aria-busy={loading}
               >
-                
+
                 {/* 4.1 "醒目标题，光药医路，口号，logo (联合团支部组成)" Header Banner */}
                 <div className="relative overflow-hidden rounded-2xl border border-[#b98f46]/35 bg-[#fbf9f2] p-5 shadow-sm gold-fine-frame">
                   <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
@@ -1272,14 +1272,41 @@ export function HomeExperience() {
                   </div>
                 </div>
 
+                <Card className="border border-primary/10 bg-white/45 p-4 shadow-sm">
+                  <span className="text-[9px] font-bold uppercase tracking-widest text-[#b98f46] block mb-2">
+                    GUESS YOU WANT TO SEARCH / 猜你想搜本草
+                  </span>
+                  <div className="flex flex-wrap gap-1.5" aria-label="猜你想搜推荐卡片">
+                    {guessRecommendations.map((rec) => (
+                      <Button
+                        key={rec.name}
+                        onClick={() => {
+                          setQuery(rec.name);
+                          setValidationError("");
+                          handleSearchExecution(rec.name);
+                        }}
+                        variant="outline"
+                        size="sm"
+                        className="h-7 rounded-lg border-primary/10 bg-white/40 text-[10px] text-muted-foreground/90 hover:bg-primary/5 hover:text-primary hover:border-primary/20 transition-all font-semibold"
+                      >
+                        <span className="mr-1">{rec.icon}</span>
+                        <span>{rec.name}</span>
+                        <span className="font-mono text-[8px] text-muted-foreground/60 ml-0.5 font-normal">
+                          {rec.pinyin}
+                        </span>
+                      </Button>
+                    ))}
+                  </div>
+                </Card>
+
                 {/* 4.2 Grid layout: Left column (Vector Specimen SVG + Suggestions) & Right column (Gold & Light-green fixed-height card) */}
                 <div className="grid gap-6 md:grid-cols-12 items-stretch">
-                  
+
                   {/* Left Column (Width: 5/12 - Responsive Vector SVG Illustration) */}
                   <div className="md:col-span-5 flex flex-col gap-6">
-                    <Card className="gold-corner-hollow border border-primary/15 bg-white/60 p-5 shadow-sm backdrop-blur-md flex flex-col justify-between overflow-hidden min-h-[380px]">
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between border-b border-primary/5 pb-2">
+                    <Card className="gold-corner-hollow border border-primary/15 bg-white/60 p-5 shadow-sm backdrop-blur-md flex flex-col justify-between overflow-hidden h-[550px]">
+                      <div className="space-y-4 flex-1 flex flex-col min-h-0">
+                        <div className="flex items-center justify-between border-b border-primary/5 pb-2 shrink-0">
                           <span className="font-mono text-[9px] font-bold tracking-widest text-[#b98f46] bg-primary/[0.04] px-2 py-0.5 rounded">
                             SPECIMEN SPECTRUM / 多光谱照影
                           </span>
@@ -1288,107 +1315,205 @@ export function HomeExperience() {
                           </span>
                         </div>
 
-                        {/* Vector SVG Botanical/Spectroscopic Illustration */}
-                        <div className="relative h-56 w-full rounded-xl border border-primary/10 bg-[#eaf4ed]/40 flex items-center justify-center shadow-inner p-3">
-                          <svg
-                            viewBox="0 0 200 200"
-                            className="h-full w-auto text-primary shrink-0 transition-transform duration-500 hover:scale-105"
-                            aria-hidden="true"
-                          >
-                            {/* Outer golden circle with coordinate dashboard style */}
-                            <circle cx="100" cy="100" r="85" fill="none" stroke="#b98f46" strokeWidth="1.5" strokeDasharray="3 3" />
-                            <circle cx="100" cy="100" r="76" fill="none" stroke="#b98f46" strokeWidth="0.8" opacity="0.4" />
-                            <circle cx="100" cy="100" r="55" fill="none" stroke="#2d6a45" strokeWidth="0.5" opacity="0.3" />
-                            
-                            {/* Tech radar crosshairs */}
-                            <line x1="15" y1="100" x2="185" y2="100" stroke="#b98f46" strokeWidth="0.5" opacity="0.15" />
-                            <line x1="100" y1="15" x2="100" y2="185" stroke="#b98f46" strokeWidth="0.5" opacity="0.15" />
-                            
-                            {/* Premium Ginkgo Leaf Representation (Traditional Herb) */}
-                            {/* Leaf shadow background */}
-                            <path
-                              d="M 100 155 C 100 142, 100 132, 100 122 M 100 122 C 80 117, 50 97, 45 72 C 42 57, 60 47, 92 62 C 96 64, 98 67, 100 69 C 102 67, 104 64, 108 62 C 140 47, 158 57, 155 72 C 150 97, 120 117, 100 122 Z"
-                              fill="rgba(45, 106, 69, 0.08)"
-                              stroke="#2d6a45"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            
-                            {/* Radiating Ginkgo Veins */}
-                            <path d="M 100 122 Q 80 108, 60 88" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
-                            <path d="M 100 122 Q 70 98, 50 76" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
-                            <path d="M 100 122 Q 85 92, 75 67" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
-                            <path d="M 100 122 Q 95 92, 92 65" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
-                            <path d="M 100 122 Q 120 108, 140 88" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
-                            <path d="M 100 122 Q 130 98, 150 76" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
-                            <path d="M 100 122 Q 115 92, 125 67" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
-                            <path d="M 100 122 Q 105 92, 108 65" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
+                        {/* Flex Row Layout for Vertical Switcher & Visual Display */}
+                        <div className="flex-1 flex gap-4 overflow-hidden min-h-0 items-stretch">
 
-                            {/* Multi-spectral refracted laser scans (Optoelectronic theme) */}
-                            {/* Red laser curve */}
-                            <path d="M 30 130 C 70 130, 95 70, 170 70" fill="none" stroke="#ae262b" strokeWidth="1" opacity="0.55" strokeLinecap="round" />
-                            {/* Gold spectral scan */}
-                            <path d="M 30 135 C 70 135, 90 65, 170 65" fill="none" stroke="#b98f46" strokeWidth="1.2" strokeDasharray="3 2" opacity="0.75" strokeLinecap="round" />
-                            {/* Green analysis sweep */}
-                            <path d="M 30 140 C 70 140, 85 60, 170 60" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.45" strokeLinecap="round" />
+                          {/* Left Sub-column: Vertical Sliding Pill Switcher */}
+                          {card && searchIsHerb && (
+                            <div className="flex flex-col gap-2 shrink-0 justify-center h-full">
+                              <div className="relative w-11 h-64 rounded-xl bg-[#e7f3eb] border border-[#b98f46]/20 p-0.5 flex flex-col items-center select-none shadow-sm overflow-hidden">
+                                <div
+                                  className="absolute left-0.5 right-0.5 rounded-lg bg-[#b98f46] shadow transition-all duration-300 ease-out"
+                                  style={{
+                                    height: "calc(50% - 2px)",
+                                    top: viewMode === "svg" ? "2px" : "calc(50%)",
+                                  }}
+                                />
 
-                            {/* Glowing active ingredient nodes & energy sparkles */}
-                            <circle cx="92" cy="62" r="3.5" fill="#b98f46" className="animate-pulse" />
-                            <circle cx="125" cy="67" r="2" fill="#ae262b" />
-                            <circle cx="50" cy="76" r="2.5" fill="#4ade80" />
-                            <circle cx="75" cy="67" r="3" fill="#b98f46" className="animate-pulse" />
-                            <circle cx="108" cy="62" r="2.5" fill="#2d6a45" />
-                            <circle cx="100" cy="92" r="3" fill="#ae262b" className="animate-pulse" />
-                            <circle cx="120" cy="100" r="2" fill="#b98f46" />
-                          </svg>
+                                <button
+                                  type="button"
+                                  onClick={() => setViewMode("svg")}
+                                  style={{ writingMode: "vertical-lr", textOrientation: "mixed" }}
+                                  className={`flex-1 w-full flex items-center justify-center font-serif text-[10px] font-bold tracking-widest relative z-10 transition-colors duration-200 text-center select-none cursor-pointer uppercase ${
+                                    viewMode === "svg" ? "text-white" : "text-[#2d6a45] hover:text-[#b98f46]"
+                                  }`}
+                                >
+                                  数字谱图 (SVG)
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => setViewMode("image")}
+                                  style={{ writingMode: "vertical-lr", textOrientation: "mixed" }}
+                                  className={`flex-1 w-full flex items-center justify-center font-serif text-[10px] font-bold tracking-widest relative z-10 transition-colors duration-200 text-center select-none cursor-pointer uppercase ${
+                                    viewMode === "image" ? "text-white" : "text-[#2d6a45] hover:text-[#b98f46]"
+                                  }`}
+                                >
+                                  本草标本 (图片)
+                                </button>
+                              </div>
+                            </div>
+                          )}
 
-                          <div className="absolute bottom-2 inset-x-0 text-center">
-                            <span className="text-[8px] font-mono tracking-widest text-[#2d6a45] uppercase bg-white/70 px-2 py-0.5 rounded shadow-sm inline-block font-semibold">
-                              Spectroscopy & Botanical Interaction Model
-                            </span>
+                          {/* Right Sub-column: Visual Area */}
+                          <div className="flex-1 h-full rounded-xl border border-primary/10 bg-[#eaf4ed]/40 flex items-center justify-center shadow-inner p-3 overflow-hidden relative">
+                            <AnimatePresence mode="wait">
+                              {card && searchIsHerb ? (
+                                viewMode === "svg" ? (
+                                  <motion.div
+                                    key="svg"
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="w-full h-full flex items-center justify-center p-2 rounded-lg bg-[#0a1a12]"
+                                  >
+                                    {card.visual ? (
+                                      <div
+                                        className="w-full h-full text-primary flex items-center justify-center svg-container [&>svg]:w-full [&>svg]:h-full [&>svg]:max-w-full [&>svg]:max-h-full"
+                                        dangerouslySetInnerHTML={{ __html: card.visual }}
+                                      />
+                                    ) : (
+                                      <div className="flex flex-col items-center gap-2 text-center">
+                                        <Loader2 className="size-5 animate-spin text-[#b98f46]" />
+                                        <span className="text-[10px] font-mono tracking-widest text-[#b98f46]/80 animate-pulse">GENERATING SPECTRUM...</span>
+                                      </div>
+                                    )}
+                                  </motion.div>
+                                ) : (
+                                  <motion.div
+                                    key="image"
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="w-full h-full flex items-center justify-center relative p-1 rounded-lg bg-[#0a1a12]"
+                                  >
+                                    {wikiImageLoading ? (
+                                      <div className="flex flex-col items-center gap-2 text-center">
+                                        <Loader2 className="size-5 animate-spin text-[#b98f46]" />
+                                        <span className="text-[10px] font-mono tracking-widest text-[#b98f46]/80 animate-pulse">FETCHING PHOTO...</span>
+                                      </div>
+                                    ) : wikiImageSrc ? (
+                                      <div className="relative w-full h-full rounded-xl overflow-hidden bg-[#e7f3eb]">
+                                        <img
+                                          src={wikiImageSrc}
+                                          alt={card.title}
+                                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                          loading="lazy"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                                      </div>
+                                    ) : (
+                                      <div className="flex flex-col items-center gap-2 text-center p-4">
+                                        <div className="size-11 rounded-full bg-white flex items-center justify-center text-[#b98f46] border border-[#b98f46]/20 shadow-sm">
+                                          <Image
+                                            src="/images/mascot/yaoguang-assistant.png"
+                                            width={32}
+                                            height={32}
+                                            alt="YaoGuang assistant fallback"
+                                            className="rounded-full"
+                                          />
+                                        </div>
+                                        <span className="text-[10px] text-white/80 leading-relaxed font-serif">
+                                          {card.imageSearchQuery ? `未找到 ${card.imageSearchQuery} 标本` : "暂无标本图片"}
+                                        </span>
+                                      </div>
+                                    )}
+                                  </motion.div>
+                                )
+                              ) : loading && !card ? (
+                                <motion.div
+                                  key="scanning"
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  className="w-full h-full flex flex-col items-center justify-center gap-3 text-center bg-[#0a1a12] rounded-lg"
+                                >
+                                  <div className="relative size-16 flex items-center justify-center">
+                                    <div className="absolute inset-0 rounded-full border-2 border-dashed border-[#b98f46]/40 animate-spin" style={{ animationDuration: "10s" }} />
+                                    <div className="absolute inset-2 rounded-full border-2 border-dashed border-primary/30 animate-spin" style={{ animationDuration: "6s", animationDirection: "reverse" }} />
+                                    <Loader2 className="size-6 animate-spin text-[#b98f46]" />
+                                  </div>
+                                  <span className="text-[10px] font-mono tracking-widest text-[#b98f46]/80 animate-pulse uppercase">
+                                    Multispectral Scanning...
+                                  </span>
+                                </motion.div>
+                              ) : (
+                                <motion.div
+                                  key="default"
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  className="w-full h-full flex items-center justify-center relative p-1"
+                                >
+                                  <svg
+                                    viewBox="0 0 200 200"
+                                    className="h-full w-auto text-primary shrink-0 transition-transform duration-500 hover:scale-105"
+                                    aria-hidden="true"
+                                  >
+                                    <circle cx="100" cy="100" r="85" fill="none" stroke="#b98f46" strokeWidth="1.5" strokeDasharray="3 3" />
+                                    <circle cx="100" cy="100" r="76" fill="none" stroke="#b98f46" strokeWidth="0.8" opacity="0.4" />
+                                    <circle cx="100" cy="100" r="55" fill="none" stroke="#2d6a45" strokeWidth="0.5" opacity="0.3" />
+
+                                    <line x1="15" y1="100" x2="185" y2="100" stroke="#b98f46" strokeWidth="0.5" opacity="0.15" />
+                                    <line x1="100" y1="15" x2="100" y2="185" stroke="#b98f46" strokeWidth="0.5" opacity="0.15" />
+
+                                    <path
+                                      d="M 100 155 C 100 142, 100 132, 100 122 M 100 122 C 80 117, 50 97, 45 72 C 42 57, 60 47, 92 62 C 96 64, 98 67, 100 69 C 102 67, 104 64, 108 62 C 140 47, 158 57, 155 72 C 150 97, 120 117, 100 122 Z"
+                                      fill="rgba(45, 106, 69, 0.08)"
+                                      stroke="#2d6a45"
+                                      strokeWidth="1.5"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    />
+
+                                    <path d="M 100 122 Q 80 108, 60 88" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
+                                    <path d="M 100 122 Q 70 98, 50 76" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
+                                    <path d="M 100 122 Q 85 92, 75 67" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
+                                    <path d="M 100 122 Q 95 92, 92 65" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
+                                    <path d="M 100 122 Q 120 108, 140 88" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
+                                    <path d="M 100 122 Q 130 98, 150 76" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
+                                    <path d="M 100 122 Q 115 92, 125 67" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
+                                    <path d="M 100 122 Q 105 92, 108 65" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
+
+                                    <path d="M 30 130 C 70 130, 95 70, 170 70" fill="none" stroke="#ae262b" strokeWidth="1" opacity="0.55" strokeLinecap="round" />
+                                    <path d="M 30 135 C 70 135, 90 65, 170 65" fill="none" stroke="#b98f46" strokeWidth="1.2" strokeDasharray="3 2" opacity="0.75" strokeLinecap="round" />
+                                    <path d="M 30 140 C 70 140, 85 60, 170 60" fill="none" stroke="#2d6a45" strokeWidth="0.8" opacity="0.45" strokeLinecap="round" />
+
+                                    <circle cx="92" cy="62" r="3.5" fill="#b98f46" className="animate-pulse" />
+                                    <circle cx="125" cy="67" r="2" fill="#ae262b" />
+                                    <circle cx="50" cy="76" r="2.5" fill="#4ade80" />
+                                    <circle cx="75" cy="67" r="3" fill="#b98f46" className="animate-pulse" />
+                                    <circle cx="108" cy="62" r="2.5" fill="#2d6a45" />
+                                    <circle cx="100" cy="92" r="3" fill="#ae262b" className="animate-pulse" />
+                                    <circle cx="120" cy="100" r="2" fill="#b98f46" />
+                                  </svg>
+                                  <div className="absolute bottom-2 inset-x-0 text-center">
+                                    <span className="text-[8px] font-mono tracking-widest text-[#2d6a45] uppercase bg-white/70 px-2 py-0.5 rounded shadow-sm inline-block font-semibold">
+                                      Spectroscopy & Botanical Interaction Model
+                                    </span>
+                                  </div>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
                           </div>
                         </div>
                       </div>
 
                       {/* Technical caption */}
-                      <div className="text-[9px] text-muted-foreground/60 leading-normal border-t border-primary/5 pt-2">
-                        图谱表达：左端代表多维近红外/拉曼光谱折射线，中部主脉象征岐黄草本，分子球节点显示经光谱指纹表征的活性多糖成分分布。
-                      </div>
-                    </Card>
-
-                    {/* 4.3 Left Column Bottom: "猜你想搜" Recommendation Badges */}
-                    <Card className="border border-primary/10 bg-white/45 p-4 shadow-sm">
-                      <span className="text-[9px] font-bold uppercase tracking-widest text-[#b98f46] block mb-2">
-                        GUESS YOU WANT TO SEARCH / 猜你想搜本草
-                      </span>
-                      <div className="flex flex-wrap gap-1.5" aria-label="猜你想搜推荐卡片">
-                        {guessRecommendations.map((rec) => (
-                          <Button
-                            key={rec.name}
-                            onClick={() => {
-                              setQuery(rec.name);
-                              setValidationError("");
-                              handleSearchExecution(rec.name);
-                            }}
-                            variant="outline"
-                            size="sm"
-                            className="h-7 rounded-lg border-primary/10 bg-white/40 text-[10px] text-muted-foreground/90 hover:bg-primary/5 hover:text-primary hover:border-primary/20 transition-all font-semibold"
-                          >
-                            <span className="mr-1">{rec.icon}</span>
-                            <span>{rec.name}</span>
-                            <span className="font-mono text-[8px] text-muted-foreground/60 ml-0.5 font-normal">
-                              {rec.pinyin}
-                            </span>
-                          </Button>
-                        ))}
+                      <div className="text-[9px] text-muted-foreground/60 leading-normal border-t border-primary/5 pt-2 shrink-0">
+                        {card && searchIsHerb
+                          ? "AI 生成多光谱植物图 · 点击左侧切换维基百科标本实拍"
+                          : loading && !card
+                          ? "多光谱高速对焦扫瞄中，将自动生成该本草的高分辨率数字光谱指纹图…"
+                          : "图谱表达：左端代表多维近红外/拉曼光谱折射线，中部主脉象征岐黄草本，分子球节点显示经光谱指纹表征的活性多糖成分分布。"}
                       </div>
                     </Card>
                   </div>
 
                   {/* Right Column (Width: 7/12 - Gold & Light Green Fixed-Height Card internally scrollable) */}
                   <div className="md:col-span-7 flex flex-col">
-                    
+
                     {error && (
                       <Alert variant="destructive" className="rounded-2xl border-destructive/20 bg-destructive/[0.02] flex-1">
                         <AlertTitle className="font-serif font-bold">生成失败</AlertTitle>
@@ -1440,113 +1565,11 @@ export function HomeExperience() {
                     {card && searchIsHerb && (
                       <article className="flex-1 flex flex-col">
                         <Card className="gold-corner-hollow overflow-hidden border-2 border-[#b98f46] bg-[#f4faf6] text-[#1b3d2b] shadow-xl rounded-2xl h-[550px] flex flex-col justify-between relative p-6 sm:p-8">
-                          
-                          <div className="flex flex-col md:flex-row gap-6 h-full relative z-10 overflow-hidden">
-                            
-                            {/* 左侧：动态视觉展示与双重切换控制 */}
-                            <div className="w-full md:w-[180px] shrink-0 flex flex-col items-center gap-4 h-full justify-start pt-2">
-                              <div className="w-full aspect-square rounded-2xl overflow-hidden border border-[#b98f46]/20 bg-[#e7f3eb] relative shadow-inner flex items-center justify-center group/visual">
-                                <AnimatePresence mode="wait">
-                                  {viewMode === "svg" ? (
-                                    <motion.div
-                                      key="svg"
-                                      initial={{ opacity: 0, scale: 0.95 }}
-                                      animate={{ opacity: 1, scale: 1 }}
-                                      exit={{ opacity: 0, scale: 0.95 }}
-                                      transition={{ duration: 0.2 }}
-                                      className="w-full h-full flex items-center justify-center p-2"
-                                    >
-                                      {card.visual ? (
-                                        <div
-                                          className="w-full h-full text-primary flex items-center justify-center svg-container [&>svg]:w-full [&>svg]:h-full [&>svg]:max-w-full [&>svg]:max-h-full"
-                                          dangerouslySetInnerHTML={{ __html: card.visual }}
-                                        />
-                                      ) : (
-                                        <div className="flex flex-col items-center gap-2 text-center">
-                                          <Loader2 className="size-5 animate-spin text-[#b98f46]" />
-                                          <span className="text-[10px] font-mono tracking-widest text-[#b98f46]/80 animate-pulse">GENERATING SPECTRUM...</span>
-                                        </div>
-                                      )}
-                                    </motion.div>
-                                  ) : (
-                                    <motion.div
-                                      key="image"
-                                      initial={{ opacity: 0, scale: 0.95 }}
-                                      animate={{ opacity: 1, scale: 1 }}
-                                      exit={{ opacity: 0, scale: 0.95 }}
-                                      transition={{ duration: 0.2 }}
-                                      className="w-full h-full flex items-center justify-center relative p-1"
-                                    >
-                                      {wikiImageLoading ? (
-                                        <div className="flex flex-col items-center gap-2 text-center">
-                                          <Loader2 className="size-5 animate-spin text-[#b98f46]" />
-                                          <span className="text-[10px] font-mono tracking-widest text-[#b98f46]/80 animate-pulse">FETCHING PHOTO...</span>
-                                        </div>
-                                      ) : wikiImageSrc ? (
-                                        <div className="relative w-full h-full rounded-xl overflow-hidden bg-[#e7f3eb]">
-                                          <img
-                                            src={wikiImageSrc}
-                                            alt={card.title}
-                                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                                            loading="lazy"
-                                          />
-                                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-                                        </div>
-                                      ) : (
-                                        <div className="flex flex-col items-center gap-2 text-center p-4">
-                                          <div className="size-11 rounded-full bg-white flex items-center justify-center text-[#b98f46] border border-[#b98f46]/20 shadow-sm">
-                                            <Image
-                                              src="/images/mascot/yaoguang-assistant.png"
-                                              width={32}
-                                              height={32}
-                                              alt="YaoGuang assistant fallback"
-                                              className="rounded-full"
-                                            />
-                                          </div>
-                                          <span className="text-[10px] text-[#2d6a45] leading-relaxed font-serif">
-                                            {card.imageSearchQuery ? `未找到 ${card.imageSearchQuery} 标本` : "暂无标本图片"}
-                                          </span>
-                                        </div>
-                                      )}
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
-                              </div>
 
-                              {/* 双态扁平滑动开关组件 */}
-                              <div className="relative w-full h-9 rounded-xl bg-[#e7f3eb] border border-[#b98f46]/20 p-0.5 flex items-center select-none shadow-sm shrink-0">
-                                <div
-                                  className="absolute top-0.5 bottom-0.5 rounded-lg bg-[#b98f46] shadow transition-all duration-300 ease-out"
-                                  style={{
-                                    width: "calc(50% - 2px)",
-                                    left: viewMode === "svg" ? "2px" : "calc(50%)",
-                                  }}
-                                />
-                                
-                                <button
-                                  type="button"
-                                  onClick={() => setViewMode("svg")}
-                                  className={`flex-1 text-center font-serif text-[10px] font-bold tracking-wide relative z-10 transition-colors duration-200 ${
-                                    viewMode === "svg" ? "text-white" : "text-[#2d6a45] hover:text-[#b98f46]"
-                                  }`}
-                                >
-                                  数字谱图 (SVG)
-                                </button>
-                                <button
-                                  type="button"
-                                  onClick={() => setViewMode("image")}
-                                  className={`flex-1 text-center font-serif text-[10px] font-bold tracking-wide relative z-10 transition-colors duration-200 ${
-                                    viewMode === "image" ? "text-white" : "text-[#2d6a45] hover:text-[#b98f46]"
-                                  }`}
-                                >
-                                  本草标本 (图片)
-                                </button>
-                              </div>
-                            </div>
-
+                          <div className="flex flex-col h-full relative z-10 overflow-hidden">
                             {/* 右侧：原有的卡片解析详细内容 */}
                             <div className="flex-1 flex flex-col h-full overflow-hidden">
-                              
+
                               {/* 1. Card Header Area (Fixed position - does not scroll) */}
                               <div className="border-b border-[#b98f46]/20 pb-3 flex items-start justify-between gap-3 shrink-0">
                                 <div className="space-y-1">
@@ -1577,7 +1600,7 @@ export function HomeExperience() {
 
                               {/* 2. Scrollable Body Area (Fixed strict height with internal custom scrollbar) */}
                               <div className="flex-1 overflow-y-auto pr-2 mt-4 space-y-6 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
-                                
+
                                 {/* Summary / 提要 */}
                                 <div>
                                   <FieldLabel label="Summary / 提要" done={fields?.summary.done ?? false} streaming={streaming} />
@@ -1762,7 +1785,7 @@ export function HomeExperience() {
                 {/* Gold corners */}
                 <div className="absolute top-0 left-0 h-2 w-2 border-t border-l border-[#b98f46]" />
                 <div className="absolute top-0 right-0 h-2 w-2 border-t border-r border-[#b98f46]" />
-                
+
                 <div className="flex items-center justify-between border-b border-primary/10 pb-3">
                   <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#b98f46]">
                     <ShoppingBag className="size-4 animate-bounce" />
