@@ -11,7 +11,12 @@
     "export:pptx": "tsx scripts/export-pptx.ts",
     "validate:decks": "node scripts/validate-decks.mjs",
     "validate:utf8": "node scripts/check-utf8.mjs",
-    "smoke:browser": "node scripts/browser-smoke.mjs"
+    "validate:assets": "tsx scripts/validate-assets.ts",
+    "validate:layout": "tsx scripts/validate-layout.ts",
+    "validate:export": "tsx scripts/validate-export.ts",
+    "validate:visual": "node scripts/validate-visual.mjs",
+    "smoke:browser": "node scripts/browser-smoke.mjs",
+    "verify": "node scripts/verify.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.1.1",

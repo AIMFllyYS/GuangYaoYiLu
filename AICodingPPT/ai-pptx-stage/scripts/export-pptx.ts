@@ -20,10 +20,11 @@ type DeckModule = {
 };
 
 export async function loadDeck(deckId: string): Promise<{ deck: DeckSpec; close: () => Promise<void> }> {
+  const hmrPort = 26000 + Math.floor(Math.random() * 10000);
   const server = await createServer({
     appType: "custom",
     logLevel: "error",
-    server: { middlewareMode: true }
+    server: { middlewareMode: true, hmr: { port: hmrPort } }
   });
 
   try {
@@ -97,6 +98,7 @@ export async function runExport(options: ExportCliOptions) {
     );
 
     return {
+      deck,
       outputPath,
       reportPath,
       report: result.report,
