@@ -19,6 +19,10 @@ type MorphState = {
 };
 
 type ThemeMode = "light" | "dark";
+type ExportStatus = {
+  state: "idle" | "running" | "success" | "error";
+  message: string;
+};
 
 const ZOOM_LEVELS = [0.35, 0.4, 0.5, 0.6, 0.75, 0.9, 1] as const;
 const FIT_ZOOM = 0.5;
@@ -51,6 +55,7 @@ export default function App() {
   const [showMode, setShowMode] = useState(false);
   const [morphState, setMorphState] = useState<MorphState | null>(null);
   const [zoom, setZoom] = useState<number>(FIT_ZOOM);
+  const [exportStatus, setExportStatus] = useState<ExportStatus>({ state: "idle", message: "" });
   const stageRef = useRef<HTMLElement | null>(null);
   const editorZoomRef = useRef<number | null>(null);
   const selectedElement = useMemo(() => findElement(currentSlide, selectedId), [currentSlide, selectedId]);
@@ -235,6 +240,37 @@ export default function App() {
     setDeck((current) => updateElement(current, currentSlide.id, id, { locked: !element.locked }));
   };
 
+  const handleExportPptx = useCallback(async () => {
+    setExportStatus({ state: "running", message: "正在导出 PPTX" });
+
+    try {
+      const [{ exportDeckToPptx }, { applyMorphTransitions }] = await Promise.all([
+        import("./deck/pptx-export"),
+        import("./deck/pptx-package")
+      ]);
+      const result = await exportDeckToPptx<Uint8Array>(deck, {
+        deckId: selectedDeckId,
+        mode: "editable",
+        outputType: "uint8array",
+        resolveAsset: (asset) => resolveBrowserAsset(asset)
+      });
+      const pptxData = await applyMorphTransitions(result.data, deck);
+      downloadBlob(
+        pptxBytesToBlob(pptxData),
+        `${deck.id}.editable.pptx`
+      );
+      setExportStatus({
+        state: "success",
+        message: `已导出 ${deck.slides.length} 页`
+      });
+    } catch (error) {
+      setExportStatus({
+        state: "error",
+        message: error instanceof Error ? error.message : "导出失败"
+      });
+    }
+  }, [deck, selectedDeckId]);
+
   return (
     <main className="editor-frame">
       <a className="skip-link" href="#stage-preview">
@@ -264,6 +300,8 @@ export default function App() {
         onZoomOut={() => changeZoom("out")}
         onZoomFit={() => changeZoom("fit")}
         onToggleTheme={() => setThemeMode((current) => (current === "light" ? "dark" : "light"))}
+        onExportPptx={handleExportPptx}
+        exportStatus={exportStatus}
         canZoomIn={zoom < ZOOM_LEVELS[ZOOM_LEVELS.length - 1]}
         canZoomOut={zoom > ZOOM_LEVELS[0]}
       />
@@ -314,4 +352,45 @@ export default function App() {
       </section>
     </main>
   );
+}
+
+async function resolveBrowserAsset(asset: string) {
+  if (asset.startsWith("data:")) {
+    return { data: asset };
+  }
+
+  const response = await fetch(asset);
+  if (!response.ok) {
+    throw new Error(`无法加载素材：${asset}`);
+  }
+
+  return { data: await blobToDataUrl(await response.blob()) };
+}
+
+function blobToDataUrl(blob: Blob) {
+  return new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(blob);
+  });
+}
+
+function pptxBytesToBlob(bytes: Uint8Array) {
+  const copy = new Uint8Array(bytes.byteLength);
+  copy.set(bytes);
+  return new Blob([copy.buffer as ArrayBuffer], {
+    type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+  });
+}
+
+function downloadBlob(blob: Blob, fileName: string) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
 }

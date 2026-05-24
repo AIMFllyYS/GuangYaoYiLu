@@ -4,7 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createServer, type ViteDevServer } from "vite";
 import { exportDeckToPptx, type PptxAssetSource } from "../src/deck/pptx-export";
-import { inspectPptxPackage } from "../src/deck/pptx-package";
+import { applyMorphTransitions, inspectPptxPackage } from "../src/deck/pptx-package";
 import type { AssetElement, DeckSpec, SlideSpec } from "../src/deck/types";
 
 export type ExportCliOptions = {
@@ -73,7 +73,7 @@ export async function runExport(options: ExportCliOptions) {
       outputType: "uint8array",
       resolveAsset: (asset: string, element: AssetElement, slide: SlideSpec) => nodeResolveAsset(asset)
     });
-    const data = Buffer.from(result.data);
+    const data = Buffer.from(await applyMorphTransitions(result.data, deck));
     const inspection = await inspectPptxPackage(data);
 
     if (inspection.slideCount !== deck.slides.length) {

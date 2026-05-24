@@ -363,6 +363,22 @@ textarea:focus-visible {
   box-shadow: 0 16px 32px var(--selection-glow);
 }
 
+.icon-button.is-exported {
+  color: var(--success);
+  border-color: rgba(123, 216, 143, 0.42);
+  background: var(--success-soft);
+}
+
+.icon-button.is-failed {
+  color: var(--danger);
+  border-color: rgba(255, 107, 122, 0.44);
+  background: var(--danger-soft);
+}
+
+.spin-icon {
+  animation: spin 900ms linear infinite;
+}
+
 .theme-toggle {
   color: var(--accent-strong);
 }
@@ -489,6 +505,36 @@ textarea:focus-visible {
   color: var(--danger);
   border-color: rgba(255, 107, 122, 0.42);
   background: var(--danger-soft);
+}
+
+.export-status {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.export-status.is-running {
+  color: var(--accent-strong);
+  border-color: var(--accent-border);
+  background: var(--accent-soft);
+}
+
+.export-status.is-success {
+  color: var(--success);
+  border-color: rgba(123, 216, 143, 0.36);
+  background: var(--success-soft);
+}
+
+.export-status.is-error {
+  color: var(--danger);
+  border-color: rgba(255, 107, 122, 0.42);
+  background: var(--danger-soft);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .editor-grid {

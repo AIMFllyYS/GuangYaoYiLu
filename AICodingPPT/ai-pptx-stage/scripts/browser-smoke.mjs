@@ -6,7 +6,7 @@ const url = process.env.AI_PPTX_STAGE_URL ?? "http://127.0.0.1:5173";
 const screenshotPath = path.join(os.tmpdir(), "ai-pptx-stage-smoke.png");
 
 const browser = await chromium.launch({ headless: true });
-const page = await browser.newPage({ viewport: { width: 1440, height: 960 }, deviceScaleFactor: 1 });
+const page = await browser.newPage({ viewport: { width: 1440, height: 960 }, deviceScaleFactor: 1, acceptDownloads: true });
 
 try {
   await page.goto(url, { waitUntil: "networkidle" });
@@ -26,15 +26,21 @@ try {
   const outside = await page.locator('[data-element-id="outside-cyan-glow"]').boundingBox();
   assert(outside && outside.width > 0, "off-canvas Morph element missing");
 
-  await page.locator(".top-toolbar button").nth(6).click();
+  const downloadPromise = page.waitForEvent("download");
+  await page.locator('button[aria-label="导出 PPTX"]').click();
+  const download = await downloadPromise;
+  assert(download.suggestedFilename() === "wave-utopia-demo.editable.pptx", "PPTX export download name invalid");
+  await page.waitForSelector(".export-status.is-success");
+
+  await page.locator('button[aria-label="放大"]').click();
   const zoomedInFrame = await page.locator(".slide-frame").boundingBox();
   assert(zoomedInFrame && zoomedInFrame.width > frameBox.width, "zoom in did not enlarge slide frame");
 
-  await page.locator(".top-toolbar button").nth(5).click();
+  await page.locator('button[aria-label="缩小"]').click();
   const zoomedOutFrame = await page.locator(".slide-frame").boundingBox();
   assert(zoomedOutFrame && Math.abs(zoomedOutFrame.width - frameBox.width) < 2, "zoom out did not return to previous scale");
 
-  await page.locator(".top-toolbar button").nth(4).click();
+  await page.locator('button[aria-label="适合窗口"]').click();
   const fitFrame = await page.locator(".slide-frame").boundingBox();
   assert(fitFrame && Math.abs(fitFrame.width - frameBox.width) < 2, "fit zoom did not restore default scale");
 
@@ -53,7 +59,7 @@ try {
   assert(inspectorText.includes("src/decks/wave-utopia-demo/pages/001-agent-start/page.ts"), "inspector missing page source path");
   assert(inspectorText.includes("PPTX Manual Sync"), "inspector missing PPTX sync data");
 
-  await page.locator(".top-toolbar button").nth(3).click();
+  await page.locator('button[aria-label="进入全屏放映预览"]').click();
   await page.waitForFunction(() => document.fullscreenElement?.classList.contains("stage-shell"));
   const fullscreenFrame = await page.locator(".slide-frame").boundingBox();
   assert(fullscreenFrame && fullscreenFrame.width > frameBox.width, "fullscreen preview did not enlarge slide frame");

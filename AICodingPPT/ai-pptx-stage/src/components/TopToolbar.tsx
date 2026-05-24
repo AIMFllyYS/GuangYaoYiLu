@@ -3,7 +3,9 @@ import {
   ChevronLeft,
   ChevronRight,
   CheckCircle2,
+  FileDown,
   Info,
+  Loader2,
   Maximize2,
   MonitorPlay,
   Moon,
@@ -29,10 +31,15 @@ type TopToolbarProps = {
   };
   showMode: boolean;
   themeMode: "light" | "dark";
+  exportStatus: {
+    state: "idle" | "running" | "success" | "error";
+    message: string;
+  };
   onPrev: () => void;
   onNext: () => void;
   onDeckChange: (deckId: string) => void;
   onToggleShow: () => void;
+  onExportPptx: () => void;
   onZoomIn: () => void;
   onZoomOut: () => void;
   onZoomFit: () => void;
@@ -51,10 +58,12 @@ export function TopToolbar({
   validationCounts,
   showMode,
   themeMode,
+  exportStatus,
   onPrev,
   onNext,
   onDeckChange,
   onToggleShow,
+  onExportPptx,
   onZoomIn,
   onZoomOut,
   onZoomFit,
@@ -76,6 +85,7 @@ export function TopToolbar({
       ? `当前页 ${validationCounts.slideWarnings} 个 PPTX 复刻提醒，总计 ${validationCounts.totalWarnings} 个提醒`
       : "没有校验错误或警告";
   const nextThemeLabel = themeMode === "light" ? "切换到深色 GPT 风格" : "切换到浅色新玻璃模式";
+  const exportBusy = exportStatus.state === "running";
 
   return (
     <header className="top-toolbar" aria-label="编辑工具栏">
@@ -144,6 +154,16 @@ export function TopToolbar({
         >
           <MonitorPlay size={18} />
         </button>
+        <button
+          className={exportStatus.state === "success" ? "icon-button is-exported" : exportStatus.state === "error" ? "icon-button is-failed" : "icon-button"}
+          type="button"
+          title="导出 PPTX"
+          aria-label={exportBusy ? "正在导出 PPTX" : "导出 PPTX"}
+          onClick={onExportPptx}
+          disabled={exportBusy}
+        >
+          {exportBusy ? <Loader2 className="spin-icon" size={18} /> : <FileDown size={18} />}
+        </button>
         <button className="icon-button" type="button" title="适合窗口" aria-label="适合窗口" onClick={onZoomFit}>
           <Maximize2 size={18} />
         </button>
@@ -156,6 +176,11 @@ export function TopToolbar({
         <button className="icon-button theme-toggle" type="button" title={nextThemeLabel} aria-label={nextThemeLabel} onClick={onToggleTheme}>
           {themeMode === "light" ? <Moon size={18} /> : <SunMedium size={18} />}
         </button>
+        {exportStatus.state !== "idle" ? (
+          <span className={`status-pill export-status is-${exportStatus.state}`} title={exportStatus.message}>
+            {exportStatus.message}
+          </span>
+        ) : null}
       </div>
     </header>
   );
