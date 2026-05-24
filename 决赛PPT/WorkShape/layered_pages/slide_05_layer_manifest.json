@@ -1,0 +1,231 @@
+{
+  "slide": 5,
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "mode": "premium image-first semantic layer merge",
+  "reference_image": "决赛PPT/输出终稿/image2_premium_ppt_v2/slides/slide_05.png",
+  "output_pptx": "决赛PPT/WorkShape/layered_pages/slide_05_layered.pptx",
+  "powerpoint_preview": "决赛PPT/WorkShape/layered_pages/slide_05_layered_powerpoint_export.png",
+  "elements": [
+    {
+      "id": "background-base-image2-muted",
+      "type": "image",
+      "source": "generated_background_from_image2_reference",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_05_background_base.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "editable": false
+    },
+    {
+      "id": "slide-title",
+      "type": "text",
+      "source": "native",
+      "text": "嘉年华路演：把中药文化变成可参与的青春体验",
+      "font": "KaiTi",
+      "font_size": 25.0,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 270,
+        "y": 34,
+        "w": 1380,
+        "h": 66
+      },
+      "editable": true
+    },
+    {
+      "id": "photo-wall-title-text",
+      "type": "text",
+      "source": "native",
+      "text": "真实现场照片 + 三个游戏机制",
+      "font": "Microsoft YaHei",
+      "font_size": 14.5,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 319,
+        "y": 182,
+        "w": 632,
+        "h": 46
+      },
+      "editable": true
+    },
+    {
+      "id": "photo-wall-layer",
+      "type": "image",
+      "source": "real_photo_collage_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_05_photo_wall_layer.png",
+      "bbox": {
+        "x": 34,
+        "y": 218,
+        "w": 1364,
+        "h": 610
+      },
+      "editable": false
+    },
+    {
+      "id": "pound-icon-image",
+      "type": "image",
+      "source": "visual_reference_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_05_pound_icon.png",
+      "bbox": {
+        "x": 1465,
+        "y": 258,
+        "w": 105,
+        "h": 105
+      },
+      "editable": false
+    },
+    {
+      "id": "pound-title",
+      "type": "text",
+      "source": "native",
+      "text": "捣药",
+      "font": "Microsoft YaHei",
+      "font_size": 22,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1605,
+        "y": 258,
+        "w": 180,
+        "h": 45
+      },
+      "editable": true
+    },
+    {
+      "id": "pound-body",
+      "type": "text",
+      "source": "native",
+      "text": "亲手体验\n传统炮制的乐趣",
+      "font": "Microsoft YaHei",
+      "font_size": 12.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1605,
+        "y": 310,
+        "w": 210,
+        "h": 58
+      },
+      "editable": true
+    },
+    {
+      "id": "smell-icon-image",
+      "type": "image",
+      "source": "visual_reference_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_05_smell_icon.png",
+      "bbox": {
+        "x": 1465,
+        "y": 483,
+        "w": 105,
+        "h": 105
+      },
+      "editable": false
+    },
+    {
+      "id": "smell-title",
+      "type": "text",
+      "source": "native",
+      "text": "闻药",
+      "font": "Microsoft YaHei",
+      "font_size": 22,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1605,
+        "y": 483,
+        "w": 180,
+        "h": 45
+      },
+      "editable": true
+    },
+    {
+      "id": "smell-body",
+      "type": "text",
+      "source": "native",
+      "text": "轻嗅识香\n辨别中药独特气味",
+      "font": "Microsoft YaHei",
+      "font_size": 12.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1605,
+        "y": 535,
+        "w": 210,
+        "h": 58
+      },
+      "editable": true
+    },
+    {
+      "id": "recognize-icon-image",
+      "type": "image",
+      "source": "visual_reference_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_05_recognize_icon.png",
+      "bbox": {
+        "x": 1465,
+        "y": 708,
+        "w": 105,
+        "h": 105
+      },
+      "editable": false
+    },
+    {
+      "id": "recognize-title",
+      "type": "text",
+      "source": "native",
+      "text": "认药",
+      "font": "Microsoft YaHei",
+      "font_size": 22,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1605,
+        "y": 708,
+        "w": 180,
+        "h": 45
+      },
+      "editable": true
+    },
+    {
+      "id": "recognize-body",
+      "type": "text",
+      "source": "native",
+      "text": "辨识本草\n认识常见中药材",
+      "font": "Microsoft YaHei",
+      "font_size": 12.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1605,
+        "y": 760,
+        "w": 210,
+        "h": 58
+      },
+      "editable": true
+    },
+    {
+      "id": "conclusion-text",
+      "type": "text",
+      "source": "native",
+      "text": "互动体验降低认知门槛，游戏化设计提升现场参与度",
+      "font": "Microsoft YaHei",
+      "font_size": 18.0,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 380,
+        "y": 907,
+        "w": 1160,
+        "h": 52
+      },
+      "editable": true
+    }
+  ]
+}
