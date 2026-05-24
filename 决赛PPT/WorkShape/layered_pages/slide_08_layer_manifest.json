@@ -1,0 +1,430 @@
+{
+  "slide": 8,
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "mode": "premium image-first semantic layer merge",
+  "reference_image": "决赛PPT/输出终稿/image2_premium_ppt_v2/slides/slide_08.png",
+  "output_pptx": "决赛PPT/WorkShape/layered_pages/slide_08_layered.pptx",
+  "powerpoint_preview": "决赛PPT/WorkShape/layered_pages/slide_08_layered_powerpoint_export.png",
+  "elements": [
+    {
+      "id": "background-base-image2-muted",
+      "type": "image",
+      "source": "generated_background_from_image2_reference",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_08_background_base.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "editable": false
+    },
+    {
+      "id": "slide-title",
+      "type": "text",
+      "source": "native",
+      "text": "科普网站：把“光药医路”延展为可持续数字入口",
+      "font": "KaiTi",
+      "font_size": 24.5,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 270,
+        "y": 34,
+        "w": 1380,
+        "h": 66
+      },
+      "editable": true
+    },
+    {
+      "id": "website-screenshot-layer",
+      "type": "image",
+      "source": "website_screenshot_reference",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_08_website_screenshot_layer.png",
+      "bbox": {
+        "x": 70,
+        "y": 130,
+        "w": 1290,
+        "h": 720
+      },
+      "editable": false
+    },
+    {
+      "id": "prototype-title-text",
+      "type": "text",
+      "source": "native",
+      "text": "建设中 / 功能原型",
+      "font": "Microsoft YaHei",
+      "font_size": 15,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 1394,
+        "y": 142,
+        "w": 312,
+        "h": 52
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-title-0",
+      "type": "text",
+      "source": "native",
+      "text": "支部特色",
+      "font": "Microsoft YaHei",
+      "font_size": 13.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 223,
+        "w": 220,
+        "h": 32
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-body-0",
+      "type": "text",
+      "source": "native",
+      "text": "联合团支部特色展示",
+      "font": "Microsoft YaHei",
+      "font_size": 9.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 260,
+        "w": 250,
+        "h": 28
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-title-1",
+      "type": "text",
+      "source": "native",
+      "text": "中药百科",
+      "font": "Microsoft YaHei",
+      "font_size": 13.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 311,
+        "w": 220,
+        "h": 32
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-body-1",
+      "type": "text",
+      "source": "native",
+      "text": "中药知识系统化呈现",
+      "font": "Microsoft YaHei",
+      "font_size": 9.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 348,
+        "w": 250,
+        "h": 28
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-title-2",
+      "type": "text",
+      "source": "native",
+      "text": "趣味课堂",
+      "font": "Microsoft YaHei",
+      "font_size": 13.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 399,
+        "w": 220,
+        "h": 32
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-body-2",
+      "type": "text",
+      "source": "native",
+      "text": "科普课程图文视频结合",
+      "font": "Microsoft YaHei",
+      "font_size": 9.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 436,
+        "w": 250,
+        "h": 28
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-title-3",
+      "type": "text",
+      "source": "native",
+      "text": "互动游戏",
+      "font": "Microsoft YaHei",
+      "font_size": 13.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 487,
+        "w": 220,
+        "h": 32
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-body-3",
+      "type": "text",
+      "source": "native",
+      "text": "趣味游戏提升参与度",
+      "font": "Microsoft YaHei",
+      "font_size": 9.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 524,
+        "w": 250,
+        "h": 28
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-title-4",
+      "type": "text",
+      "source": "native",
+      "text": "研究成果",
+      "font": "Microsoft YaHei",
+      "font_size": 13.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 575,
+        "w": 220,
+        "h": 32
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-body-4",
+      "type": "text",
+      "source": "native",
+      "text": "展示最新研究成果",
+      "font": "Microsoft YaHei",
+      "font_size": 9.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 612,
+        "w": 250,
+        "h": 28
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-title-5",
+      "type": "text",
+      "source": "native",
+      "text": "联系我们",
+      "font": "Microsoft YaHei",
+      "font_size": 13.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 663,
+        "w": 220,
+        "h": 32
+      },
+      "editable": true
+    },
+    {
+      "id": "feature-body-5",
+      "type": "text",
+      "source": "native",
+      "text": "留言反馈，持续优化",
+      "font": "Microsoft YaHei",
+      "font_size": 9.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1540,
+        "y": 700,
+        "w": 250,
+        "h": 28
+      },
+      "editable": true
+    },
+    {
+      "id": "vertical-banner-text",
+      "type": "text",
+      "source": "native",
+      "text": "数字赋能\n传承创新",
+      "font": "Microsoft YaHei",
+      "font_size": 15,
+      "color": "native",
+      "align": "center",
+      "bbox": {
+        "x": 1814,
+        "y": 322,
+        "w": 68,
+        "h": 276
+      },
+      "editable": true
+    },
+    {
+      "id": "bottom-feature-0-title",
+      "type": "text",
+      "source": "native",
+      "text": "联合团支部特色展示",
+      "font": "Microsoft YaHei",
+      "font_size": 11.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 458,
+        "y": 908,
+        "w": 169,
+        "h": 34
+      },
+      "editable": true
+    },
+    {
+      "id": "bottom-feature-0-body",
+      "type": "text",
+      "source": "native",
+      "text": "• 三支部风采与项目实践\n• 集中呈现",
+      "font": "Microsoft YaHei",
+      "font_size": 8.6,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 458,
+        "y": 946,
+        "w": 169,
+        "h": 44
+      },
+      "editable": true
+    },
+    {
+      "id": "bottom-feature-1-title",
+      "type": "text",
+      "source": "native",
+      "text": "Q版瑶光助手",
+      "font": "Microsoft YaHei",
+      "font_size": 11.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 788,
+        "y": 908,
+        "w": 169,
+        "h": 34
+      },
+      "editable": true
+    },
+    {
+      "id": "bottom-feature-1-body",
+      "type": "text",
+      "source": "native",
+      "text": "• 智能互动引导陪伴，\n• 提升科普体验感",
+      "font": "Microsoft YaHei",
+      "font_size": 8.6,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 788,
+        "y": 946,
+        "w": 169,
+        "h": 44
+      },
+      "editable": true
+    },
+    {
+      "id": "bottom-feature-2-title",
+      "type": "text",
+      "source": "native",
+      "text": "中药功能查询",
+      "font": "Microsoft YaHei",
+      "font_size": 11.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1118,
+        "y": 908,
+        "w": 169,
+        "h": 34
+      },
+      "editable": true
+    },
+    {
+      "id": "bottom-feature-2-body",
+      "type": "text",
+      "source": "native",
+      "text": "• 便捷检索药材功效，\n• 科学实用",
+      "font": "Microsoft YaHei",
+      "font_size": 8.6,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1118,
+        "y": 946,
+        "w": 169,
+        "h": 44
+      },
+      "editable": true
+    },
+    {
+      "id": "bottom-feature-3-title",
+      "type": "text",
+      "source": "native",
+      "text": "趣味问答小游戏",
+      "font": "Microsoft YaHei",
+      "font_size": 11.5,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1448,
+        "y": 908,
+        "w": 169,
+        "h": 34
+      },
+      "editable": true
+    },
+    {
+      "id": "bottom-feature-3-body",
+      "type": "text",
+      "source": "native",
+      "text": "• 游戏化学习，\n• 激发兴趣与参与",
+      "font": "Microsoft YaHei",
+      "font_size": 8.6,
+      "color": "native",
+      "align": "left",
+      "bbox": {
+        "x": 1448,
+        "y": 946,
+        "w": 169,
+        "h": 44
+      },
+      "editable": true
+    }
+  ]
+}
