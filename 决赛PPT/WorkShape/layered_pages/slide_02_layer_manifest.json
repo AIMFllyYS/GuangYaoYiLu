@@ -1,0 +1,180 @@
+{
+  "slide": 2,
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "mode": "premium image-first semantic layer merge",
+  "reference_image": "决赛PPT/输出终稿/image2_premium_ppt_v2/slides/slide_02.png",
+  "output_pptx": "决赛PPT/WorkShape/layered_pages/slide_02_layered.pptx",
+  "preview": "决赛PPT/WorkShape/layered_pages/slide_02_layered_preview.png",
+  "powerpoint_preview": "决赛PPT/WorkShape/layered_pages/slide_02_layered_powerpoint_export.png",
+  "elements": [
+    {
+      "id": "background-base-image2-muted",
+      "type": "image",
+      "source": "generated_background_from_image2_reference",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_02_background_base.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "z": 0,
+      "editable": false,
+      "animation_group": "background"
+    },
+    {
+      "id": "slide-title",
+      "type": "text",
+      "source": "native",
+      "text": "趣味调研：青年愿意了解中药，但更需要体验式入口",
+      "font": "KaiTi",
+      "font_size": 22.8,
+      "color": "RGB(16,82,54)",
+      "align": "center",
+      "bbox": {
+        "x": 250,
+        "y": 34,
+        "w": 1340,
+        "h": 62
+      },
+      "z": 10,
+      "editable": true
+    },
+    {
+      "id": "subtitle",
+      "type": "text",
+      "source": "native",
+      "text": "问卷截图与结果图均来自项目材料",
+      "font": "Microsoft YaHei",
+      "font_size": 14.2,
+      "color": "RGB(45,54,39)",
+      "align": "center",
+      "bbox": {
+        "x": 720,
+        "y": 115,
+        "w": 480,
+        "h": 50
+      },
+      "z": 20,
+      "editable": true
+    },
+    {
+      "id": "survey-screenshots-layer",
+      "type": "image",
+      "source": "visual_reference_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_02_survey_screenshots_layer.png",
+      "bbox": {
+        "x": 24,
+        "y": 186,
+        "w": 920,
+        "h": 575
+      },
+      "z": 30,
+      "editable": false,
+      "animation_group": "evidence"
+    },
+    {
+      "id": "results-charts-layer",
+      "type": "image",
+      "source": "visual_reference_crop",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_02_results_charts_layer.png",
+      "bbox": {
+        "x": 963,
+        "y": 179,
+        "w": 890,
+        "h": 572
+      },
+      "z": 40,
+      "editable": false,
+      "animation_group": "evidence"
+    },
+    {
+      "id": "sample-card",
+      "type": "shape",
+      "source": "native",
+      "bbox": {
+        "x": 30,
+        "y": 790,
+        "w": 548,
+        "h": 150
+      },
+      "z": 50,
+      "editable": true
+    },
+    {
+      "id": "sample-card-text",
+      "type": "text",
+      "source": "native",
+      "text": "青年样本\n18–25岁青年为主力样本\n多数对中医药持积极态度\n认知基础有待提升",
+      "font": "Microsoft YaHei",
+      "font_size": 8.8,
+      "color": "RGB(45,54,39)",
+      "align": "left",
+      "bbox": {
+        "x": 134,
+        "y": 782,
+        "w": 296,
+        "h": 128
+      },
+      "z": 60,
+      "editable": true
+    },
+    {
+      "id": "pain-card-text",
+      "type": "text",
+      "source": "native",
+      "text": "认知痛点\n概念混淆，专业门槛高\n辨识困难，实物接触少\n缺乏有趣、可参与的体验",
+      "font": "Microsoft YaHei",
+      "font_size": 8.8,
+      "color": "RGB(45,54,39)",
+      "align": "left",
+      "bbox": {
+        "x": 714,
+        "y": 782,
+        "w": 253,
+        "h": 128
+      },
+      "z": 70,
+      "editable": true
+    },
+    {
+      "id": "activity-card-text",
+      "type": "text",
+      "source": "native",
+      "text": "活动启发\n以体验破解认知壁垒\n以互动提升参与热情\n以传播扩大文化影响",
+      "font": "Microsoft YaHei",
+      "font_size": 8.8,
+      "color": "RGB(45,54,39)",
+      "align": "left",
+      "bbox": {
+        "x": 1244,
+        "y": 782,
+        "w": 253,
+        "h": 128
+      },
+      "z": 80,
+      "editable": true
+    },
+    {
+      "id": "conclusion-text",
+      "type": "text",
+      "source": "native",
+      "text": "调研结论直接指向活动设计：用可参与、可体验、可传播的方式讲好本草文化",
+      "font": "Microsoft YaHei",
+      "font_size": 19.5,
+      "color": "RGB(242,220,150)",
+      "align": "center",
+      "bbox": {
+        "x": 190,
+        "y": 978,
+        "w": 1540,
+        "h": 58
+      },
+      "z": 90,
+      "editable": true
+    }
+  ]
+}
