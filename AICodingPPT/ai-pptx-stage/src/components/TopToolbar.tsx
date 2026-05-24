@@ -1,6 +1,9 @@
 import {
+  AlertTriangle,
   ChevronLeft,
   ChevronRight,
+  CheckCircle2,
+  Info,
   Maximize2,
   MonitorPlay,
   MousePointer2,
@@ -16,6 +19,12 @@ type TopToolbarProps = {
   total: number;
   slideTitle: string;
   zoomLabel: string;
+  validationCounts: {
+    slideErrors: number;
+    slideWarnings: number;
+    totalErrors: number;
+    totalWarnings: number;
+  };
   showMode: boolean;
   onPrev: () => void;
   onNext: () => void;
@@ -35,6 +44,7 @@ export function TopToolbar({
   total,
   slideTitle,
   zoomLabel,
+  validationCounts,
   showMode,
   onPrev,
   onNext,
@@ -46,6 +56,20 @@ export function TopToolbar({
   canZoomIn,
   canZoomOut
 }: TopToolbarProps) {
+  const hasErrors = validationCounts.totalErrors > 0;
+  const hasWarnings = validationCounts.totalWarnings > 0;
+  const validationIsClean = !hasErrors && !hasWarnings;
+  const validationLabel = hasErrors
+    ? `校验错误 ${validationCounts.totalErrors}`
+    : hasWarnings
+      ? `PPTX 提醒 本页 ${validationCounts.slideWarnings}`
+      : "校验通过";
+  const validationAriaLabel = hasErrors
+    ? `当前页 ${validationCounts.slideErrors} 个错误，总计 ${validationCounts.totalErrors} 个错误`
+    : hasWarnings
+      ? `当前页 ${validationCounts.slideWarnings} 个 PPTX 复刻提醒，总计 ${validationCounts.totalWarnings} 个提醒`
+      : "没有校验错误或警告";
+
   return (
     <header className="top-toolbar" aria-label="编辑工具栏">
       <div className="toolbar-group title-group">
@@ -86,6 +110,19 @@ export function TopToolbar({
           16:9
         </span>
         <span className="zoom-label">缩放 {zoomLabel}</span>
+        <span
+          className={validationIsClean ? "status-pill is-clean" : hasErrors ? "status-pill is-error" : "status-pill is-warning"}
+          aria-label={validationAriaLabel}
+        >
+          {validationIsClean ? (
+            <CheckCircle2 size={14} aria-hidden="true" />
+          ) : hasErrors ? (
+            <AlertTriangle size={14} aria-hidden="true" />
+          ) : (
+            <Info size={14} aria-hidden="true" />
+          )}
+          {validationLabel}
+        </span>
       </div>
       <div className="toolbar-group tool-group" aria-label="舞台工具">
         <button className="icon-button is-active" type="button" title="选择工具" aria-label="选择工具">

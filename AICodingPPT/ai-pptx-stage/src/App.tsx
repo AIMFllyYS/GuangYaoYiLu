@@ -21,6 +21,14 @@ type MorphState = {
 const ZOOM_LEVELS = [0.35, 0.4, 0.5, 0.6, 0.75, 0.9, 1] as const;
 const FIT_ZOOM = 0.5;
 
+function shouldKeepShortcutLocal(target: EventTarget | null) {
+  if (!(target instanceof HTMLElement)) {
+    return false;
+  }
+
+  return Boolean(target.closest("input, textarea, select, button, [contenteditable='true']"));
+}
+
 export default function App() {
   const [selectedDeckId, setSelectedDeckId] = useState(defaultDeckId);
   const [deck, setDeck] = useState(() => getDeckEntry(defaultDeckId).deck);
@@ -34,6 +42,19 @@ export default function App() {
   const editorZoomRef = useRef<number | null>(null);
   const selectedElement = useMemo(() => findElement(currentSlide, selectedId), [currentSlide, selectedId]);
   const validationIssues = useMemo(() => validateDeck(deck), [deck]);
+  const validationCounts = useMemo(
+    () => {
+      const slideIssues = validationIssues.filter((issue) => issue.slideId === currentSlide.id);
+
+      return {
+        slideErrors: slideIssues.filter((issue) => issue.level === "error").length,
+        slideWarnings: slideIssues.filter((issue) => issue.level === "warning").length,
+        totalErrors: validationIssues.filter((issue) => issue.level === "error").length,
+        totalWarnings: validationIssues.filter((issue) => issue.level === "warning").length
+      };
+    },
+    [currentSlide.id, validationIssues]
+  );
   const slideChecklist = useMemo(() => slidePptxChecklist(deck, currentSlide), [deck, currentSlide]);
   const deckOptions = useMemo(() => deckEntries.map((entry) => ({ id: entry.id, title: entry.title })), []);
   const zoomLabel = `${Math.round(zoom * 100)}%`;
@@ -106,6 +127,10 @@ export default function App() {
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape" && shouldKeepShortcutLocal(event.target)) {
+        return;
+      }
+
       if (event.key === "ArrowRight" || event.key === " ") {
         event.preventDefault();
         goToSlide(currentIndex + 1);
@@ -188,6 +213,9 @@ export default function App() {
 
   return (
     <main className="editor-frame">
+      <a className="skip-link" href="#stage-preview">
+        跳转到舞台
+      </a>
       <TopToolbar
         deckId={selectedDeckId}
         deckOptions={deckOptions}
@@ -195,6 +223,7 @@ export default function App() {
         total={deck.slides.length}
         slideTitle={currentSlide.title}
         zoomLabel={zoomLabel}
+        validationCounts={validationCounts}
         onPrev={() => goToSlide(currentIndex - 1)}
         onNext={() => goToSlide(currentIndex + 1)}
         onDeckChange={handleDeckChange}
@@ -221,7 +250,14 @@ export default function App() {
           onToggleVisibility={handleToggleVisibility}
           onToggleLock={handleToggleLock}
         />
-        <section ref={stageRef} className="stage-shell" style={stageStyle} aria-label="AI PPTX stage preview">
+        <section
+          id="stage-preview"
+          ref={stageRef}
+          className="stage-shell"
+          style={stageStyle}
+          tabIndex={-1}
+          aria-label="AI PPTX stage preview"
+        >
           <SceneRenderer
             deck={deck}
             slide={currentSlide}

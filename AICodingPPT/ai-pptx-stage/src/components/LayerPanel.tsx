@@ -14,6 +14,7 @@ import {
   TextCursorInput,
   Type
 } from "lucide-react";
+import { useMemo, useState } from "react";
 import type { SlideElement, SlideSpec } from "../deck/types";
 
 type LayerPanelProps = {
@@ -33,7 +34,27 @@ export function LayerPanel({
   onToggleVisibility,
   onToggleLock
 }: LayerPanelProps) {
-  const layers = [...slide.elements].sort((a, b) => b.z - a.z);
+  const [query, setQuery] = useState("");
+  const layers = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    const sorted = [...slide.elements].sort((a, b) => b.z - a.z);
+
+    if (!normalizedQuery) {
+      return sorted;
+    }
+
+    return sorted.filter((element) => {
+      const haystack = [
+        element.name,
+        element.id,
+        element.type,
+        element.morphKey ?? "",
+        String(element.z)
+      ].join(" ").toLowerCase();
+
+      return haystack.includes(normalizedQuery);
+    });
+  }, [query, slide.elements]);
 
   return (
     <aside className="side-panel layer-panel" aria-label="图层面板">
@@ -51,18 +72,37 @@ export function LayerPanel({
         <span>{slide.id}</span>
         <strong>{slide.title}</strong>
       </div>
+      <label className="layer-search-shell">
+        <Search size={14} aria-hidden="true" />
+        <span className="sr-only">搜索图层</span>
+        <input
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="搜索图层、Morph key…"
+          autoComplete="off"
+          spellCheck={false}
+        />
+        <span className="layer-count" aria-label={`当前显示 ${layers.length} 个图层，共 ${slide.elements.length} 个图层`}>
+          {layers.length}/{slide.elements.length}
+        </span>
+      </label>
       <div className="layer-list">
-        {layers.map((element) => (
-          <LayerRow
-            key={element.id}
-            element={element}
-            selected={selectedId === element.id}
-            onSelect={onSelect}
-            onMoveLayer={onMoveLayer}
-            onToggleVisibility={onToggleVisibility}
-            onToggleLock={onToggleLock}
-          />
-        ))}
+        {layers.length === 0 ? (
+          <p className="layer-empty">没有匹配的图层。</p>
+        ) : (
+          layers.map((element) => (
+            <LayerRow
+              key={element.id}
+              element={element}
+              selected={selectedId === element.id}
+              onSelect={onSelect}
+              onMoveLayer={onMoveLayer}
+              onToggleVisibility={onToggleVisibility}
+              onToggleLock={onToggleLock}
+            />
+          ))
+        )}
       </div>
     </aside>
   );
@@ -82,7 +122,13 @@ function LayerRow({ element, selected, onSelect, onMoveLayer, onToggleVisibility
 
   return (
     <div className={selected ? "layer-row is-active" : "layer-row"} data-layer-type={element.type}>
-      <button className="layer-main" type="button" onClick={() => onSelect(element.id)} aria-pressed={selected}>
+      <button
+        className="layer-main"
+        type="button"
+        onClick={() => onSelect(element.id)}
+        aria-pressed={selected}
+        aria-label={`选择图层 ${element.name}，类型 ${element.type}${element.morphKey ? `，Morph ${element.morphKey}` : ""}`}
+      >
         <span className={`layer-type layer-type-${element.type}`} title={element.type}>
           <TypeIcon size={14} aria-hidden="true" />
         </span>
@@ -90,6 +136,7 @@ function LayerRow({ element, selected, onSelect, onMoveLayer, onToggleVisibility
           <strong>{element.name}</strong>
           <small>
             <span className="morph-key">{element.morphKey ?? "no morphKey"}</span>
+            <span className="layer-z">z {element.z}</span>
             <span className="layer-id">{element.id}</span>
           </small>
         </span>

@@ -15,6 +15,8 @@ type InspectorPanelProps = {
 
 export function InspectorPanel({ deck, slide, element, slideChecklist, issues }: InspectorPanelProps) {
   const slideIssues = issues.filter((issue) => issue.slideId === slide.id);
+  const errors = issues.filter((issue) => issue.level === "error").length;
+  const warnings = issues.filter((issue) => issue.level === "warning").length;
 
   return (
     <aside className="side-panel inspector-panel" aria-label="参数面板">
@@ -92,6 +94,17 @@ export function InspectorPanel({ deck, slide, element, slideChecklist, issues }:
             <CheckCircle2 size={14} aria-hidden="true" />
             Validation
           </h3>
+          <div className="validation-summary" aria-label={`当前页 ${slideIssues.length} 个校验问题，总计 ${issues.length} 个校验问题`}>
+            <span className="validation-chip">
+              当前页 <strong>{slideIssues.length}</strong>
+            </span>
+            <span className={errors > 0 ? "validation-chip is-error" : "validation-chip"}>
+              Error <strong>{errors}</strong>
+            </span>
+            <span className={warnings > 0 ? "validation-chip is-warning" : "validation-chip"}>
+              Warning <strong>{warnings}</strong>
+            </span>
+          </div>
           <ValidationReport issues={slideIssues} />
         </section>
       </div>
@@ -113,18 +126,30 @@ function ParamGrid({ rows }: { rows: [string, string][] }) {
 }
 
 function CopyButton({ label, value }: { label: string; value: string }) {
-  const [copied, setCopied] = useState(false);
+  const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
 
   const copy = async () => {
-    await navigator.clipboard.writeText(value);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1200);
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopyState("copied");
+    } catch {
+      setCopyState("failed");
+    }
+    window.setTimeout(() => setCopyState("idle"), 1400);
   };
 
+  const copied = copyState === "copied";
+  const failed = copyState === "failed";
+
   return (
-    <button className={copied ? "copy-button is-copied" : "copy-button"} type="button" onClick={copy} aria-live="polite">
+    <button
+      className={copied ? "copy-button is-copied" : failed ? "copy-button is-failed" : "copy-button"}
+      type="button"
+      onClick={copy}
+      aria-live="polite"
+    >
       {copied ? <ClipboardCheck size={14} /> : <Clipboard size={14} />}
-      {copied ? "已复制" : label}
+      {copied ? "已复制" : failed ? "复制失败" : label}
     </button>
   );
 }
