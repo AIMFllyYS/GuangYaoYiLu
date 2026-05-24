@@ -11,6 +11,16 @@ export {
   wide16x9
 } from "./builders";
 
+export {
+  infoCard,
+  logoLockup,
+  morphKey,
+  pageNumber,
+  photoStrip,
+  sectionTitle,
+  watermark
+} from "./presets";
+
 export type {
   AssetElement,
   BaseElement,
@@ -28,4 +38,3 @@ export type {
   TextElement,
   TransitionType
 } from "./types";
-

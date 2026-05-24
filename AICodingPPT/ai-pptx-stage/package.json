@@ -9,6 +9,8 @@
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc -b",
     "export:pptx": "tsx scripts/export-pptx.ts",
+    "deck:new": "node scripts/deck-new.mjs",
+    "ai:brief": "tsx scripts/ai-brief.ts",
     "validate:decks": "node scripts/validate-decks.mjs",
     "validate:utf8": "node scripts/check-utf8.mjs",
     "validate:assets": "tsx scripts/validate-assets.ts",
