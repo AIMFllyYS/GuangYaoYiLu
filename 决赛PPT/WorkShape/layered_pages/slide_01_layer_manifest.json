@@ -1,0 +1,195 @@
+{
+  "slide": 1,
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "mode": "premium image-first semantic layer merge",
+  "reference_image": "决赛PPT/输出终稿/image2_premium_ppt_v2/slides/slide_01.png",
+  "output_pptx": "决赛PPT/WorkShape/layered_pages/slide_01_layered.pptx",
+  "preview": "决赛PPT/WorkShape/layered_pages/slide_01_layered_preview.png",
+  "elements": [
+    {
+      "id": "background-base-image2-muted",
+      "type": "image",
+      "source": "generated_background_from_image2_reference",
+      "file": "决赛PPT/WorkShape/layered_pages/slide_01_background_base.png",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "z": 0,
+      "editable": false,
+      "animation_group": "background"
+    },
+    {
+      "id": "top-slogan-backplate",
+      "type": "shape",
+      "source": "native",
+      "bbox": {
+        "x": 164,
+        "y": 157,
+        "w": 1596,
+        "h": 158
+      },
+      "z": 10,
+      "editable": true
+    },
+    {
+      "id": "top-slogan",
+      "type": "text",
+      "source": "native",
+      "text": "金光青黛同济兴，百草杏林华夏清",
+      "font": "KaiTi",
+      "font_size": 38,
+      "color": "RGB(12,71,46)",
+      "align": "center",
+      "bbox": {
+        "x": 198,
+        "y": 168,
+        "w": 1510,
+        "h": 130
+      },
+      "z": 20,
+      "editable": true,
+      "animation_group": "text"
+    },
+    {
+      "id": "divider",
+      "type": "shape",
+      "source": "native",
+      "bbox": {
+        "x": 510,
+        "y": 378,
+        "w": 900,
+        "h": 40
+      },
+      "z": 30,
+      "editable": true
+    },
+    {
+      "id": "main-title-plaque",
+      "type": "shape",
+      "source": "native",
+      "bbox": {
+        "x": 500,
+        "y": 430,
+        "w": 920,
+        "h": 196
+      },
+      "z": 40,
+      "editable": true
+    },
+    {
+      "id": "slide-title",
+      "type": "text",
+      "source": "native",
+      "text": "光药医路",
+      "font": "KaiTi",
+      "font_size": 62,
+      "color": "RGB(246,222,143)",
+      "align": "center",
+      "bbox": {
+        "x": 520,
+        "y": 432,
+        "w": 880,
+        "h": 174
+      },
+      "z": 50,
+      "editable": true,
+      "animation_group": "title"
+    },
+    {
+      "id": "team-strip",
+      "type": "shape",
+      "source": "native",
+      "bbox": {
+        "x": 395,
+        "y": 705,
+        "w": 1135,
+        "h": 78
+      },
+      "z": 60,
+      "editable": true
+    },
+    {
+      "id": "team-text",
+      "type": "text",
+      "source": "native",
+      "text": "药学（中外）2503、光电2506、基础医学（强基）2501班团支部",
+      "font": "Microsoft YaHei",
+      "font_size": 17,
+      "color": "RGB(255,251,235)",
+      "align": "center",
+      "bbox": {
+        "x": 525,
+        "y": 708,
+        "w": 970,
+        "h": 70
+      },
+      "z": 70,
+      "editable": true,
+      "animation_group": "text"
+    },
+    {
+      "id": "date-strip",
+      "type": "shape",
+      "source": "native",
+      "bbox": {
+        "x": 700,
+        "y": 820,
+        "w": 520,
+        "h": 72
+      },
+      "z": 80,
+      "editable": true
+    },
+    {
+      "id": "date-text",
+      "type": "text",
+      "source": "native",
+      "text": "答辩时间：2026.5.24",
+      "font": "Microsoft YaHei",
+      "font_size": 20,
+      "color": "RGB(255,251,235)",
+      "align": "center",
+      "bbox": {
+        "x": 788,
+        "y": 824,
+        "w": 400,
+        "h": 60
+      },
+      "z": 90,
+      "editable": true,
+      "animation_group": "text"
+    },
+    {
+      "id": "logo-placeholder-1",
+      "type": "shape",
+      "source": "native",
+      "bbox": {
+        "x": 1572,
+        "y": 34,
+        "w": 126,
+        "h": 126
+      },
+      "z": 100,
+      "editable": true
+    },
+    {
+      "id": "logo-placeholder-2",
+      "type": "shape",
+      "source": "native",
+      "bbox": {
+        "x": 1736,
+        "y": 34,
+        "w": 126,
+        "h": 126
+      },
+      "z": 110,
+      "editable": true
+    }
+  ]
+}
